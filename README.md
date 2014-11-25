@@ -1,10 +1,10 @@
-# Pattern Lab Starter
+# MSK Cycle For Survival Pattern Lab
 
 ## Brief Overview
 
 ### One line install and setup
 
-    git clone git@bitbucket.org:phase2tech/pattern-lab-starter.git && cd pattern-lab-starter && bash scripts/setup-everything.sh
+    git clone git@bitbucket.org:phase2tech/msk-cycle-for-survival-pattern-lab.git && cd pattern-lab-starter && bash scripts/setup-everything.sh
   
 Already downloaded the repo? Just run this to make you've got dependencies and helpers taken care of:
   
