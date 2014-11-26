@@ -14,5 +14,9 @@ All styles that are imported here will be compiled into css/style.css
   "breakpoint",
   "singularitygs",
   "normalize", // from the normalize gem
+  "global/**/*",
+  "base/**/*",
+  "layout/**/*",
+  "components/**/*",
 
   "**/*";
