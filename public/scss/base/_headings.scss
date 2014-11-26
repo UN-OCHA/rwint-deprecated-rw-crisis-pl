@@ -1,0 +1,35 @@
+h1,h2,h3,h4,h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.h-1, .h-2, .h-3, .h-4, .h-4-2, .h-5, .h-5-2, .h-6, .h-6-2, .h-7, .h-8 {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5em;
+  color: #313131;
+  font-weight: bold;
+}
+
+.h-2 {
+  font-size: 36px;
+}
+
+.h-6, .h-6-2 {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.h-7 {
+  font-size: 42px;
+  color: $white;
+  margin-bottom: 10px;
+}
+
+.h-8 {
+  font-size: 62px;
+  color: $white;
+  margin-bottom: 10px;
+}
