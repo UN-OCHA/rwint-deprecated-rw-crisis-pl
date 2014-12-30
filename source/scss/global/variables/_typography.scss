@@ -10,15 +10,11 @@
  * to actual usable font family strings.
  */
 
-//$tstar-font:        font-name("tstar_mono_roundregular"), Helvetica, Arial, Sans-Serif;
-//$tstar-bold-font:     font-name("tstar_mono_roundbold");
-//$tradegothic-cond-font: font-name("TradeGothicLTStdBoldCondensedNo20");
-//$times-font: TimesNewRoman, "Times New Roman", Times, serif;
+$font--volkhov:   font-name("volkhov-regular"), "Times New Roman", Times, serif;
+$font--helvetica: Helvetica, Arial, sans-serif;
 
-// Deprecated
-
-$font-body: sans;
-$font-headline: serifs;
+$font-body: $font--helvetica;
+$font-headline: $font--volkhov;
 
 // Font size and line-height
 $root-typesize   : 16px;
