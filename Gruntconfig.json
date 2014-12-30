@@ -1,0 +1,18 @@
+{
+  "comment": "To override values here, make a file named 'Gruntconfig--custom.json' - it will be git ignored",
+  "deploy": {
+    "mountPath": "",
+    "files": [
+      "<%= package.paths.patternlab %>/css/*.*",
+      "<%= package.paths.patternlab %>/img-local/*.*",
+      "<%= package.paths.patternlab %>/js/*.*",
+      "<%= package.paths.patternlab %>/template_api/**/*.*"
+    ],
+    "autoDeploy": false
+  },
+  "openBrowserAtStart": true,
+  "localDrupal": false,
+  "patternLab": true,
+  "updateAtStart": true,
+  "buildModernizrAtStart": true
+}

@@ -1,14 +1,18 @@
 # Require any additional compass plugins here.
 require 'breakpoint'
 require 'singularitygs'
+require 'modular-scale'
 require 'toolkit'
 require 'sass-globbing'
+require 'oily_png'
+require 'compass'
+require 'compass-import-once'
 
 # Set this to the root of your project when deployed:
-http_path = "../"
+http_path = ""
 css_dir = "source/css"
 sass_dir = "source/scss"
-images_dir = "source/images"
+images_dir = "source/images/"
 javascripts_dir = "source/js"
 fonts_dir = "source/fonts"
 add_import_path "source/bower_components/eq.js/sass"

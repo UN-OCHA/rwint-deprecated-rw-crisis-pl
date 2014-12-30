@@ -956,7 +956,7 @@ class Builder {
 
 			} else {
 
-				foreach ($patternTypeValues["patternItems"] as $patternSubtypeKey => $patternSubtypeItem) {
+				foreach ($patternTypeValues["patternTypeItems"] as $patternSubtypeKey => $patternSubtypeItem) {
 					// set the pattern state
 					$patternBits = $this->getPatternInfo($patternSubtypeItem["patternPartial"]);
 					if ($this->patternPaths[$patternBits[0]][$patternBits[1]]["patternState"] != "") {

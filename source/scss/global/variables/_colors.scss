@@ -1,26 +1,60 @@
 /* ==========================================================================
-   Color Variables
+   Global Variables - Colors
    ========================================================================== */
 
-//Colors
-$gray : #808080;
-$gray-light : #f9f9f9;
-$gray-light-2 : #eee;
-$gray-light-3 : #ddd;
-$gray-med : #666;
-$gray-dark : #333;
-$gray-dark-2 : #131313;
-$white : #fff;
-$black : #000;
-$dim : rgba(0,0,0,0.5);
-$error : #f00;
-$valid : #089e00;
-$warning : #fff664;
-$information : #000db5;
 
-$color-primary-1: #f26522;
-$color-primary-2: #e54e28;
-$color-primary-3: #fff76f;
+/*
+ * Here's a great tutorial on how to use color variables properly:
+ * @see http://sachagreif.com/sass-color-variables/
+ */
 
-$color-secondary-1: #ffb999;
-$color-secondary-2: #f67c42;
+$color--white: hsl(0, 0%, 100%);
+//$color--gray--white: hsl(0, 0%, 94.1%);
+//$color--gray--lightest: hsl(0, 0%, 85.9%);
+//$color--gray--lighter: hsl(0, 0%, 78%);
+//$color--gray--light: hsl(0, 0%, 60%);
+//$color--gray: hsl(228, 2.3%, 41.8%);
+//$color--gray--dark: hsl(0, 0%, 30%);
+//$color--gray--darker: hsl(0, 0%, 20%);
+//$color--gray--darkest: hsl(0, 0%, 16.1%);
+//$color--gray--black: hsl(0, 0%, 10%);
+$color--black: hsl(0, 0%, 0%);
+
+$color--blue--dark: #0a5d82;
+$color--blue: #1989ba;
+$color--gray: #494949;
+$color--gray--light: #f5f5f5;
+$color--red: #ed5759;
+$color--teal: #9ec4c8;
+$color--blue--bright: #459df0;
+$color--blue--light: #eaf5f7;
+$color--gray--dark: #060606;
+$color--purple: #b393e1;
+
+$white: $color--white;
+$black: $color--black;
+
+// Semantic Colors
+$color--text: $color--black;
+$color--link: $color--black;
+$color--border: $color--gray--light;
+$color--border-active: $color--black;
+$bg-color: $color--white;
+
+// Emphasis Colors
+$color--information: $color--blue;
+$color--success: $color--blue--bright;
+$color--error: $color--red;
+$color--warning: $color--blue--dark;
+
+// Links
+$cs-link-normal            : $color--blue;
+$cs-link-hover             : $color--blue--bright;
+$cs-link-active            : $color--blue;
+$cs-link-visited           : $color--blue;
+$cs-link-focus             : $color--blue--bright;
+$cs-link-underline-normal  : $color--blue;
+$cs-link-underline-hover   : $color--blue--bright;
+$cs-link-underline-active  : $color--blue;
+$cs-link-underline-visited : $color--blue;
+$cs-link-underline-focus   : $color--blue--bright;

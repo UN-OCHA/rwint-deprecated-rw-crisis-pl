@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Base - Typography
+   ========================================================================== */
+
+
+/*
+ * Loop through our map and load font files
+ * $fonts map defined in scss/global/variables/_fonts.scss
+ */
+
+@each $font-index, $font-info in $fonts {
+
+  $font-name-mac: map-get($font-info, font-name-mac);
+  $font-folder-mac: map-get($font-info, font-folder-mac);
+  $font-filename-mac: map-get($font-info, font-filename-mac);
+  $font-weight-mac: map-get($font-info, font-weight-mac);
+  $font-style-mac: map-get($font-info, font-style-mac);
+
+  @include font-face(
+  "#{$font-name-mac}",
+  (
+    'eot': "#{$font-folder-mac}/#{$font-filename-mac}.eot",
+    'woff': "#{$font-folder-mac}/#{$font-filename-mac}.woff",
+    'ttf': "#{$font-folder-mac}/#{$font-filename-mac}.ttf",
+    'svg': "#{$font-folder-mac}/#{$font-filename-mac}.svg"
+  ),
+  "#{$font-weight-mac}",
+  "#{$font-style-mac}"
+  );
+}
+
+/* Mixin - Reverse
+   ========================================================================== */
+
+@mixin reverse($extend: true) {
+  @if $extend {
+    @extend %reverse;
+  }
+  @else {
+    background-color: $color--black;
+    color: $color--white;
+    a {
+      @include set-link-colors($color--white, $color--white, $color--white, $color--white, $color--white, false);
+      @include single-transition($property: border-bottom-color);
+      border-bottom-color: $color--gray--light;
+      &:hover,
+      &:active,
+      &:focus {
+        border-bottom-color: $color--white;
+      }
+    }
+  }
+}
+
+/* Extendables - Reverse & Reverse Text
+   ========================================================================== */
+
+%reverse {
+  background-color: $color--black;
+  @extend %reverse-text;
+}
+%reverse-text {
+  color: $color--white;
+  a {
+    @include set-link-colors($color--white, $color--white, $color--white, $color--white, $color--white, false);
+    @include single-transition($property: border-bottom-color);
+    border-bottom-color: $color--gray--light;
+    &:hover,
+    &:active,
+    &:focus {
+      border-bottom-color: $color--white;
+    }
+  }
+}

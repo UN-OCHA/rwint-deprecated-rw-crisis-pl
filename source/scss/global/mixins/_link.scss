@@ -1,0 +1,254 @@
+/* ==========================================================================
+   Global Mixins - Link
+   ========================================================================== */
+
+
+/*
+ * @See the following articles by Hugo Giraudel for a comprehensive
+ * discussion around extends and media queries.
+ *
+ * http://www.sitepoint.com/sass-extend-nobody-told-you/
+ * http://www.sitepoint.com/cross-media-query-extend-sass/
+ */
+
+//////////////////////
+// Links Element Default Variables
+$links-defaults-extend: true !default;
+$links-extend: true !default;
+
+$link-normal-default: $cs-link-normal !default;
+$link-hover-default: $cs-link-hover !default;
+$link-active-default: $cs-link-active !default;
+$link-visited-default: $cs-link-visited !default;
+$link-focus-default: $cs-link-focus !default;
+
+$set-background-links-default: true !default;
+$link-background-size-default: 1px !default;
+
+$link-underline-normal-default: $cs-link-underline-normal !default;
+$link-underline-hover-default: $cs-link-underline-hover !default;
+$link-underline-active-default: $cs-link-underline-active !default;
+$link-underline-visited-default: $cs-link-underline-visited !default;
+$link-underline-focus-default: $cs-link-underline-focus !default;
+$unset-underline-links-extend: true;
+//////////////////////
+
+/* Mixin - Set Link Defaults
+   ========================================================================== */
+/*
+ * @params
+ *  $extend - Toggle if contained in a media query.
+ *            true || false. Default: $links-defaults-extend (true).
+ *
+ * Usage:
+ * @include set-link-defaults();
+ *
+ * @media (min-width: 720px) {
+ *   @include set-link-defaults($extend: false);
+ * }
+ */
+
+@mixin set-link-defaults($extend: $links-defaults-extend) {
+  @if $extend {
+    @extend %link-defaults-extend;
+  }
+  @else {
+    text-transform: uppercase;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+/* Mixin - Set Link Colors
+   ========================================================================== */
+/*
+ * @params
+ *  $link-normal - CSS color. Default: $link-normal-default ($cs-link-normal).
+ *  $link-hover - CSS color. Default: $link-hover-default ($cs-link-hover).
+ *  $link-active - CSS color. Default: $link-active-default ($cs-link-active).
+ *  $link-visited - CSS color. Default: $link-visited-default ($cs-link-visited).
+ *  $link-focus - CSS color. Default: $link-focus-default ($cs-link-focus).
+ *  $extend - Toggle if contained in a media query.
+ *            true || false. Default: $links-extend (true).
+ *
+ * Usage:
+ * @include set-link-colors();
+ *
+ * @media (min-width: 720px) {
+ *   @include set-link-colors($extend: false);
+ * }
+ */
+
+@mixin set-link-colors(
+  $link-normal: $link-normal-default,
+  $link-hover: $link-hover-default,
+  $link-active: $link-active-default,
+  $link-visited: $link-visited-default,
+  $link-focus: $link-focus-default,
+  $extend: $links-extend
+) {
+  @if $extend {
+    @extend %link-colors-extend;
+  }
+  @else {
+    @include link-colors($link-normal, $link-hover, $link-active, $link-visited, $link-focus);
+  }
+}
+
+/* Mixin - Set Underline Links
+   ========================================================================== */
+/*
+ * @params
+ *  $link-underline-normal - CSS color. Default: $link-underline-normal-default ($cs-link-underline-normal).
+ *  $link-underline-hover - CSS color. Default: $link-underline-hover-default ($cs-link-underline-hover).
+ *  $link-underline-active - CSS color. Default: $link-underline-active-default ($cs-link-underline-active).
+ *  $link-underline-visited - CSS color. Default: $link-underline-visited-default ($cs-link-underline-visited).
+ *  $link-underline-focus - CSS color. Default: $link-underline-focus-default ($cs-link-underline-focus).
+ *  $link-underline-size - CSS color. Default: $link-background-size-default (1px).
+ *  $extend - Toggle if contained in a media query.
+ *            true || false. Default: $set-background-links-default (true).
+ *
+ * Usage:
+ * @include set-underline-links();
+ *
+ * @media (min-width: 720px) {
+ *   @include set-underline-links($extend: false);
+ * }
+ */
+
+@mixin set-underline-links(
+  $link-underline-normal: $link-underline-normal-default,
+  $link-underline-hover: $link-underline-hover-default,
+  $link-underline-active: $link-underline-active-default,
+  $link-underline-visited: $link-underline-visited-default,
+  $link-underline-focus: $link-underline-focus-default,
+  $link-underline-size: $link-background-size-default,
+  $extend: $set-background-links-default
+) {
+  @if $extend {
+    @extend %link-underline-extend;
+  }
+  @else {
+    text-decoration: none;
+    border-bottom: $link-underline-size solid $link-underline-normal;
+    &:visited {
+      border-bottom-color: $link-underline-visited;
+    }
+    &:focus {
+      border-bottom-color: $link-underline-focus;
+    }
+    &:hover {
+      border-bottom-color: $link-underline-hover;
+    }
+    &:active {
+      border-bottom-color: $link-underline-active;
+    }
+  }
+}
+
+/* Mixin - Unset Underline Links
+   ========================================================================== */
+/*
+ * @params
+ *  $extend - Toggle if contained in a media query.
+ *            true || false. Default: $unset-underline-links-extend (true).
+ *
+ * Usage:
+ * @include unset-underline-links();
+ *
+ * @media (min-width: 720px) {
+ *   @include unset-underline-links($extend: false);
+ * }
+ */
+
+@mixin unset-underline-links($extend: $unset-underline-links-extend) {
+  @if $extend {
+    @extend %link-unset-underline-extend;
+  }
+  @else {
+    text-decoration: none;
+    border-bottom: none;
+    &:visited {
+      border-bottom: none;
+    }
+    &:focus {
+      border-bottom: none;
+    }
+    &:hover {
+      border-bottom: none;
+    }
+    &:active {
+      border-bottom: none;
+    }
+  }
+}
+
+/* Extendables - Link Element Extendables
+   ========================================================================== */
+
+/*
+ * Use this standalone extendable to set link defaults
+ * when inside a media query.
+ *
+ * Usage:
+ * @extend %link-defaults-extend;
+ */
+
+%link-defaults-extend {
+  @include set-link-defaults($extend: false);
+}
+
+/*
+ * Use this standalone extendable to set link colors
+ * when inside a media query.
+ *
+ * Usage:
+ * @extend %link-colors-extend;
+ */
+
+%link-colors-extend {
+  @include set-link-colors($extend: false);
+}
+
+/*
+ * Use this standalone extendable to set link underlines
+ * when inside a media query.
+ *
+ * Usage:
+ * @extend %link-underline-extend;
+ */
+
+%link-underline-extend {
+  @include set-underline-links($extend: false);
+}
+
+/*
+ * Use this standalone extendable to unset link underlines
+ * when inside a media query.
+ *
+ * Usage:
+ * @extend %link-unset-underline-extend;
+ */
+
+%link-unset-underline-extend {
+  @include unset-underline-links($extend: false);
+}
+
+/*
+ * Use this inclusive extendable to set all link properties
+ * when outside of a media query.
+ *
+ * Usage:
+ * @extend %links-extend;
+ */
+
+%links-extend {
+  @extend %link-defaults-extend;
+  @extend %link-colors-extend;
+  @extend %link-underline-extend;
+}
+
+a {
+  @extend %links-extend;
+}

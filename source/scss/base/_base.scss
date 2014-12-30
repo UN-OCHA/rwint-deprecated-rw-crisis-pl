@@ -1,6 +1,8 @@
 /* ==========================================================================
-   Base Styles
+   Base - Base Styles
    ========================================================================== */
+
+
 * {
   @include box-sizing(border-box);
 }
@@ -10,19 +12,23 @@ button,
 input,
 select,
 textarea {
-//  font-family: $tstar-font;
-//  font-size: $root-typesize;
-//  color: $color--text;
+  font-family: $font-body;
+  font-size: $root-typesize;
+  color: $color--text;
 }
 
 body {
-  //background: $bg-color;
-  //@extend %body-mono;
+  background: $bg-color;
 }
 
 p {
   margin-top: 0;
-//  margin-bottom: $base-line-em;
+  margin-bottom: $base-line-em;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
 }
 
 h1,
@@ -37,12 +43,12 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #e3e3e3;
+  border-top: 1px solid $color--gray;
   margin: 1em 0;
   padding: 0;
 }
 
-/* Remove bullets from lists */
+// Remove bullets from lists
 ol,
 ul {
   margin: 0;
@@ -73,14 +79,14 @@ img {
   height: auto;
 }
 
-/* Remove default fieldset styles. */
+// Remove default fieldset styles.
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* Allow only vertical resizing of textareas. */
+// Allow only vertical resizing of textareas.
 textarea {
   resize: vertical;
 }
@@ -88,39 +94,4 @@ textarea {
 blockquote {
   margin-left: 0;
   margin-right: 0;
-}
-
-/* REPLACE THESE WITH ACTUAL STYLES */
-.p-1, .p-5 {
-  font-family: Helvetica, Arial, sans-serif;
-  letter-spacing: -0.03em;
-  color: #fff;
-  margin: 0;
-}
-
-.p-5 {
-  font-size: 21px;
-  line-height: 1.4;
-  letter-spacing: -0.05em;
-  font-weight: bold;
-
-  @include breakpoint($bp--large-up) {
-    font-size: 28px;
-  }
-}
-
-.tc-1 {
-  color: #fff76f;
-}
-
-.tc-5 {
-  color: #fff !important;
-}
-
-.tc-11 {
-  color: $color-secondary-1 !important;
-}
-
-.bss-mt60, .bss-mv60, .bss-ma60 {
-  margin-top: 60px !important;
 }

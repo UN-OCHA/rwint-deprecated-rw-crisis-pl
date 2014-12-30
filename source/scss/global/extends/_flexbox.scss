@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Global Extends - Flexbox
+   ========================================================================== */
+
+
+/* Mixin - Flex Column
+   ========================================================================== */
+/*
+ * @params
+ *  $height
+ *  $extend
+ */
+
+@mixin flex-column($height: 100%, $extend: true) {
+  @if($extend) {
+    @extend %flex-column;
+  }
+  height: $height;
+  @include flexbox(
+    (
+      display: flex,
+      flex-direction: column,
+      justify-content: space-between
+    )
+  );
+}
+
+/* Mixin - Flex Row
+   ========================================================================== */
+/*
+ * @params
+ *  $height
+ *  $extend
+ */
+
+@mixin flex-row($height: 100%, $extend: true) {
+  @if($extend) {
+    @extend %flex-row;
+  }
+  height: $height;
+  @include flexbox(
+    (
+      display: flex,
+      flex-direction: row,
+      justify-content: space-between
+    )
+  );
+}
+
+/* Mixin - Flex Item
+   ========================================================================== */
+/*
+ * @params
+ *  $flex
+ *  $extend
+ */
+
+@mixin flex-item($flex: auto, $extend: true) {
+  @if $extend && $flex == auto {
+  @extend %flex-auto;
+} @else if $extend && $flex == 1 {
+  @extend %flex-1;
+}
+  @include flexbox((flex: $flex));
+}
+
+/* Mixin - No Flexbox / Reset
+   ========================================================================== */
+
+@mixin no-flexbox-ir-reset() {
+  .no-flexbox & {
+    padding-top: 0;
+    height: auto;
+    > * {
+      position: relative;
+      width: auto !important;
+      height: auto !important;
+    }
+  }
+}
+
+/* Extendable - Flex Column
+   ========================================================================== */
+
+%flex-column {
+  @include flex-column($extend: false);
+}
+
+/* Extendable - Flex Row
+   ========================================================================== */
+
+%flex-row {
+  @include flex-row($extend: false);
+}
+
+/* Extendable - Flex Column Auto
+   ========================================================================== */
+
+%flex-column-auto {
+  @include flex-column(auto, false);
+}
+
+/* Extendable - Flex Auto
+   ========================================================================== */
+
+%flex-auto {
+  @include flex-item(auto, false);
+}
+
+/* Extendable - Flex One
+   ========================================================================== */
+
+%flex-1 {
+  @include flex-item(1, false);
+}
+
+/* Extendable - Flex None
+   ========================================================================== */
+
+%flex-none {
+  @include flex-item(none, false);
+}
+
+/* Extendable - No Flexbox / Reset
+   ========================================================================== */
+
+%no-flexbox-ir-reset {
+  @include no-flexbox-ir-reset();
+}

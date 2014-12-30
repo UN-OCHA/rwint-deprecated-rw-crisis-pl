@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Global Variables - Typography
+   ========================================================================== */
+
+
+/* Font names
+   ========================================================================== */
+/*
+ * Assign font names from global/variables/_fonts.scss $fonts map
+ * to actual usable font family strings.
+ */
+
+//$tstar-font:        font-name("tstar_mono_roundregular"), Helvetica, Arial, Sans-Serif;
+//$tstar-bold-font:     font-name("tstar_mono_roundbold");
+//$tradegothic-cond-font: font-name("TradeGothicLTStdBoldCondensedNo20");
+//$times-font: TimesNewRoman, "Times New Roman", Times, serif;
+
+// Deprecated
+
+$font-body: sans;
+$font-headline: serifs;
+
+// Font size and line-height
+$root-typesize   : 16px;
+$base-font-size  : $root-typesize;
+$base-line-px    : 24px;
+$base-line-em    : em($base-line-px);
+$base-line-height: unitless-convert($base-line-em);
+
+// Sassy Modular-scale
+$ms-base: $root-typesize;
+$ms-ratio: $minor-third $golden;
+
+
+// Heading sizes
+$heading-sizes:
+  ms(6)
+  ms(5)
+  ms(4)
+  ms(3)
+  ms(2)
+  ms(1);
+$heading-line-heights:
+  ms(7)
+  ms(6)
+  ms(5)
+  ms(4)
+  ms(3)
+  ms(2);
+
+

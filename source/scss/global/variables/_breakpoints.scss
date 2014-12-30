@@ -1,5 +1,18 @@
-// Breakpoint Configuration
-// docs: https://github.com/Team-Sass/breakpoint/wiki
+/* ==========================================================================
+   Global Variables - Breakpoints
+   ========================================================================== */
+
+
+/*
+ * Breakpoint Configuration
+ * @see https://github.com/Team-Sass/breakpoint/wiki
+ *
+ * Usage:
+ * display: none; // hidden for mobile
+ * @include breakpoint($bp--small-up) {
+ *   display: block; // shown above 400
+ * }
+ */
 
 $breakpoint-no-query-fallbacks: true; // Breakpoint will output fallback selectors in this stylesheet
 $breakpoint-to-ems: true; // Breakpoint will convert all media queries to use EMs rather than PX
@@ -12,27 +25,90 @@ $width-large   : 768px;
 $width-xlarge  : 1024px;
 
 // design max-width
-$width-xxlarge : 1280px;
 
 // Breakpoint variables are prefixed with "$bp--"
 // Mobile-first queries
-$bp--xsmall-up : $width-xsmall;
-$bp--small-up  : $width-small;
-$bp--medium-up : $width-medium;
-$bp--large-up  : $width-large;
-$bp--xlarge-up : $width-xlarge;
-$bp--xxlarge-up : $width-xxlarge;
 
 // Fenced queries
-$bp--xsmall    : max-width $width-small - 1;
-$bp--small     : $width-small $width-medium - 1;
-$bp--medium    : $width-medium $width-large;
-$bp--large     : $width-large + 1 $width-xlarge - 1;
 
 // Queries with no-query fallbacks
-$bp--large-up--no-mq   : $bp--large-up, 'no-query' '.no-mq';
-$bp--medium-up--no-mq  : $bp--medium-up, 'no-query' '.no-mq';
+
 
 // Mobile-last queries (USE SPARINGLY)
-$bp--small-down : max-width $width-medium - 1;
-$bp--medium-down: max-width $width-large - 1;
+
+
+
+////////////////////
+// UNCOMMENT BELOW TO USE UNISON
+////////////////////
+///*
+// * UNISON: Let javascript respond to the above breakpoint
+// *
+// * Unison.on('usn-x-small', function() {
+// *   console.log('x-small breakpoint');
+// * });
+// * Unison.on('usn-small', function() {
+// *   console.log('small breakpoint');
+// * });
+// * Unison.on('usn-medium', function() {
+// *   console.log('another medium function');
+// * });
+// * etc ...
+// *
+// */
+//$debug: false;
+//
+//// create sass list to pass media query data
+//// if a breakpoint name changes, remember to
+//// update it in the list below as well
+//$mq-sync: (
+//  usn-zero           "0px",
+//  usn-x-small        $width-xsmall,
+//  usn-small          $width-small,
+//  usn-medium         $width-medium,
+//  usn-large          $width-large,
+//  usn-x-large        $width-xlarge,
+//  usn-xx-large       $width-xxlarge
+//);
+//
+//// build each media query for js ingestion
+//@each $mq in $mq-sync {
+//  @media screen and (min-width: nth($mq, 2)) {
+//    head { font-family: "#{nth($mq, 1)} #{nth($mq, 2)}"; }
+//    body:after { content: "#{nth($mq, 1)} - min-width: #{nth($mq, 2)}"; }
+//  }
+//}
+//
+//head {
+//  // set clear on head to show Unison is set up correctly
+//  clear: both;
+//  // store hash of all breakpoints
+//  title { font-family: "#{$mq-sync}"; }
+//}
+//
+//// debug styles to see breakpoint info
+//body:after {
+//  display: none;
+//}
+//
+//@if $debug == true {
+//  body:after {
+//    display: block;
+//    position: fixed;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    background-color: #000;
+//    background-color: rgba(0,0,0,0.8);
+//    text-align: center;
+//    color: #FFF;
+//    padding: 10px;
+//    z-index: 1000;
+//    font-size: 12px;
+//    font-family: sans-serif;
+//  }
+//}
+//
+//// hide elements for conditional loading
+//// only used for responsive comments plugin
+//*[data-usn-if] { display: none; }

@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "font-A": {
+      "scss-style": [
+        "font-family: TBD"
+      ]
+    },
+    "font-B": {
+      "scss-style": [
+        "font-family: TBD",
+        "font-weight: bold"
+      ]
+    },
+    "font-C": {
+      "scss-style": [
+        "font-family: TBD"
+      ]
+    },
+    "font-D": {
+      "scss-style": [
+        "font-family: TBD"
+      ]
+    }
+  }
+}
