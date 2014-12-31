@@ -10,22 +10,22 @@
 
 @each $font-index, $font-info in $fonts {
 
-  $font-name-mac: map-get($font-info, font-name-mac);
-  $font-folder-mac: map-get($font-info, font-folder-mac);
-  $font-filename-mac: map-get($font-info, font-filename-mac);
-  $font-weight-mac: map-get($font-info, font-weight-mac);
-  $font-style-mac: map-get($font-info, font-style-mac);
+  $font-name: map-get($font-info, font-name);
+  $font-folder: map-get($font-info, font-folder);
+  $font-filename: map-get($font-info, font-filename);
+  $font-weight: map-get($font-info, font-weight);
+  $font-style: map-get($font-info, font-style);
 
   @include font-face(
-  "#{$font-name-mac}",
+  "#{$font-name}",
   (
-    'eot': "#{$font-folder-mac}/#{$font-filename-mac}.eot",
-    'woff': "#{$font-folder-mac}/#{$font-filename-mac}.woff",
-    'ttf': "#{$font-folder-mac}/#{$font-filename-mac}.ttf",
-    'svg': "#{$font-folder-mac}/#{$font-filename-mac}.svg"
+    'eot': "#{$font-folder}/#{$font-filename}.eot",
+    'woff': "#{$font-folder}/#{$font-filename}.woff",
+    'ttf': "#{$font-folder}/#{$font-filename}.ttf",
+    'svg': "#{$font-folder}/#{$font-filename}.svg"
   ),
-  "#{$font-weight-mac}",
-  "#{$font-style-mac}"
+  "#{$font-weight}",
+  "#{$font-style}"
   );
 }
 

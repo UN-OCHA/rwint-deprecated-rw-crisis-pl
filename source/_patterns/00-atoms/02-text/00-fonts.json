@@ -1,8 +1,8 @@
 {
   "meta": {
-    "font-A": {
+    "font-volkhov": {
       "scss-style": [
-        "font-family: TBD"
+        "font-family: $font--volkhov"
       ]
     },
     "font-B": {
