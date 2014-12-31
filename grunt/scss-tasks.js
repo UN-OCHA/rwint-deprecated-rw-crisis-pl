@@ -3,12 +3,12 @@ module.exports = function (grunt, options) {
   var _ = require('underscore');
   var files = {
     "all": [
-      '<%= package.paths.patternlab %>/scss/**/*.scss',
-      '!<%= package.paths.patternlab %>/scss/**/*scsslint_tmp*.scss'
+      '<%= package.paths.patternlab %>/source/scss/**/*.scss',
+      '!<%= package.paths.patternlab %>/source/scss/**/*scsslint_tmp*.scss'
     ],
     "lint": [
-      '<%= package.paths.patternlab %>/scss/**/*.scss',
-      '!<%= package.paths.patternlab %>/scss/vendor/*.scss',
+      '<%= package.paths.patternlab %>/source/scss/**/*.scss',
+      '!<%= package.paths.patternlab %>/source/scss/vendor/*.scss',
     ]
   };
 

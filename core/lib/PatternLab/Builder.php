@@ -215,7 +215,6 @@ class Builder {
 		$styleGuideFoot = $this->mv->render($this->mainPageFoot,$sd);
 		$styleGuidePage = $styleGuideHead.$this->mfs->render('viewall',$sd).$styleGuideFoot;
 
-
 //		if (!file_exists($this->pd."/styleguide/html/styleguide.html")) {
 //			print "ERROR: the main style guide wasn't written out. make sure public/styleguide exists. can copy core/styleguide\n";
 //		} else {
@@ -956,7 +955,7 @@ class Builder {
 
 			} else {
 
-				foreach ($patternTypeValues["patternTypeItems"] as $patternSubtypeKey => $patternSubtypeItem) {
+				foreach ($patternTypeValues["patternItems"] as $patternSubtypeKey => $patternSubtypeItem) {
 					// set the pattern state
 					$patternBits = $this->getPatternInfo($patternSubtypeItem["patternPartial"]);
 					if ($this->patternPaths[$patternBits[0]][$patternBits[1]]["patternState"] != "") {
@@ -1212,7 +1211,6 @@ class Builder {
 
 		// make sure some directories aren't deleted
 		$ignoreDirs = array("styleguide");
-//    $ignoreDirs = array("");
 		foreach ($ignoreDirs as $ignoreDir) {
 			$key = array_search($this->pd."/".$ignoreDir,$publicDirs);
 			if ($key !== false){

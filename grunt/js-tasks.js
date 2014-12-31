@@ -15,7 +15,7 @@ module.exports = function (grunt, options) {
     "jshint": {
       "options": {
         "force": true,
-        "jshintrc": "../.jshintrc"
+        "jshintrc": ".jshintrc"
       },
       "src": files
     }

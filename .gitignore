@@ -25,3 +25,6 @@ node_modules
 
 #IDE plugins
 atlassian-ide-plugin.xml
+
+# Grunt custom config
+Gruntconfig--custom.json
