@@ -11,9 +11,10 @@
  */
 
 $font--volkhov:   font-name("volkhov-regular"), "Times New Roman", Times, serif;
+$font--futura:    "futura-pt", Helvetica, Arial, sans-serif;
 $font--helvetica: Helvetica, Arial, sans-serif;
 
-$font-body: $font--helvetica;
+$font-body: $font--futura;
 $font-headline: $font--volkhov;
 
 // Font size and line-height

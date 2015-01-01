@@ -5,20 +5,28 @@
         "font-family: $font--volkhov"
       ]
     },
-    "font-B": {
+    "font-futura": {
       "scss-style": [
-        "font-family: TBD",
+        "font-family: $font--futura"
+      ]
+    },
+    "font-futura-italic": {
+      "scss-style": [
+        "font-family: $font--futura",
+        "font-style: italic"
+      ]
+    },
+    "font-futura-bold": {
+      "scss-style": [
+        "font-family: $font--futura",
         "font-weight: bold"
       ]
     },
-    "font-C": {
+    "font-futura-bold-italic": {
       "scss-style": [
-        "font-family: TBD"
-      ]
-    },
-    "font-D": {
-      "scss-style": [
-        "font-family: TBD"
+        "font-family: $font--futura",
+        "font-weight: bold",
+        "font-style: italic"
       ]
     }
   }
