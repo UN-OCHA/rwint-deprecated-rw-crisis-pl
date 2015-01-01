@@ -1,14 +1,6 @@
 {
   "pl_colors": [
     {
-      "name": "$color--white",
-      "value": "hsl(0, 0%, 100%)"
-    },
-    {
-      "name": "$color--black",
-      "value": "hsl(0, 0%, 0%)"
-    },
-    {
       "name": "$color--blue--dark",
       "value": "#0a5d82"
     },
@@ -47,6 +39,14 @@
     {
       "name": "$color--purple",
       "value": "#b393e1"
+    },
+    {
+      "name": "$color--white",
+      "value": "hsl(0, 0%, 100%)"
+    },
+    {
+      "name": "$color--black",
+      "value": "hsl(0, 0%, 0%)"
     }
   ]
 }
