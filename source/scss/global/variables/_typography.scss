@@ -10,8 +10,8 @@
  * to actual usable font family strings.
  */
 
-$font--volkhov:   font-name("volkhov-regular"), "Times New Roman", Times, serif;
-$font--futura:    "futura-pt", Helvetica, Arial, sans-serif;
+$font--volkhov:   font-name('volkhov-regular'), 'Times New Roman', Times, serif;
+$font--futura:    'futura-pt', Helvetica, Arial, sans-serif;
 $font--helvetica: Helvetica, Arial, sans-serif;
 
 $font-body: $font--futura;
@@ -26,8 +26,7 @@ $base-line-height: unitless-convert($base-line-em);
 
 // Sassy Modular-scale
 $ms-base: $root-typesize;
-$ms-ratio: $minor-third $golden;
-
+$ms-ratio: $major-third $fifth;
 
 // Heading sizes
 $heading-sizes:
