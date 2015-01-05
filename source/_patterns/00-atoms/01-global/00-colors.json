@@ -5,6 +5,10 @@
       "value": "#0a5d82"
     },
     {
+      "name": "$color--purple",
+      "value": "#b393e1"
+    },
+    {
       "name": "$color--blue",
       "value": "#1989ba"
     },
@@ -35,10 +39,6 @@
     {
       "name": "$color--gray--dark",
       "value": "#060606"
-    },
-    {
-      "name": "$color--purple",
-      "value": "#b393e1"
     },
     {
       "name": "$color--white",
