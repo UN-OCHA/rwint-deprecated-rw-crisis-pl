@@ -19,15 +19,14 @@ $grid--8     : 8;
 $grid--12    : 12;
 // assymetrical grids
 $grid--3-2   : 3 2;
-$grid--2-3   : 2 3;
+$grid--2-3   : 1.618 1;
 $grid--3-2-3 : 3 2 3;
 $grid--2-3-3 : 2 3 3;
 $grid--3-3-2 : 3 3 2;
 $grid--2-1: 2 1; // product images on left, details on right
 
 // gutters (no gutter by default)
-@include add-gutter(0);
-$grid-gutter: res-width($spacing); //manually add on padding where needed
+@include add-gutter(0.1);
 
 [class*="grid-container--"] {
   @include clearfix();
@@ -141,6 +140,7 @@ $grid-gutter: res-width($spacing); //manually add on padding where needed
 .grid-container--2-3 {
   @include layout($grid--2-3) {
     .grid--item {
+      outline: 1px solid red;
       &:nth-of-type(2n+1) { @include grid-span(1, 1); clear: both;}
       &:nth-of-type(2n+2) { @include grid-span(1, 2); }
     }
