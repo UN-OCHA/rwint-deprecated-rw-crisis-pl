@@ -11,5 +11,27 @@
     <h2>{{headline.short}}</h2>
     {{excerpt.long}}
   </div>
-  <div class="overview-widget--tabs tabs"></div>
+  <div class="overview-widget--tabs tab-set">
+    <input type="radio" name="tab" id="tab-1" class="tab-set--tab" checked="checked"/>
+    <label for="tab-1">Iraq</label>
+    <input type="radio" name="tab" id="tab-2" class="tab-set--tab" />
+    <label for="tab-2">Syria</label>
+    <div class="tab-set--content">
+      <div id="tab-body-1" class="tab-set--body">
+        <h2>Iraq</h2>
+        <h3>3 Million</h3>
+        <p>Refugees</p>
+        <h3>6.5 Million</h3>
+        <p>Internally Displaced</p>
+      </div>
+      <div id="tab-body-2" class="tab-set--body">
+        <h2>Syria</h2>
+        <h3>4 Million</h3>
+        <p>Refugees</p>
+        <h3>7.5 Million</h3>
+        <p>Internally Displaced</p>
+      </div>
+    </div>
+  </div>
+  <footer>Data Source <cite><a href="">UNHCR</a></cite></footer>
 </div>
