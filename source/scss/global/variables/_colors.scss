@@ -21,6 +21,21 @@ $color--gray--dark: #060606;
 $color--white: hsl(0, 0%, 100%);
 $color--black: hsl(0, 0%, 0%);
 
+$color-map: (
+  color--blue-dark: $color--blue--dark,
+  color--purple: $color--purple,
+  color--blue: $color--blue,
+  color--gray: $color--gray,
+  color--gray--light: $color--gray--light,
+  color--red: $color--red,
+  color--teal: $color--teal,
+  color--blue--bright: $color--blue--bright,
+  color--blue--light: $color--blue--light,
+  color--gray--dark: $color--gray--dark,
+  color--white: $color--white,
+  color--black: $color--black
+);
+
 // Semantic Colors
 $color--text: $color--black;
 $color--link: $color--black;

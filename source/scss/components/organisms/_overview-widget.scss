@@ -1,7 +1,12 @@
 .overview-widget--title {
-  @include fontsize-rem(ms(1));
+  @include fontsize-rem(ms(0));
+  font-weight: bold;
+  margin-top: 1em;
+  line-height: 1.2;
   text-transform: uppercase;
   color: $color--blue;
+  @include try-colors();
+  margin: em(24px);
 }
 
 .overview-widget--map {
@@ -16,8 +21,8 @@
   @extend %baseline;
   h2 {
     @include fontsize-rem(ms(2));
-    color: $color--blue;
-    border-bottom: 1px solid $color--blue;
+    color: $color--blue--dark;
+    border-bottom: 1px solid $color--blue--dark;
   }
 }
 
