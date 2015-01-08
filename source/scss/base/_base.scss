@@ -14,6 +14,7 @@ select,
 textarea {
   font-family: $font-body;
   font-size: $root-typesize;
+  line-height: $base-line-height;
   color: $color--text;
 }
 

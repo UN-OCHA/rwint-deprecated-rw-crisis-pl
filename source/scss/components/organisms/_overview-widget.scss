@@ -1,12 +1,17 @@
+//.overview-widget {
+//  margin: 0 0.5em;
+//}
+
 .overview-widget--title {
   @include fontsize-rem(ms(0));
+  margin: 0;
+  padding: 0.75em 0.5em;
+  background-color: $color--purple;
+  color: $color--white;
   font-weight: bold;
-  margin-top: 1em;
   line-height: 1.2;
   text-transform: uppercase;
-  color: $color--blue;
-  @include try-colors();
-  margin: em(24px);
+  //  @include try-colors();
 }
 
 .overview-widget--map {
@@ -18,19 +23,24 @@
 }
 
 .overview-widget--description {
-  @extend %baseline;
+//  @extend %baseline;
   h2 {
     @include fontsize-rem(ms(2));
-    color: $color--blue--dark;
-    border-bottom: 1px solid $color--blue--dark;
+    margin: 0 0 12px;
+    padding: 6px 0.5em;
+    border-top: 1px solid $color--gray--lightish;
+    border-bottom: 2px solid $color--purple;
+    background-color: $color--gray--light;
+    color: $color--purple--dark;
+    line-height: unitless-convert(em(34px, ms(2)));
   }
 }
 
 .overview-widget--tabs {
   label {
     @include fontsize-rem(ms(1));
-    text-transform: uppercase;
-    background-color: $color--gray--light;
     padding: 0.5em 3px;
+    background-color: $color--gray--light;
+    text-transform: uppercase;
   }
 }

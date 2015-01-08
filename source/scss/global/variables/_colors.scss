@@ -14,25 +14,30 @@ $color--blue--bright: #459df0;
 $color--blue--light: #eaf5f7;
 $color--teal: #9ec4c8;
 $color--purple: #b393e1;
+$color--purple--dark: #6b5887;
 $color--red: #ed5759;
 $color--white: hsl(0, 0%, 100%);
 $color--gray--light: #f5f5f5;
+$color--gray--lightish: #cccccc;
 $color--gray: #494949;
 $color--gray--dark: #060606;
 $color--black: hsl(0, 0%, 0%);
+$color--purple--dark: mix($color--purple, $color--black, 60%);
+//@debug ($color--purple--dark);
 
 $color-map: (
   color--blue-dark: $color--blue--dark,
-  color--purple: $color--purple,
   color--blue: $color--blue,
-  color--gray: $color--gray,
-  color--gray--light: $color--gray--light,
-  color--red: $color--red,
-  color--teal: $color--teal,
   color--blue--bright: $color--blue--bright,
   color--blue--light: $color--blue--light,
-  color--gray--dark: $color--gray--dark,
+  color--teal: $color--teal,
+  color--purple: $color--purple,
+  color--purple--dark: $color--purple--dark,
+  color--red: $color--red,
   color--white: $color--white,
+  color--gray--light: $color--gray--light,
+  color--gray: $color--gray,
+  color--gray--dark: $color--gray--dark,
   color--black: $color--black
 );
 
