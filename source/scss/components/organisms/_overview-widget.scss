@@ -1,0 +1,31 @@
+.overview-widget--title {
+  @include fontsize-rem(ms(1));
+  text-transform: uppercase;
+  color: $color--blue;
+}
+
+.overview-widget--map {
+  border: {
+    width: 1px 0;
+    style: solid;
+    color: $color--gray--dark;
+  }
+}
+
+.overview-widget--description {
+  @extend %baseline;
+  h2 {
+    @include fontsize-rem(ms(2));
+    color: $color--blue;
+    border-bottom: 1px solid $color--blue;
+  }
+}
+
+.overview-widget--tabs {
+  label {
+    @include fontsize-rem(ms(1));
+    text-transform: uppercase;
+    background-color: $color--gray--light;
+    padding: 0.5em 3px;
+  }
+}

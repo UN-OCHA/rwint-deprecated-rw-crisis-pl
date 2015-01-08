@@ -1,5 +1,5 @@
 {
-  "dateRan": "2014-12-31T20:34:35.664Z",
+  "dateRan": "2015-01-08T06:54:04.447Z",
   "report": [
     {
       "file": "./source/scss/base/_base.scss",
@@ -13,27 +13,27 @@
           "linter": "PropertySortOrder"
         },
         {
-          "line": 25,
+          "line": 45,
           "column": 3,
-          "length": 13,
+          "length": 9,
           "severity": "warning",
-          "reason": "Properties should be ordered margin-bottom, margin-top",
+          "reason": "Properties should be ordered display, height, margin, padding, border, border-top",
           "linter": "PropertySortOrder"
         },
         {
-          "line": 43,
+          "line": 84,
+          "column": 3,
+          "length": 9,
+          "severity": "warning",
+          "reason": "Properties should be ordered margin, padding, border",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 95,
           "column": 3,
           "length": 14,
           "severity": "warning",
-          "reason": "Properties should be ordered border, border-top, display, height, margin, padding",
-          "linter": "PropertySortOrder"
-        },
-        {
-          "line": 78,
-          "column": 3,
-          "length": 15,
-          "severity": "warning",
-          "reason": "Properties should be ordered height, max-width",
+          "reason": "Properties should be ordered margin-right, margin-left",
           "linter": "PropertySortOrder"
         }
       ]
@@ -59,7 +59,7 @@
           "column": 3,
           "length": 15,
           "severity": "warning",
-          "reason": "Properties should be ordered background-color, border-color, border-style, border-width, cursor, display, font-size, height, line-height, padding, text-align, text-transform",
+          "reason": "Properties should be ordered display, height, padding, border-width, border-style, border-color, background-color, cursor, font-size, line-height, text-align, text-transform",
           "linter": "PropertySortOrder"
         },
         {
@@ -69,6 +69,75 @@
           "severity": "warning",
           "reason": "Use the Compass `inline-block` mixin instead of `display: inline-block`",
           "linter": "Compass::PropertyWithMixin"
+        },
+        {
+          "line": 65,
+          "column": 3,
+          "length": 31,
+          "severity": "warning",
+          "reason": "Properties should be ordered border-width, border-color, background-color",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 78,
+          "column": 3,
+          "length": 29,
+          "severity": "warning",
+          "reason": "Properties should be ordered border-width, background-color",
+          "linter": "PropertySortOrder"
+        }
+      ]
+    },
+    {
+      "file": "./source/scss/components/atoms/_headings.scss",
+      "errors": [
+        {
+          "line": 63,
+          "column": 3,
+          "length": 58,
+          "severity": "warning",
+          "reason": "Properties should be ordered margin-top, margin-bottom",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 77,
+          "column": 3,
+          "length": 58,
+          "severity": "warning",
+          "reason": "Properties should be ordered margin-top, margin-bottom",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 91,
+          "column": 3,
+          "length": 58,
+          "severity": "warning",
+          "reason": "Properties should be ordered margin-top, margin-bottom",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 105,
+          "column": 3,
+          "length": 59,
+          "severity": "warning",
+          "reason": "Properties should be ordered margin-top, margin-bottom",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 118,
+          "column": 3,
+          "length": 59,
+          "severity": "warning",
+          "reason": "Properties should be ordered margin-top, margin-bottom",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 131,
+          "column": 3,
+          "length": 59,
+          "severity": "warning",
+          "reason": "Properties should be ordered margin-top, margin-bottom",
+          "linter": "PropertySortOrder"
         }
       ]
     },
@@ -90,6 +159,14 @@
           "severity": "warning",
           "reason": "Rule sets should be ordered as follows: @extends, @includes without @content, properties, @includes with @content, nested rule sets",
           "linter": "DeclarationOrder"
+        },
+        {
+          "line": 12,
+          "column": 5,
+          "length": 14,
+          "severity": "warning",
+          "reason": "Properties should be ordered margin-left, font-size",
+          "linter": "PropertySortOrder"
         }
       ]
     },
@@ -97,19 +174,11 @@
       "file": "./source/scss/components/atoms/_utilities.scss",
       "errors": [
         {
-          "line": 27,
+          "line": 38,
           "column": 3,
-          "length": 28,
+          "length": 9,
           "severity": "warning",
-          "reason": "Properties should be ordered background-position, background-repeat, background-size",
-          "linter": "PropertySortOrder"
-        },
-        {
-          "line": 36,
-          "column": 3,
-          "length": 18,
-          "severity": "warning",
-          "reason": "Properties should be ordered bottom, left, position, right, top",
+          "reason": "Properties should be ordered position, top, right, bottom, left",
           "linter": "PropertySortOrder"
         },
         {
@@ -130,7 +199,7 @@
           "column": 3,
           "length": 10,
           "severity": "warning",
-          "reason": "Properties should be ordered border-color, border-style, border-width, outline, padding, width",
+          "reason": "Properties should be ordered width, padding, border-width, border-style, border-color, outline",
           "linter": "PropertySortOrder"
         },
         {
@@ -160,6 +229,64 @@
       ]
     },
     {
+      "file": "./source/scss/components/molecules/_tab-set.scss",
+      "errors": [
+        {
+          "line": 1,
+          "column": 1,
+          "length": 18,
+          "severity": "warning",
+          "reason": "Empty rule",
+          "linter": "EmptyRule"
+        },
+        {
+          "line": 10,
+          "column": 5,
+          "length": 8,
+          "severity": "warning",
+          "reason": "Empty rule",
+          "linter": "EmptyRule"
+        },
+        {
+          "line": 15,
+          "column": 9,
+          "length": 34,
+          "severity": "warning",
+          "reason": "Nesting should be no greater than 3, but was 4",
+          "linter": "NestingDepth"
+        }
+      ]
+    },
+    {
+      "file": "./source/scss/components/organisms/_overview-widget.scss",
+      "errors": [
+        {
+          "line": 2,
+          "column": 3,
+          "length": 30,
+          "severity": "warning",
+          "reason": "Properties should be ordered color, font-size, text-transform",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 17,
+          "column": 5,
+          "length": 30,
+          "severity": "warning",
+          "reason": "Properties should be ordered border-bottom, color, font-size",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 25,
+          "column": 5,
+          "length": 30,
+          "severity": "warning",
+          "reason": "Properties should be ordered padding, background-color, font-size, text-transform",
+          "linter": "PropertySortOrder"
+        }
+      ]
+    },
+    {
       "file": "./source/scss/global/extends/_flexbox.scss",
       "errors": [
         {
@@ -185,20 +312,36 @@
           "severity": "warning",
           "reason": "Properties should be ordered height, padding-top",
           "linter": "PropertySortOrder"
-        },
-        {
-          "line": 75,
-          "column": 7,
-          "length": 18,
-          "severity": "warning",
-          "reason": "Properties should be ordered height, position, width",
-          "linter": "PropertySortOrder"
         }
       ]
     },
     {
       "file": "./source/scss/global/extends/_helpers.scss",
       "errors": [
+        {
+          "line": 14,
+          "column": 3,
+          "length": 9,
+          "severity": "warning",
+          "reason": "Properties should be ordered position, width, height, margin, padding, border, overflow, clip",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 28,
+          "column": 3,
+          "length": 10,
+          "severity": "warning",
+          "reason": "Properties should be ordered position, width, height, margin, overflow, clip",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 74,
+          "column": 3,
+          "length": 11,
+          "severity": "warning",
+          "reason": "Properties should be ordered display, content, z-index",
+          "linter": "PropertySortOrder"
+        },
         {
           "line": 74,
           "column": 12,
@@ -241,16 +384,16 @@
           "column": 3,
           "length": 20,
           "severity": "warning",
-          "reason": "Use the Compass `inline-block` mixin instead of `display: inline-block`",
-          "linter": "Compass::PropertyWithMixin"
+          "reason": "Colon after property should be followed by one space",
+          "linter": "SpaceAfterPropertyColon"
         },
         {
           "line": 16,
           "column": 3,
           "length": 20,
           "severity": "warning",
-          "reason": "Colon after property should be followed by one space",
-          "linter": "SpaceAfterPropertyColon"
+          "reason": "Use the Compass `inline-block` mixin instead of `display: inline-block`",
+          "linter": "Compass::PropertyWithMixin"
         },
         {
           "line": 17,
@@ -341,11 +484,19 @@
           "linter": "DeclarationOrder"
         },
         {
-          "line": 43,
+          "line": 44,
           "column": 5,
-          "length": 18,
+          "length": 12,
           "severity": "warning",
-          "reason": "Properties should be ordered height, position, right, text-align, top",
+          "reason": "Properties should be ordered position, top, right, height, text-align",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 72,
+          "column": 5,
+          "length": 36,
+          "severity": "warning",
+          "reason": "Properties should be ordered font-size, content",
           "linter": "PropertySortOrder"
         }
       ]
@@ -455,6 +606,14 @@
           "linter": "Compass::PropertyWithMixin"
         },
         {
+          "line": 141,
+          "column": 5,
+          "length": 23,
+          "severity": "warning",
+          "reason": "Properties should be ordered position, outline",
+          "linter": "PropertySortOrder"
+        },
+        {
           "line": 146,
           "column": 26,
           "length": 1,
@@ -483,23 +642,23 @@
           "column": 34,
           "length": 3,
           "severity": "warning",
-          "reason": "`0.0` should be written without a trailing zero as `0`",
-          "linter": "TrailingZero"
+          "reason": "`0.0` should be written without the mantissa as `0`",
+          "linter": "UnnecessaryMantissa"
         },
         {
           "line": 146,
           "column": 34,
           "length": 3,
           "severity": "warning",
-          "reason": "`0.0` should be written without the mantissa as `0`",
-          "linter": "UnnecessaryMantissa"
+          "reason": "`0.0` should be written without a trailing zero as `0`",
+          "linter": "TrailingZero"
         },
         {
           "line": 151,
           "column": 7,
           "length": 27,
           "severity": "warning",
-          "reason": "Properties should be ordered background, bottom, color, content, counter-increment, font-size, font-weight, left, padding-top, position, right, text-align, top, z-index",
+          "reason": "Properties should be ordered position, top, right, bottom, left, padding-top, background, color, font-size, font-weight, text-align, content, z-index, counter-increment",
           "linter": "PropertySortOrder"
         },
         {
@@ -507,7 +666,7 @@
           "column": 9,
           "length": 30,
           "severity": "warning",
-          "reason": "Properties should be ordered color, content, display, font-size, position, text-align, top, width, z-index",
+          "reason": "Properties should be ordered display, position, top, width, color, font-size, text-align, content, z-index",
           "linter": "PropertySortOrder"
         },
         {
@@ -519,11 +678,11 @@
           "linter": "StringQuotes"
         },
         {
-          "line": 186,
+          "line": 188,
           "column": 5,
-          "length": 18,
+          "length": 9,
           "severity": "warning",
-          "reason": "Properties should be ordered bottom, color, left, position, right, top, z-index",
+          "reason": "Properties should be ordered position, top, right, bottom, left, color, z-index",
           "linter": "PropertySortOrder"
         },
         {
@@ -575,11 +734,11 @@
           "linter": "Indentation"
         },
         {
-          "line": 254,
+          "line": 255,
           "column": 7,
-          "length": 36,
+          "length": 39,
           "severity": "warning",
-          "reason": "Properties should be ordered border-bottom-width, border-left-width, border-right-color, border-right-width, border-top-width",
+          "reason": "Properties should be ordered border-top-width, border-right-width, border-bottom-width, border-left-width, border-right-color",
           "linter": "PropertySortOrder"
         },
         {
@@ -591,11 +750,11 @@
           "linter": "Indentation"
         },
         {
-          "line": 262,
+          "line": 263,
           "column": 7,
-          "length": 36,
+          "length": 39,
           "severity": "warning",
-          "reason": "Properties should be ordered border-bottom-width, border-left-color, border-left-width, border-right-width, border-top-width",
+          "reason": "Properties should be ordered border-top-width, border-right-width, border-bottom-width, border-left-width, border-left-color",
           "linter": "PropertySortOrder"
         },
         {
@@ -611,7 +770,7 @@
           "column": 7,
           "length": 36,
           "severity": "warning",
-          "reason": "Properties should be ordered border-bottom-color, border-bottom-width, border-left-width, border-right-width, border-top-width",
+          "reason": "Properties should be ordered border-top-width, border-right-width, border-bottom-width, border-left-width, border-bottom-color",
           "linter": "PropertySortOrder"
         },
         {
@@ -627,7 +786,7 @@
           "column": 7,
           "length": 36,
           "severity": "warning",
-          "reason": "Properties should be ordered border-bottom-width, border-left-width, border-right-width, border-top-color, border-top-width",
+          "reason": "Properties should be ordered border-top-width, border-right-width, border-bottom-width, border-left-width, border-top-color",
           "linter": "PropertySortOrder"
         }
       ]
@@ -717,19 +876,6 @@
       ]
     },
     {
-      "file": "./source/scss/global/variables/_typography.scss",
-      "errors": [
-        {
-          "line": 13,
-          "column": 29,
-          "length": 17,
-          "severity": "warning",
-          "reason": "Prefer single quoted strings",
-          "linter": "StringQuotes"
-        }
-      ]
-    },
-    {
       "file": "./source/scss/layout/_extends.scss",
       "errors": [
         {
@@ -737,15 +883,23 @@
           "column": 3,
           "length": 18,
           "severity": "warning",
-          "reason": "Properties should be ordered clear, display, margin, position, z-index",
+          "reason": "Properties should be ordered display, position, margin, clear, z-index",
           "linter": "PropertySortOrder"
         },
         {
-          "line": 36,
+          "line": 26,
+          "column": 3,
+          "length": 7,
+          "severity": "warning",
+          "reason": "Properties should be ordered top, left",
+          "linter": "PropertySortOrder"
+        },
+        {
+          "line": 31,
           "column": 3,
           "length": 8,
           "severity": "warning",
-          "reason": "Properties should be ordered bottom, right",
+          "reason": "Properties should be ordered top, right",
           "linter": "PropertySortOrder"
         },
         {
@@ -762,12 +916,25 @@
       "file": "./source/scss/layout/_layout.scss",
       "errors": [
         {
-          "line": 134,
+          "line": 133,
           "column": 1,
           "length": 1,
           "severity": "warning",
-          "reason": "Merge rule `.grid-item--4-of-4` with rule on line 105",
+          "reason": "Merge rule `.grid-item--4-of-4` with rule on line 104",
           "linter": "MergeableSelector"
+        }
+      ]
+    },
+    {
+      "file": "./source/scss/patternlab/_fonts.scss",
+      "errors": [
+        {
+          "line": 11,
+          "column": 59,
+          "length": 17,
+          "severity": "warning",
+          "reason": "Properties should be ordered font-family, font-style, font-weight",
+          "linter": "PropertySortOrder"
         }
       ]
     },
@@ -775,11 +942,11 @@
       "file": "./source/scss/patternlab/_grids.scss",
       "errors": [
         {
-          "line": 10,
+          "line": 8,
           "column": 5,
-          "length": 18,
+          "length": 30,
           "severity": "warning",
-          "reason": "Properties should be ordered background, color, margin-bottom, padding, text-align",
+          "reason": "Properties should be ordered margin-bottom, padding, background, color, text-align",
           "linter": "PropertySortOrder"
         },
         {
@@ -788,6 +955,40 @@
           "length": 14,
           "severity": "warning",
           "reason": "Properties should be ordered background, color",
+          "linter": "PropertySortOrder"
+        }
+      ]
+    },
+    {
+      "file": "./source/scss/patternlab/_meta-examples.scss",
+      "errors": [
+        {
+          "line": 8,
+          "column": 3,
+          "length": 34,
+          "severity": "warning",
+          "reason": "Properties should be ordered margin, border-top, font-family, font-size, font-weight",
+          "linter": "PropertySortOrder"
+        }
+      ]
+    },
+    {
+      "file": "./source/scss/patternlab/_modular-scale.scss",
+      "errors": [
+        {
+          "line": 9,
+          "column": 9,
+          "length": 9,
+          "severity": "warning",
+          "reason": "Nesting should be no greater than 3, but was 4",
+          "linter": "NestingDepth"
+        },
+        {
+          "line": 10,
+          "column": 11,
+          "length": 22,
+          "severity": "warning",
+          "reason": "Properties should be ordered font-size, content",
           "linter": "PropertySortOrder"
         }
       ]
@@ -908,11 +1109,11 @@
           "linter": "SingleLinePerSelector"
         },
         {
-          "line": 54,
+          "line": 52,
           "column": 5,
-          "length": 18,
+          "length": 24,
           "severity": "warning",
-          "reason": "Properties should be ordered background, color, margin-bottom, padding, text-align",
+          "reason": "Properties should be ordered margin-bottom, padding, background, color, text-align",
           "linter": "PropertySortOrder"
         },
         {
@@ -948,19 +1149,19 @@
           "linter": "NestingDepth"
         },
         {
-          "line": 76,
+          "line": 75,
           "column": 5,
           "length": 16,
           "severity": "warning",
-          "reason": "Properties should be ordered background, margin-bottom, padding, text-align",
+          "reason": "Properties should be ordered margin-bottom, padding, background, text-align",
           "linter": "PropertySortOrder"
         },
         {
-          "line": 86,
+          "line": 88,
           "column": 7,
-          "length": 18,
+          "length": 7,
           "severity": "warning",
-          "reason": "Properties should be ordered background, bottom, left, position, top, width",
+          "reason": "Properties should be ordered position, top, bottom, left, width, background",
           "linter": "PropertySortOrder"
         },
         {
@@ -976,7 +1177,7 @@
           "column": 7,
           "length": 16,
           "severity": "warning",
-          "reason": "Properties should be ordered border, box-sizing, margin, overflow, padding",
+          "reason": "Properties should be ordered margin, padding, border, overflow, box-sizing",
           "linter": "PropertySortOrder"
         },
         {
@@ -1008,7 +1209,7 @@
           "column": 9,
           "length": 12,
           "severity": "warning",
-          "reason": "Properties should be ordered display, float, height, outline, width",
+          "reason": "Properties should be ordered display, width, height, float, outline",
           "linter": "PropertySortOrder"
         },
         {
@@ -1032,15 +1233,15 @@
           "column": 9,
           "length": 14,
           "severity": "warning",
-          "reason": "Properties should be ordered float, line-height, width",
+          "reason": "Properties should be ordered width, float, line-height",
           "linter": "PropertySortOrder"
         },
         {
-          "line": 125,
+          "line": 124,
           "column": 9,
-          "length": 10,
+          "length": 11,
           "severity": "warning",
-          "reason": "Properties should be ordered float, margin-right, width",
+          "reason": "Properties should be ordered width, margin-right, float",
           "linter": "PropertySortOrder"
         },
         {
@@ -1068,11 +1269,11 @@
           "linter": "Indentation"
         },
         {
-          "line": 152,
+          "line": 153,
           "column": 7,
-          "length": 18,
+          "length": 38,
           "severity": "warning",
-          "reason": "Properties should be ordered border-left, height, position",
+          "reason": "Properties should be ordered position, height, border-left",
           "linter": "PropertySortOrder"
         },
         {
@@ -1092,6 +1293,14 @@
           "linter": "NestingDepth"
         },
         {
+          "line": 156,
+          "column": 9,
+          "length": 15,
+          "severity": "warning",
+          "reason": "Properties should be ordered margin-top, font-size",
+          "linter": "PropertySortOrder"
+        },
+        {
           "line": 159,
           "column": 1,
           "length": 1,
@@ -1108,11 +1317,11 @@
           "linter": "NestingDepth"
         },
         {
-          "line": 162,
+          "line": 165,
           "column": 9,
-          "length": 14,
+          "length": 27,
           "severity": "warning",
-          "reason": "Properties should be ordered background, color, display, padding",
+          "reason": "Properties should be ordered display, padding, background, color",
           "linter": "PropertySortOrder"
         },
         {
@@ -1164,19 +1373,11 @@
           "linter": "Compass::PropertyWithMixin"
         },
         {
-          "line": 181,
+          "line": 180,
           "column": 7,
-          "length": 17,
+          "length": 40,
           "severity": "warning",
-          "reason": "Properties should be ordered border-bottom, border-right, margin-bottom, padding-right, text-align",
-          "linter": "PropertySortOrder"
-        },
-        {
-          "line": 190,
-          "column": 3,
-          "length": 16,
-          "severity": "warning",
-          "reason": "Properties should be ordered cursor, min-height",
+          "reason": "Properties should be ordered margin-bottom, padding-right, border-right, border-bottom, text-align",
           "linter": "PropertySortOrder"
         },
         {
@@ -1255,6 +1456,187 @@
           "severity": "warning",
           "reason": "Properties should be ordered line-height, text-align, white-space",
           "linter": "PropertySortOrder"
+        }
+      ]
+    },
+    {
+      "file": "./source/scss/styles.scss",
+      "errors": [
+        {
+          "line": 9,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 10,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 11,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 12,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 13,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 14,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 15,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 18,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 19,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 20,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 21,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 22,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 23,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 24,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 26,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 29,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 30,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 31,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 33,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 36,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 37,
+          "column": 1,
+          "length": 1,
+          "severity": "warning",
+          "reason": "Line should be indented 0 spaces, but was indented 2 spaces",
+          "linter": "Indentation"
+        },
+        {
+          "line": 37,
+          "column": 3,
+          "length": 7,
+          "severity": "warning",
+          "reason": "Prefer single quoted strings",
+          "linter": "StringQuotes"
         }
       ]
     }

@@ -16,6 +16,7 @@ $font--helvetica: Helvetica, Arial, sans-serif;
 
 $font-body: $font--futura;
 $font-headline: $font--volkhov;
+$font-headline: $font--futura;
 
 // Font size and line-height
 $root-typesize   : 16px;
@@ -37,9 +38,9 @@ $heading-sizes:
   ms(2)
   ms(1);
 $heading-line-heights:
-  ms(7)
-  ms(6)
-  ms(5)
-  ms(4)
-  ms(3)
-  ms(2);
+  1.5
+  1.5
+  1.5
+  1.5
+  1.5
+  1.5;

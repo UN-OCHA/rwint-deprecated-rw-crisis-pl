@@ -91,6 +91,7 @@ linters:
   PropertySortOrder:
     enabled: true
     ignore_unspecified: false
+    order: smacss
 
   PropertySpelling:
     enabled: true
