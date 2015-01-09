@@ -4,8 +4,10 @@
 .accordion-set--check {
   display: none;
   &:checked {
-    + .accordion-set--content {
-      display: block;
+    + .accordion-set--label {
+      + .accordion-set--content {
+        display: block;
+      }
     }
   }
 }

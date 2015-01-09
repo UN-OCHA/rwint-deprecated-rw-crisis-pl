@@ -36,12 +36,84 @@
   }
 }
 
-.overview-widget--tabs {
-  label {
-    @include fontsize-rem(ms(1));
-    padding: 0.5em 3px;
-    background-color: $color--gray--light;
-    text-transform: uppercase;
+// Accordion
+.accordion-set--check {
+  &:checked {
+    + .accordion-set--label {
+      &:before {
+        @include transform(rotate(90deg));
+      }
+    }
   }
 }
+
+.accordion-set--label {
+  position: relative;
+  &:before {
+    @include arrow($color--purple);
+    top: 1em;
+    left: 0.5em;
+  }
+  h2 {
+    padding-left: 1em;
+  }
+}
+
+// Tabs
+.overview-widget--tabs {
+  display: flex;
+  flex-wrap: wrap;
+  label {
+    @include fontsize-rem(ms(1));
+    padding: 3px 0.5em;
+    background-color: $color--gray--light;
+    text-transform: uppercase;
+    flex-basis: 33%;
+  }
+  .tab-set--tab:checked {
+    + label {
+      position: relative;
+      background-color: $color--purple;
+      color: $color--white;
+      &:before {
+        @include arrow($color--purple, down);
+        top: 100%;
+        left: 0.5em;
+      }
+    }
+  }
+  .tab-set--content {
+    width: 100%;
+    background-color: $color--purple--dark;
+  }
+  .tab-set--body {
+    padding: 1em 0.5em;
+    > h2 {
+      @extend %hide;
+    }
+    h3 {
+      margin-bottom: 0;
+      color: $color--purple;
+      line-height: 1;
+      text-transform: lowercase;
+      .figure {
+        color: $color--white;
+        font-weight: bold;
+      }
+      + p {
+        color: $color--white;
+      }
+    }
+  }
+}
+
+// Sources
+.overview-widget--sources {
+  margin: 1em 0;
+  color: $color--gray--lightish;
+}
+
+
+
+
 

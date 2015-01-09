@@ -5,14 +5,14 @@
   </div>
   <div class="overview-widget--description">
     <div class="accordion-set">
-      <label for="syria" class="accordion-set--label"><h2>Syria</h2></label>
       <input type="checkbox" id="syria" class="accordion-set--check" checked="checked"/>
+      <label for="syria" class="accordion-set--label"><h2>Syria</h2></label>
       <div class="accordion-set--content">
         <p>{{excerpt.long}}</p>
         <p>{{excerpt.long}}</p>
       </div>
-      <label for="iraq" class="accordion-set--label"><h2>Iraq</h2></label>
       <input type="checkbox" id="iraq" class="accordion-set--check"/>
+      <label for="iraq" class="accordion-set--label"><h2>Iraq</h2></label>
       <div class="accordion-set--content">
         <p>{{excerpt.long}}</p>
       </div>
@@ -26,19 +26,27 @@
     <div class="tab-set--content">
       <div id="tab-body-1" class="tab-set--body">
         <h2>Iraq</h2>
-        <h3>3 Million</h3>
-        <p>Refugees</p>
-        <h3>6.5 Million</h3>
-        <p>Internally Displaced</p>
+        <div class="refugees">
+          <h3><span class="figure">3</span> Million</h3>
+          <p>Refugees</p>
+        </div>
+        <div class="idp">
+          <h3><span class="figure">6.25</span> Million</h3>
+          <p>Internally Displaced</p>
+        </div>
       </div>
       <div id="tab-body-2" class="tab-set--body">
         <h2>Syria</h2>
-        <h3>4 Million</h3>
-        <p>Refugees</p>
-        <h3>7.5 Million</h3>
-        <p>Internally Displaced</p>
+        <div class="refugees">
+          <h3><span class="figure">4</span> Million</h3>
+          <p>Refugees</p>
+        </div>
+        <div class="idp">
+          <h3><span class="figure">7.5</span> Million</h3>
+          <p>Internally Displaced</p>
+        </div>
       </div>
     </div>
   </div>
-  <footer>Data Source <cite><a href="">UNHCR</a></cite></footer>
+  <footer class="overview-widget--sources">Data Source <cite><a href="">UNHCR</a></cite></footer>
 </div>
