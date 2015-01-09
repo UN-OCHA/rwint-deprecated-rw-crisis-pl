@@ -34,6 +34,9 @@
     color: $color--purple--dark;
     line-height: unitless-convert(em(34px, ms(2)));
   }
+  .accordion-set--content {
+    padding: 0 0.5em;
+  }
 }
 
 // Accordion
