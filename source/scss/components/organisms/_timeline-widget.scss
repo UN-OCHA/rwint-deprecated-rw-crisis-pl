@@ -5,11 +5,70 @@
 .frame .slidee { margin: 0; padding: 0; height: 100%; list-style: none; }
 .frame .slidee li { float: left; margin: 0; padding: 0; width: 860px; height: 100%;}
 
+.timeline-widget-wrapper {
+
+}
+
+.timeline-widget--dropdown {
+  position: absolute;
+  right: 0;
+  top: 1.5em;
+  z-index: 10;
+
+  .timeline-widget--dropdown--wrapper {
+    display: none;
+  }
+
+  .timeline-widget--dropdown--wrapper.open {
+    display: block;
+  }
+
+  .timeline-widget--dropdown-heading {
+    background: $color--blue;
+    color: $color--white;
+    float: right;
+    padding: em(10px) em(32px);
+    text-transform: uppercase;
+    width: em(220px);
+  }
+
+  .timeline-widget--dropdown-controls {
+    background: $color--blue;
+    padding: em(10px) em(32px);
+    position: relative;
+    margin-top: em(14px);
+    width: 360px;
+
+    /*&:after {
+      @include arrow($color--red, em(15px), em(15px), up);
+      content: ' ';
+      position: absolute;
+      right: em(-15px);
+      top: em(16px);
+    }*/
+  }
+  .timeline-widget--dropdown--container {
+    background: $color--gray--light;
+    height: em(325px);
+    padding: em(15px);
+    width: em(360px);
+
+    li {
+      background: $color--white;
+      margin-left: em(45px);
+      margin-bottom: em(15px);
+      padding: em(20px);
+      text-align: right;
+    }
+  }
+}
+
 // TODO: Convert all pixel calculations to em.
 .timeline-widget {
   margin: 0 auto;
   max-width: em(1175px);
   padding: 0.5em;
+  position: relative;
 
   .timeline-widget--controls {
     position: relative;
@@ -56,8 +115,18 @@
     background: $color--red;
     color: $color--white;
     font-size: ms(0);
-    padding: em(5px) em(10px);
+    margin-right: 20px;
+    padding: em(6px) em(10px);
+    position: relative;
     text-transform: uppercase;
+
+    &:after {
+      @include arrow($color--red, em(15px), em(31px), right);
+      content: ' ';
+      position: absolute;
+      right: em(-15px);
+      top: em(16px);
+    }
   }
 
   .timeline-widget-item--date {
@@ -150,15 +219,18 @@
     ul {
       margin: 0;
       padding: 0;
+      width: 100%;
 
       li {
         display: inline-block;
-        width: 33.1%;
+        float: left;
+        height: 100%;
+        width: 300px;
 
         // TODO: Turn this into a mixin.
         .timeline-widget-pager--item {
           margin: 0 auto;
-          max-width: 200px;
+          width: 200px;
 
           .timeline-widget-pager--item--ring {
             @include border-radius(40px);

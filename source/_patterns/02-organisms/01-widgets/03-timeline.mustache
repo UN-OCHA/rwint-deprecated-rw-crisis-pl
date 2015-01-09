@@ -4,7 +4,26 @@
     <div class="timeline-widget--controls">
       <button class="prev"></button>
       <button class="next"></button>
-    </div>
+    </div><!-- .timeline-widget--controls -->
+
+    <div class="timeline-widget--dropdown">
+      <div class="timeline-widget--dropdown-heading">Timeline - Calendar</div>
+      <div class="clear"></div>
+      <div class="timeline-widget--dropdown--wrapper">
+        <div class="timeline-widget--dropdown-controls">Controls <span class="close">close</span></div>
+        <div class="timeline-widget--dropdown--container">
+          <ul class="slidee">
+            {{#timeline-items}}
+              <li>
+                <div class="timeline-widget-dropdown--item" data-slide="{{ index }}">
+                    {{ short-desc }}
+                </div>
+              </li>
+            {{/timeline-items}}
+          </ul>
+        </div>
+      </div>
+    </div><!-- .timeline-widget--controls -->
 
     <div class="timeline-widget-frames frame">
       <ul class="slidee">
@@ -39,7 +58,7 @@
 
     <div class="timeline-widget-pager--handle"></div>
     <div class="timeline-widget-pager">
-      <ul class="slidee">
+      <ul class="">
        {{#timeline-items}}
           <li>
             <div class="timeline-widget-pager--item" data-slide="{{ index }}">
