@@ -1,34 +1,72 @@
+// TODO: Double check font sizes.
+// TODO: Fix this!
+//$color
+.frame { width: 100%; /*height: 160px;*/ padding: 0; }
+.frame .slidee { margin: 0; padding: 0; height: 100%; list-style: none; }
+.frame .slidee li { float: left; margin: 0; padding: 0; width: 860px; height: 100%;}
+
+// TODO: Convert all pixel calculations to em.
 .timeline-widget {
+  margin: 0 auto;
+  max-width: em(1175px);
+  padding: 0.5em;
 
-  .timeline-widget-item {
-    border-top: 8px solid $color--blue--dark;
-    padding: 40px 38px;
+  .timeline-widget--controls {
+    position: relative;
 
-    .timeline-widget-item--header {
-      border-top:1px solid $color--gray--light;
-      padding-top: 24px;
-
-      h1.timeline-widget-item--title {
-        font-family: $font--futura;
-        font-size: ms(4);
-        font-weight: bold;
-        line-height: normal;
-      }
-
-      .timeline-widget-item--headline {
-        font-size: ms(2);
-        font-weight: bold;
-        text-transform: uppercase;
-
-        span.timeline-widget-item--category {
-          color: $color--red;
-        }
-
-        span.timeline-widget-item--date {
-          color: $color--purple--dark;
-        }
-      }
+    .next,
+    .prev {
+      @include border-radius(em(50px));
+      background: $color--white;
+      border: em(1px) solid $color--gray--light;
+      height: em(50px);
+      position: absolute;
+      top: em(260px);
+      width: em(50px);
     }
+
+    .next {
+      background: url('../../images/next-chevron.svg') no-repeat center;
+      background-size: 12px 18px;
+      right: em(-102px);
+    }
+
+    .prev {
+      background: url('../../images/prev-chevron.svg') no-repeat center;
+      background-size: 12px 18px;
+      left: em(-102px);
+    }
+  }
+
+  //.timeline-widget-item {
+
+  .timeline-widget-item--header {
+    padding-top: em(24px);
+  }
+
+  .timeline-widget-item--title {
+    font-family: $font--futura;
+    font-size: ms(4);
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .timeline-widget-item--category {
+    @include inline-block;
+    background: $color--red;
+    color: $color--white;
+    font-size: ms(0);
+    padding: em(5px) em(10px);
+    text-transform: uppercase;
+  }
+
+  .timeline-widget-item--date {
+    @include inline-block;
+    color: $color--purple--dark;
+    font-size: ms(2);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 
     .timeline-widget-item--content {
 
@@ -76,5 +114,102 @@
         color: $color--gray;
       }
     }
+  //}
+
+  .timeline-widget-pager--handle {
+    background: $color--gray--light;
+    margin-top: 42px;
+    height: 4px;
+    width: 100%;
   }
+
+  .timeline-widget-pager {
+    width: 100%;
+    position: relative;
+    margin-top: -20px;
+
+    .timeline-widget-pager--current {
+      border-top: 1px solid $color--gray--light;
+      width: 200px;
+      margin: 34px auto;
+      text-align: center;
+      padding: 10px;
+      text-transform: uppercase;
+      font-size: ms(1);
+
+      .timeline-widget-pager--current--ring {
+        width: 10px;
+        height: 10px;
+        margin: -15px auto 0 auto;
+        background: white;
+        @include border-radius(10px);
+        border: 1px solid $color--gray--light;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        width: 33.1%;
+
+        // TODO: Turn this into a mixin.
+        .timeline-widget-pager--item {
+          margin: 0 auto;
+          max-width: 200px;
+
+          .timeline-widget-pager--item--ring {
+            @include border-radius(40px);
+            @include box-shadow($color--white 0 0 0 4px);
+            margin: 0 auto;
+            border: 8px solid $color--gray--light;
+            background: $color--white;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            z-index: 100;
+          }
+
+          .timeline-widget-pager--item-content {
+            border: 2px solid $color--gray--light;
+            padding: 10px;
+            margin-top: 15px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// TODO: Create Ring mixin.
+
+// TODO: Create arrow bow mixin.
+.arrow_box {
+  position: relative;
+  background: $color--white;
+  border: 2px solid $color--gray--light;
+}
+.arrow_box:after, .arrow_box:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.arrow_box:after {
+  border-bottom-color: $color--white;
+  border-width:8px;
+  margin-left: -8px;
+}
+.arrow_box:before {
+  border-bottom-color: $color--gray--light;
+  border-width: 11px;
+  margin-left: -11px;
 }

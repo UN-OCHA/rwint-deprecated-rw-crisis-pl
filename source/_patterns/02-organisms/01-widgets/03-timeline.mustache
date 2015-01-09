@@ -1,31 +1,63 @@
 <div class="timeline-widget-wrapper">
-  <ul class="timeline-widget frame">
-    <li class="timeline-widget-item">
-      <div class="timeline-widget-item--header">
-        <div class="timeline-widget-item--headline">
-          <span class="timeline-widget-item--category">Ocha</span> <span class="timeline-widget-item--date">12 December 2014</span>
-        </div>
-        <h1 class="timeline-widget-item--title">Civilian protection must be at heart of political, military and other efforts in Iraq — UN humanitarian chief</h1>
+  <div class="timeline-widget">
+
+    <div class="timeline-widget--controls">
+      <button class="prev"></button>
+      <button class="next"></button>
+    </div>
+
+    <div class="timeline-widget-frames frame">
+      <ul class="slidee">
+        {{#timeline-items}}
+          <li class="timeline-widget-item">
+            <div class="timeline-widget-item--header">
+              <div class="timeline-widget-item--headline">
+                <span class="timeline-widget-item--category">Ocha</span> <span class="timeline-widget-item--date">{{ date-full }}</span>
+              </div>
+              <h1 class="timeline-widget-item--title">{{ title }}</h1>
+            </div>
+            <div class="timeline-widget-item--content grid-container--2-3 clearfix">
+              <div class="timeline-widget-item--image grid--item">
+                <div class="timeline-widget-item--image--icons">
+                  <a class="timeline-widget-item--image--view-more"><img src="../../images/eye-img.png"></a>
+                  <a class="timeline-widget-item--image--country">{{ country }}</a>
+                </div>
+                <img src="../../images/timeline-img.png">
+              </div>
+              <div class="timeline-widget-item--description grid--item">
+                {{{long-desc}}}
+                <div class="timeline-widget-item-link">
+                  <a class="btn" href="{{ url }}">Read full report</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        {{/timeline-items}}
+      </ul>
+      <div class="clear"></div>
+    </div><!-- .timeline-widget-frames -->
+
+    <div class="timeline-widget-pager--handle"></div>
+    <div class="timeline-widget-pager">
+      <ul class="slidee">
+       {{#timeline-items}}
+          <li>
+            <div class="timeline-widget-pager--item" data-slide="{{ index }}">
+              <div class="timeline-widget-pager--item--ring"></div>
+              <div class="timeline-widget-pager--item-content arrow_box">
+                {{ short-desc }}
+              </div>
+            </div>
+          </li>
+        {{/timeline-items}}
+      </ul>
+      <div class="clear"></div>
+      <div class="timeline-widget-pager--current">
+        <div class="timeline-widget-pager--current--ring"></div>
+        2014 December
       </div>
-      <div class="timeline-widget-item--content grid-container--2-3 clearfix">
-        <div class="timeline-widget-item--image grid--item">
-          <div class="timeline-widget-item--image--icons">
-            <a class="timeline-widget-item--image--view-more"><img src="../../images/eye-img.png"></a>
-            <a class="timeline-widget-item--image--country">Iraq</a>
-          </div>
-          <img src="../../images/timeline-img.png">
-        </div>
-        <div class="timeline-widget-item--description grid--item">
-          <p>The <a href="{{ url }}">United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>
-          <div class="timeline-widget-item-link">
-            <a class="btn" href="{{ url }}">Read full report</a>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-  <div class="controls center">
-    <button class="btn prev"><i class="icon-chevron-left"></i> prev</button>
-    <button class="btn next">next <i class="icon-chevron-right"></i></button>
+    </div><!-- .timeline-widget-pager -->
+
   </div>
+
 </div>
