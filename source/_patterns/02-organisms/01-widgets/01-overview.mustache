@@ -4,11 +4,19 @@
     <img src="../../images/overview-map.jpg" alt="Overview map of Syria / Iraq Crisis" />
   </div>
   <div class="overview-widget--description">
-    <h2>Syria</h2>
-    <p>{{excerpt.long}}</p>
-    <p>{{excerpt.long}}</p>
-    <h2>Iraq</h2>
-    <p>{{excerpt.long}}</p>
+    <div class="accordion-set">
+      <label for="syria" class="accordion-set--label"><h2>Syria</h2></label>
+      <input type="checkbox" id="syria" class="accordion-set--check" checked="checked"/>
+      <div class="accordion-set--content">
+        <p>{{excerpt.long}}</p>
+        <p>{{excerpt.long}}</p>
+      </div>
+      <label for="iraq" class="accordion-set--label"><h2>Iraq</h2></label>
+      <input type="checkbox" id="iraq" class="accordion-set--check"/>
+      <div class="accordion-set--content">
+        <p>{{excerpt.long}}</p>
+      </div>
+    </div>
   </div>
   <div class="overview-widget--tabs tab-set">
     <input type="radio" name="tab" id="tab-1" class="tab-set--tab" checked="checked"/>
