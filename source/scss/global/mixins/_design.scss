@@ -11,3 +11,9 @@
     /* background-color: #{$color-val}; */
   }
 }
+
+@mixin try-fonts() {
+  @each $font-var, $font-val in $font-map {
+    /* font-family: #{$font-val}; */
+  }
+}
