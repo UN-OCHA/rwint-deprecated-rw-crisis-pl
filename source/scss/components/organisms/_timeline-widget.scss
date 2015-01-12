@@ -1,26 +1,69 @@
-// TODO: Double check font sizes.
-// TODO: Fix this!
-//$color
-.frame { width: 100%; /*height: 160px;*/ padding: 0; }
-.frame .slidee { margin: 0; padding: 0; height: 100%; list-style: none; }
-.frame .slidee li { float: left; margin: 0; padding: 0; width: 860px; height: 100%;}
 
-.timeline-widget-wrapper {
+// Responsive styles.
+@media screen and (max-width: 1360px) {
 
+  .timeline-widget-frames-wrapper {
+    margin: 0 em(60px);
+  }
+
+  .timeline-widget--controls {
+
+    .next {
+      right: 0 !important;
+    }
+
+    .prev {
+      left: 0 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .timeline-widget--dropdown {
+    position: static !important;
+    right: auto;
+    top: auto;
+
+    .timeline-widget--dropdown-heading {
+      width: 100% !important;
+    }
+
+    .timeline-widget--dropdown--wrapper {
+      height: 100% !important;
+      position: absolute;
+      width: 100% !important;
+      z-index: 100;
+    }
+  }
+
+  .timeline-widget-item--description {
+    padding-top: em(10px) !important;
+
+  }
+
+  .timeline-widget-pager {
+    max-height: em(20px);
+  }
+
+  .timeline-widget-pager--item-content {
+    display: none;
+  }
 }
 
 .timeline-widget--dropdown {
   position: absolute;
-  right: 0;
+  right: 0.5em;
   top: 1.5em;
   z-index: 10;
 
   .timeline-widget--dropdown--wrapper {
     display: none;
-  }
+    width: em(360px);
 
-  .timeline-widget--dropdown--wrapper.open {
-    display: block;
+    &.open {
+      display: block;
+    }
   }
 
   .timeline-widget--dropdown-heading {
@@ -28,47 +71,78 @@
     color: $color--white;
     float: right;
     padding: em(10px) em(32px);
+    text-align: center;
     text-transform: uppercase;
-    width: em(220px);
+    width: em(240px);
+
+    span {
+      color: $color--blue--dark;
+    }
   }
 
   .timeline-widget--dropdown-controls {
     background: $color--blue;
+    height: em(55px);
+    margin-top: em(14px);
     padding: em(10px) em(32px);
     position: relative;
-    margin-top: em(14px);
-    width: 360px;
 
-    /*&:after {
-      @include arrow($color--red, em(15px), em(15px), up);
-      content: ' ';
-      position: absolute;
-      right: em(-15px);
-      top: em(16px);
-    }*/
+    .form-select {
+      @include inline-block;
+    }
   }
   .timeline-widget--dropdown--container {
-    background: $color--gray--light;
+    background: url('../../images/dropdown-bk-img.png');
     height: em(325px);
-    padding: em(15px);
-    width: em(360px);
+    padding: 0 em(15px) 0 em(30px);
+
+    ul {
+      border-left: em(4px) solid $color--blue;
+      padding: em(14px) 0;
+    }
 
     li {
-      background: $color--white;
-      margin-left: em(45px);
-      margin-bottom: em(15px);
+      @include arrow-box(em(10px), $color--white, em(1px), $color--gray--light, left);
+      margin-bottom: em(14px);
+      margin-left: em(22px);
       padding: em(20px);
+      position: relative;
       text-align: right;
+    }
+
+    .timeline-widget--dot {
+      left: em(-33px);
+      position: absolute;
+      top: em(34px);
     }
   }
 }
 
-// TODO: Convert all pixel calculations to em.
+
+.timeline-widget-frames {
+  width: 100%;
+
+  ul {
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .timeline-widget-item {
+    float: left;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .timeline-widget {
   margin: 0 auto;
   max-width: em(1175px);
   padding: 0.5em;
   position: relative;
+
 
   .timeline-widget--controls {
     position: relative;
@@ -82,6 +156,7 @@
       position: absolute;
       top: em(260px);
       width: em(50px);
+      z-index: 10;
     }
 
     .next {
@@ -96,8 +171,6 @@
       left: em(-102px);
     }
   }
-
-  //.timeline-widget-item {
 
   .timeline-widget-item--header {
     padding-top: em(24px);
@@ -137,84 +210,73 @@
     text-transform: uppercase;
   }
 
-    .timeline-widget-item--content {
-
-      a {
-        font-weight: bold;
-        text-transform: none;
-
-        &.btn {
-          font-family: $font--futura;
-          font-size: ms(0);
-          font-weight: normal;
-          background: $color--purple--dark;
-          text-decoration: none;
-        }
-      }
-
-      .timeline-widget-item--image {
-        position: relative;
-
-        .timeline-widget-item--image--icons {
-          position: absolute;
-          top:0;
-          left: 0;
-          font-size: ms(0);
-
-          a {
-            color: $color--white;
-            border: none;
-            text-transform: uppercase;
-
-            &.timeline-widget-item--image--view-more {
-              background: $color--red;
-            }
-
-            &.timeline-widget-item--image--country {
-              background: $color--blue--dark;
-              padding: 0px 3px;
-            }
+  .timeline-widget-item--content {
+    @media screen and (min-width: 700px) {
+      @include layout($grid--2-3) {
+        .grid--item {
+          &:nth-of-type(2n+1) {
+            @include grid-span(1, 1);
+            clear: both;
+          }
+          &:nth-of-type(2n+2) {
+            @include grid-span(1, 2);
           }
         }
       }
+    }
 
-      .timeline-widget-item--description {
-        padding-top: 64px;
-        color: $color--gray;
+    a {
+      font-weight: bold;
+      text-transform: none;
+
+      &.btn {
+        background: $color--purple--dark;
+        font-family: $font--futura;
+        font-size: ms(0);
+        font-weight: normal;
+        text-decoration: none;
+        width: 100%;
       }
     }
-  //}
 
-  .timeline-widget-pager--handle {
-    background: $color--gray--light;
-    margin-top: 42px;
-    height: 4px;
-    width: 100%;
+    .timeline-widget-item--image {
+      position: relative;
+
+      .timeline-widget-item--image--icons {
+        font-size: ms(0);
+        left: 0;
+        position: absolute;
+        top: 0;
+
+        a {
+          border: none;
+          color: $color--white;
+          text-transform: uppercase;
+
+          &.timeline-widget-item--image--view-more {
+            background: $color--red;
+          }
+
+          &.timeline-widget-item--image--country {
+            background: $color--blue--dark;
+            padding: 0 em(3px);
+          }
+        }
+      }
+    }
+
+    .timeline-widget-item--description {
+      color: $color--gray;
+      padding-top: em(64px);
+    }
   }
 
   .timeline-widget-pager {
-    width: 100%;
+    background: url('../../images/pager-bk-img.png') repeat-x $color--blue--light;
+    height: em(120px);
+    margin-top: em(40px);
     position: relative;
-    margin-top: -20px;
-
-    .timeline-widget-pager--current {
-      border-top: 1px solid $color--gray--light;
-      width: 200px;
-      margin: 34px auto;
-      text-align: center;
-      padding: 10px;
-      text-transform: uppercase;
-      font-size: ms(1);
-
-      .timeline-widget-pager--current--ring {
-        width: 10px;
-        height: 10px;
-        margin: -15px auto 0 auto;
-        background: white;
-        @include border-radius(10px);
-        border: 1px solid $color--gray--light;
-      }
-    }
+    width: 100%;
 
     ul {
       margin: 0;
@@ -222,66 +284,169 @@
       width: 100%;
 
       li {
-        display: inline-block;
+        display: inline;
         float: left;
         height: 100%;
-        width: 300px;
 
-        // TODO: Turn this into a mixin.
         .timeline-widget-pager--item {
           margin: 0 auto;
-          width: 200px;
-
-          .timeline-widget-pager--item--ring {
-            @include border-radius(40px);
-            @include box-shadow($color--white 0 0 0 4px);
-            margin: 0 auto;
-            border: 8px solid $color--gray--light;
-            background: $color--white;
-            width: 40px;
-            height: 40px;
-            position: relative;
-            z-index: 100;
-          }
+          max-width: em(200px);
 
           .timeline-widget-pager--item-content {
-            border: 2px solid $color--gray--light;
-            padding: 10px;
-            margin-top: 15px;
+            @include arrow-box(em(10px), $color--white, em(1px), $color--gray--light, up);
+            border: em(1px) solid $color--gray--light;
+            margin-top: em(15px);
+            padding: em(10px);
             text-align: center;
           }
         }
       }
     }
   }
+
+  .timeline-widget-pager--current {
+    background: $color--blue--light;
+    border-top: em(1px) solid $color--white;
+    font-size: ms(0);
+    margin: auto;
+    padding: em(10px);
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
 }
 
-// TODO: Create Ring mixin.
+.timeline-widget--dot {
+  @include border-radius(16px);
+  background: $color--blue;
+  border: em(4px) solid $color--blue--light;
+  height: em(16px);
+  margin: 0 auto;
+  width: em(16px);
+}
 
-// TODO: Create arrow bow mixin.
-.arrow_box {
+/*======================================================================
+  Selectric
+======================================================================*/
+.selectricWrapper {
+  cursor: pointer;
   position: relative;
-  background: $color--white;
-  border: 2px solid $color--gray--light;
-}
-.arrow_box:after, .arrow_box:before {
-  bottom: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
 }
 
-.arrow_box:after {
-  border-bottom-color: $color--white;
-  border-width:8px;
-  margin-left: -8px;
+.selectric {
+  @include border-radius(em(2px));
+  background: $color--blue--dark;
+  color: $color--white;
+  position: relative;
+
+  .label {
+    color: $color--white;
+    display: block;
+    font-size: ms(0);
+    margin-right: em(14px);
+    overflow: hidden;
+    padding: em(6px) em(12px);
+    white-space: nowrap;
+  }
+
+  .button {
+    background: url('../../images/blue-chevron-select.svg') no-repeat center;
+    background-size: em(10px) em(8px);
+    color: $color--blue--dark;
+    display: block;
+    height: em(8px);
+    position: absolute;
+    right: em(10px);
+    text-align: center;
+    top: 40%;
+    width: em(10px);
+  }
 }
-.arrow_box:before {
-  border-bottom-color: $color--gray--light;
-  border-width: 11px;
-  margin-left: -11px;
+
+.selectricOpen {
+  z-index: 9999;
+
+  .selectric {
+    background: $color--blue--dark;
+  }
+
+  .selectricItems {
+    display: block;
+  }
+}
+
+.selectricHideSelect {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  width: 0;
+
+  select {
+    display: none;
+    left: -100%;
+    position: absolute;
+  }
+}
+
+.selectricInput {
+  background: none !important;
+  border: none !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  left: 0 !important;
+  margin: 0 !important;
+  outline: none !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 1px !important;
+}
+
+.selectricTempShow {
+  display: block !important;
+  position: absolute !important;
+  visibility: hidden !important;
+}
+
+.selectricItems {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: $color--blue--dark;
+  z-index: -1;
+
+  ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: block;
+    padding: 5px;
+    color: $color--white;
+    cursor: pointer;
+
+    .selected {
+      background: $color--blue;
+      color: $color--blue--dark;
+    }
+
+    :hover {
+      background: $color--white;
+      color: $color--blue--dark;
+    }
+  }
+
+  .selectricScroll {
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+.selectricAbove .selectricItems {
+  top: auto;
+  bottom: 100%;
 }

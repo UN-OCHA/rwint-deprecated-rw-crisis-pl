@@ -7,14 +7,34 @@
     </div><!-- .timeline-widget--controls -->
 
     <div class="timeline-widget--dropdown">
-      <div class="timeline-widget--dropdown-heading">Timeline - Calendar</div>
+      <div class="timeline-widget--dropdown-heading">
+        <span class="icon-product_type_report"></span> Timeline - Calendar</div>
       <div class="clear"></div>
       <div class="timeline-widget--dropdown--wrapper">
-        <div class="timeline-widget--dropdown-controls">Controls <span class="close">close</span></div>
+        <div class="timeline-widget--dropdown-controls">
+          <div class="form-select">
+            <select name="" id="">
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+            </select>
+          </div>
+          <div class="form-select">
+            <select name="" id="">
+              <option value="dec">December</option>
+              <option value="dec">January</option>
+              <option value="dec">February</option>
+              <option value="dec">March</option>
+              <option value="dec">April</option>
+            </select>
+          </div>
+          <span class="close"></span>
+        </div>
         <div class="timeline-widget--dropdown--container">
           <ul class="slidee">
             {{#timeline-items}}
               <li>
+                <div class="timeline-widget--dot"></div>
                 <div class="timeline-widget-dropdown--item" data-slide="{{ index }}">
                     {{ short-desc }}
                 </div>
@@ -25,7 +45,8 @@
       </div>
     </div><!-- .timeline-widget--controls -->
 
-    <div class="timeline-widget-frames frame">
+    <div class="timeline-widget-frames-wrapper">
+    <div class="timeline-widget-frames">
       <ul class="slidee">
         {{#timeline-items}}
           <li class="timeline-widget-item">
@@ -35,7 +56,7 @@
               </div>
               <h1 class="timeline-widget-item--title">{{ title }}</h1>
             </div>
-            <div class="timeline-widget-item--content grid-container--2-3 clearfix">
+            <div class="timeline-widget-item--content clearfix">
               <div class="timeline-widget-item--image grid--item">
                 <div class="timeline-widget-item--image--icons">
                   <a class="timeline-widget-item--image--view-more"><img src="../../images/eye-img.png"></a>
@@ -46,7 +67,7 @@
               <div class="timeline-widget-item--description grid--item">
                 {{{long-desc}}}
                 <div class="timeline-widget-item-link">
-                  <a class="btn" href="{{ url }}">Read full report</a>
+                  <a class="btn" href="{{ url }}"><span class="icon-product_type_report"></span> Read full report</a>
                 </div>
               </div>
             </div>
@@ -55,15 +76,15 @@
       </ul>
       <div class="clear"></div>
     </div><!-- .timeline-widget-frames -->
+    </div>
 
-    <div class="timeline-widget-pager--handle"></div>
     <div class="timeline-widget-pager">
       <ul class="">
        {{#timeline-items}}
           <li>
             <div class="timeline-widget-pager--item" data-slide="{{ index }}">
-              <div class="timeline-widget-pager--item--ring"></div>
-              <div class="timeline-widget-pager--item-content arrow_box">
+              <div class="timeline-widget--dot"></div>
+              <div class="timeline-widget-pager--item-content">
                 {{ short-desc }}
               </div>
             </div>
@@ -71,11 +92,10 @@
         {{/timeline-items}}
       </ul>
       <div class="clear"></div>
-      <div class="timeline-widget-pager--current">
-        <div class="timeline-widget-pager--current--ring"></div>
-        2014 December
-      </div>
     </div><!-- .timeline-widget-pager -->
+    <div class="timeline-widget-pager--current">
+      2014 December
+    </div>
 
   </div>
 

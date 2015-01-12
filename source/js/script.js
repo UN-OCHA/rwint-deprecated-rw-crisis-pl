@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  $('select').selectric();
+
   var $frame = $('.timeline-widget-frames');
   var $item = $('.timeline-widget-item');
   var $pager = $('.timeline-widget-pager');
@@ -12,12 +14,15 @@ $(document).ready(function() {
   var $width = $initialWidth;
   $item.width($initialWidth);
   $item.css({ marginRight : $margin});
+  $('.timeline-widget-pager li').width(Math.floor($initialWidth/3));
 
   // Control resizing.
   $(window).resize(function(e) {
     $width = $frame.width();
     $item.width($width);
     $sly.reload();
+    $('.timeline-widget-pager li').width(Math.floor($width/3));
+    $slyPager.reload();
   });
 
   // Main slider.
@@ -39,8 +44,8 @@ $(document).ready(function() {
     clickBar: 1,
 
     // Buttons
-    prev: $wrap.find('.prev'),
-    next: $wrap.find('.next')
+    prev: $('.prev'),
+    next: $('.next')
   }).init();
 
   // Pager.
