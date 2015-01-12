@@ -1,19 +1,47 @@
 // Breakpoints
+$bp--overview-2col: 600px;
 
-//.overview-widget {
-//  margin: 0 0.5em;
-//}
+.overview-widget {
+  @include breakpoint($bp--overview-2col) {
+    @include layout($grid--golden-left) {
+      .overview-widget--description {
+        @include grid-span(1, 1);
+        clear: left;
+      }
+      .overview-widget--map {
+        @include grid-span(1, 2);
+      }
+      .overview-widget--tabs {
+        @include grid-span(1, 2);
+        clear: right;
+      }
+      .overview-widget--sources {
+        @include grid-span(1, 2);
+        clear: right;
+      }
+    }
+  }
+}
 
 .overview-widget--title {
   @include fontsize-rem(ms(0));
+  position: relative;
   margin: 0;
-  padding: 0.75em 0.5em;
+  padding: 0.75em 0.5em 0.75em 3em;
   background-color: $color--purple;
   color: $color--white;
   font-weight: bold;
   line-height: 1.2;
   text-transform: uppercase;
   //  @include try-colors();
+  .un-icon-crisis_conflict {
+    @include transform(translateY(-50%));
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    color: $color--purple--dark;
+    font-size: 2.25em;
+  }
 }
 
 .overview-widget--map {
@@ -35,17 +63,20 @@
     background-color: $color--gray--light;
     color: $color--purple--dark;
     line-height: unitless-convert(em(34px, ms(2)));
+    @include breakpoint($bp--overview-2col) {
+      border-top: none;
+      background-color: transparent;
+    }
   }
   .accordion-set--content {
-    padding: 0 0.5em;
     @include column-gap(2em);
+    padding: 0 0.5em;
     @include eq('cols2') {
       @include columns(2);
       padding-bottom: $base-line-em;
     }
-    @include eq('cols3') {
-      @include columns(3);
-      padding-bottom: $base-line-em;
+    @include breakpoint($bp--overview-2col) {
+      display: block;
     }
   }
 }
@@ -54,7 +85,6 @@
 .accordion-set--check {
   &:checked {
     + .accordion-set--label {
-
       &:before {
         @include transform(rotate(90deg));
       }
@@ -68,20 +98,32 @@
     @include arrow($color--purple);
     top: 1em;
     left: 0.5em;
+    @include breakpoint($bp--overview-2col) {
+      display: none;
+    }
   }
   h2 {
     padding-left: 1em;
+    @include breakpoint($bp--overview-2col) {
+      padding-left: 0.5rem;
+    }
   }
 }
 
 // Tabs
 .overview-widget--tabs {
   display: flex;
+  margin-top: $base-line-em;
   flex-wrap: wrap;
+  @include breakpoint($bp--overview-2col) {
+    margin-top: 0;
+    background-color: $color--gray--light;
+  }
   label {
     @include fontsize-rem(ms(1));
     padding: 3px 0.5em;
     background-color: $color--gray--light;
+    font-family: $font--futura;
     text-transform: uppercase;
     flex-basis: 33%;
   }
@@ -98,6 +140,7 @@
     }
   }
   .tab-set--content {
+    position: relative;
     width: 100%;
     background-color: $color--purple--dark;
   }
@@ -119,6 +162,14 @@
         color: $color--white;
       }
     }
+  }
+  .un-icon-crisis_population_displacement {
+    @include opacity(0.1);
+    position: absolute;
+    width: 100%;
+    color: $color--white;
+    font-size: 10em;
+    text-align: center;
   }
 }
 
