@@ -1,3 +1,5 @@
+// Breakpoints
+
 //.overview-widget {
 //  margin: 0 0.5em;
 //}
@@ -36,6 +38,15 @@
   }
   .accordion-set--content {
     padding: 0 0.5em;
+    @include column-gap(2em);
+    @include eq('cols2') {
+      @include columns(2);
+      padding-bottom: $base-line-em;
+    }
+    @include eq('cols3') {
+      @include columns(3);
+      padding-bottom: $base-line-em;
+    }
   }
 }
 
@@ -43,6 +54,7 @@
 .accordion-set--check {
   &:checked {
     + .accordion-set--label {
+
       &:before {
         @include transform(rotate(90deg));
       }

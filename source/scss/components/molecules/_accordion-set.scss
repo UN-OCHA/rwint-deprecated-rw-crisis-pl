@@ -6,6 +6,7 @@
   &:checked {
     + .accordion-set--label {
       + .accordion-set--content {
+        /* @todo: this isn't working in Safari */
         display: block;
       }
     }
