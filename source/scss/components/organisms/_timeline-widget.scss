@@ -39,7 +39,6 @@
 
   .timeline-widget-item--description {
     padding-top: em(10px) !important;
-
   }
 
   .timeline-widget-pager {
@@ -228,39 +227,39 @@
     a {
       font-weight: bold;
       text-transform: none;
+    }
 
-      &.btn {
-        background: $color--purple--dark;
-        font-family: $font--futura;
-        font-size: ms(0);
-        font-weight: normal;
-        text-decoration: none;
-        width: 100%;
-      }
+    .btn {
+      background: $color--purple--dark;
+      font-family: $font--futura;
+      font-size: ms(0);
+      font-weight: normal;
+      text-decoration: none;
+      width: 100%;
     }
 
     .timeline-widget-item--image {
       position: relative;
+    }
 
-      .timeline-widget-item--image--icons {
-        font-size: ms(0);
-        left: 0;
-        position: absolute;
-        top: 0;
+    .timeline-widget-item--image--icons {
+      font-size: ms(0);
+      left: 0;
+      position: absolute;
+      top: 0;
 
-        a {
-          border: none;
-          color: $color--white;
-          text-transform: uppercase;
+      a {
+        border: none;
+        color: $color--white;
+        text-transform: uppercase;
 
-          &.timeline-widget-item--image--view-more {
-            background: $color--red;
-          }
+        &.timeline-widget-item--image--view-more {
+          background: $color--red;
+        }
 
-          &.timeline-widget-item--image--country {
-            background: $color--blue--dark;
-            padding: 0 em(3px);
-          }
+        &.timeline-widget-item--image--country {
+          background: $color--blue--dark;
+          padding: 0 em(3px);
         }
       }
     }
@@ -325,9 +324,7 @@
   width: em(16px);
 }
 
-/*======================================================================
-  Selectric
-======================================================================*/
+// TODO: Move this into forms.
 .selectricWrapper {
   cursor: pointer;
   position: relative;
@@ -410,31 +407,32 @@
 }
 
 .selectricItems {
+  background: $color--blue--dark;
   display: none;
+  left: 0;
   position: absolute;
   top: 100%;
-  left: 0;
-  background: $color--blue--dark;
   z-index: -1;
 
-  ul, li {
+  ul,
+  li {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   li {
-    display: block;
-    padding: 5px;
     color: $color--white;
     cursor: pointer;
+    display: block;
+    padding: 5px;
 
-    .selected {
+    &.selected {
       background: $color--blue;
       color: $color--blue--dark;
     }
 
-    :hover {
+    &:hover {
       background: $color--white;
       color: $color--blue--dark;
     }
@@ -447,6 +445,6 @@
 }
 
 .selectricAbove .selectricItems {
-  top: auto;
   bottom: 100%;
+  top: auto;
 }

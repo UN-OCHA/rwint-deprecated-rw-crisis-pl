@@ -46,37 +46,37 @@
     </div><!-- .timeline-widget--controls -->
 
     <div class="timeline-widget-frames-wrapper">
-    <div class="timeline-widget-frames">
-      <ul class="slidee">
-        {{#timeline-items}}
-          <li class="timeline-widget-item">
-            <div class="timeline-widget-item--header">
-              <div class="timeline-widget-item--headline">
-                <span class="timeline-widget-item--category">Ocha</span> <span class="timeline-widget-item--date">{{ date-full }}</span>
-              </div>
-              <h1 class="timeline-widget-item--title">{{ title }}</h1>
-            </div>
-            <div class="timeline-widget-item--content clearfix">
-              <div class="timeline-widget-item--image grid--item">
-                <div class="timeline-widget-item--image--icons">
-                  <a class="timeline-widget-item--image--view-more"><img src="../../images/eye-img.png"></a>
-                  <a class="timeline-widget-item--image--country">{{ country }}</a>
+      <div class="timeline-widget-frames">
+        <ul class="slidee">
+          {{#timeline-items}}
+            <li class="timeline-widget-item">
+              <div class="timeline-widget-item--header">
+                <div class="timeline-widget-item--headline">
+                  <span class="timeline-widget-item--category">Ocha</span> <span class="timeline-widget-item--date">{{ date-full }}</span>
                 </div>
-                <img src="../../images/timeline-img.png">
+                <h1 class="timeline-widget-item--title">{{ title }}</h1>
               </div>
-              <div class="timeline-widget-item--description grid--item">
-                {{{long-desc}}}
-                <div class="timeline-widget-item-link">
-                  <a class="btn" href="{{ url }}"><span class="icon-product_type_report"></span> Read full report</a>
+              <div class="timeline-widget-item--content clearfix">
+                <div class="timeline-widget-item--image grid--item">
+                  <div class="timeline-widget-item--image--icons">
+                    <a class="timeline-widget-item--image--view-more"><img src="../../images/eye-img.png"></a>
+                    <a class="timeline-widget-item--image--country">{{ country }}</a>
+                  </div>
+                  <img src="../../images/timeline-img.png">
+                </div>
+                <div class="timeline-widget-item--description grid--item">
+                  {{{long-desc}}}
+                  <div class="timeline-widget-item-link">
+                    <a class="btn" href="{{ url }}"><span class="icon-product_type_report"></span> Read full report</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-        {{/timeline-items}}
-      </ul>
-      <div class="clear"></div>
-    </div><!-- .timeline-widget-frames -->
-    </div>
+            </li>
+          {{/timeline-items}}
+        </ul>
+        <div class="clear"></div>
+      </div><!-- .timeline-widget-frames -->
+    </div><!-- .timeline-widget-frames-wrapper -->
 
     <div class="timeline-widget-pager">
       <ul class="">
