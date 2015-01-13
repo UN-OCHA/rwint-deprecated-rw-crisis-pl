@@ -1,36 +1,36 @@
 {
   "pl_colors": [
     {
-      "name": "$color--blue--dark",
-      "value": "#0a5d82"
-    },
-    {
-      "name": "$color--blue",
-      "value": "#1989ba"
-    },
-    {
-      "name": "$color--blue--bright",
-      "value": "#459df0"
-    },
-    {
-      "name": "$color--blue--light",
-      "value": "#eaf5f7"
-    },
-    {
-      "name": "$color--teal",
-      "value": "#9ec4c8"
-    },
-    {
       "name": "$color--purple",
       "value": "#b393e1"
     },
     {
       "name": "$color--purple--dark",
-      "value": "#6b5887"
+      "value": "#6e5695"
+    },
+    {
+      "name": "$color--blue",
+      "value": "#6c9acd"
+    },
+    {
+      "name": "$color--blue--dark",
+      "value": "#375573"
+    },
+    {
+      "name": "$color--yellow",
+      "value": "#f5c655"
+    },
+    {
+      "name": "$color--yellow--dark",
+      "value": "#957128"
     },
     {
       "name": "$color--red",
       "value": "#ed5759"
+    },
+    {
+      "name": "$color--red--dark",
+      "value": "#92333b"
     },
     {
       "name": "$color--white",
