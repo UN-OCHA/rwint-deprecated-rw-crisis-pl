@@ -1,0 +1,17 @@
+.accordion-set--content {
+  display: none;
+}
+.accordion-set--check {
+  display: none;
+  &:checked {
+    + .accordion-set--label {
+      + .accordion-set--content {
+        /* @todo: this isn't working in Safari */
+        display: block;
+      }
+    }
+  }
+}
+.accordion-set--label {
+  display: block;
+}

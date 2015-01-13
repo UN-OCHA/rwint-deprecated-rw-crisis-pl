@@ -10,7 +10,6 @@
   @extend %link-unset-underline-extend;
   @include link-colors($normal: white, $hover: white, $active: white, $visited: white, $focus: white);
   @include antialiased;
-  @include trade-gothic-bold-condensed;
   font-size: 15px;
   text-align: center;
   padding: 0 20px;

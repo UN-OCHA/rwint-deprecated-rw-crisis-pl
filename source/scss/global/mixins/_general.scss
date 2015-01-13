@@ -3,33 +3,6 @@
    ========================================================================== */
 
 
-/* Mixin - Retina Images
-   ========================================================================== */
-/*
- * @params
- *  $image
- *  $width
- *  $height
- *
- * Usage:
- * @include image-2x('logo2x.png', 100px, 25px);
- *
- * Note:
- * Retina images should follow naming convention of 'image@2x.png'
- */
-
-@mixin image-2x($image, $width, $height) {
-  @media (min--moz-device-pixel-ratio: 1.3),
-  (-o-min-device-pixel-ratio: 2.6/2),
-  (-webkit-min-device-pixel-ratio: 1.3),
-  (min-device-pixel-ratio: 1.3),
-  (min-resolution: 1.3dppx) {
-    // on retina, use image that's scaled by 2
-    background-image: image-url($image);
-    background-size: $width $height;
-  }
-}
-
 /* Mixin - Antialiased
    ========================================================================== */
 
@@ -38,251 +11,50 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Mixins - Fonts
-   ========================================================================== */
 
-//@mixin trade-gothic() {
-//  font-family: 'TradeGothicLTStdRegular';
-//}
-
-//@mixin trade-gothic-bold() {
-//  font-family: 'TradeGothicLTStdBold';
-//}
-
-@mixin trade-gothic-bold-condensed() {
-  font-family: 'TradeGothicLTStdBoldCondensedNo.20';
-}
-
-@mixin tstar-mono-round() {
-  font-family: 'tstar_mono_roundregular';
-}
-
-//@mixin tstar-mono-round-light() {
-//  font-family: 'tstar_mono_roundlight';
-//}
-
-//@mixin tstar-mono-round-bold() {
-//  font-family: 'tstar_mono_roundbold';
-//}
-
-/* Mixin - Keyframes
-   ========================================================================== */
-/*
- * @params
- *  $name
- */
-
-@mixin keyframes($name) {
-  @-webkit-keyframes #{$name} {
-    @content;
-  }
-  @-moz-keyframes #{$name} {
-    @content;
-  }
-  @-ms-keyframes #{$name} {
-    @content;
-  }
-  @keyframes #{$name} {
-    @content;
-  }
-}
-
-/* Mixin - Animation
-   ========================================================================== */
-/*
- * @params
- *  $animation
- */
-
-@mixin animation($animation) {
-  -webkit-animation: #{$animation};
-  -moz-animation: #{$animation};
-  -ms-animation: #{$animation};
-  animation: #{$animation};
-}
-
-/* Mixin - Transform
-   ========================================================================== */
-/*
- * @params
- *  $transform
- */
-
-@mixin transform($transform) {
-  -webkit-transform: $transform;
-  -moz-transform: $transform;
-  -ms-transform: $transform;
-  transform: $transform;
-}
-
-@include keyframes(bounce) {
-  0%, 20%, 50%, 80%, 100% {
-    @include transform(translateY(0));
-  }
-  40% {
-    @include transform(translateY(-20px));
-  }
-  60% {
-    @include transform(translateY(-10px));
-  }
-}
-
-/* Mixin - Grid Debugger
-   ========================================================================== */
-/*
- * @params
- *  $show-classes
- */
-
-@mixin grid-debugger($show-classes: false) {
-  // debugger
-  counter-reset: grid-item;
-  >* {
-    outline: dotted 1px red;
-    position: relative;
-    &:hover {
-      &:before,
-      &:after {
-        background: hsla(0,0%,0%,0.0);
-        font-size: 1px;
-      }
-    }
-    &:before {
-      content: counter(grid-item);
-      counter-increment: grid-item;
-      color: white;
-      font-size: 40px;
-      font-weight: bold;
-      text-align: center;
-      z-index: 1;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: hsla(0, 0%, 0%, 0.5);
-      padding-top: 15px;
-    }
-    @if $show-classes == true {
-
-      &:after {
-        content: "class: " attr(class);
-        position: absolute;
-        top: 70px;
-        font-size: 18px;
-        color: white;
-        text-align: center;
-        z-index: 2;
-        display: block;
-        width: 100%;
-      }
-    }
-
-  }
-}
-
-.adjust-grid {
-  &__item {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    color: white;
-  }
-  &__menu {
-    >li {
-      cursor: pointer;
-      &:active {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-/* Mixin - Vertical Align Base
-   ========================================================================== */
-/*
- * http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
- */
-
-@mixin vertically-center($horizontally-center: false, $absolute-positioning: false) {
-  .csstransforms & {
-    top: 50%;
-    @include transform-style(preserve-3d);
-    
-    @if($absolute-positioning) {
-      position: absolute;
-    } @else {
-      position: relative;
-    }
-    
-    @if($horizontally-center) {
-      left: 50%;
-      @include transform(translateX(-50%) translateY(-50%));
-    } @else {
-      @include transform(translateY(-50%));
-    }
-  }
-  .no-csstransforms & {//@todo IE8 support
-    
-  }
-}
 
 /* Mixin - Arrow
    ========================================================================== */
 /*
  * @params
  *  $color
- *  $width
- *  $height
  *  $direction
+ *  $arrow-length
+ *  $arrow-breadth
  */
-
-@mixin arrow(
-  $color: black,
-  $width: 10px,
-  $height: 10px,
-  $direction: down
-) {
-    margin-top: (-0.5 * $height);
-    border-style: solid;
-    border-color: transparent;
-
-    @if $direction == left {
-      border-top-width: round($height / 2);
-      border-bottom-width: round($height / 2);
-      border-left-width: 0;
-      border-right-width: $width;
-
-      border-right-color: $color;
+@mixin arrow($color: black, $direction: right, $arrow-length: 0.66em, $arrow-breadth: $arrow-length * 1.515151515) {
+  $arrow-breadth-half: $arrow-breadth / 2;
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  color: transparent;
+  content: '.';
+  @if $direction == right {
+    border: {
+      width: $arrow-breadth-half 0 $arrow-breadth-half $arrow-length;
+      color: transparent transparent transparent $color;
     }
-    @else if $direction == right {
-      border-top-width: round($height / 2);
-      border-bottom-width: round($height / 2);
-      border-right-width: 0;
-      border-left-width: $width;
-
-      border-left-color: $color;
+  }
+  @else if $direction == left {
+    border: {
+      width: $arrow-breadth-half $arrow-length $arrow-breadth-half 0;
+      color: transparent $color transparent transparent;
     }
-    @else if $direction == up {
-      border-left-width: round($width / 2);
-      border-right-width: round($width / 2);
-      border-top-width: 0;
-      border-bottom-width: $height;
-
-      border-bottom-color: $color;
+  }
+  @else if $direction == up {
+    border: {
+      width: 0 $arrow-breadth-half $arrow-length $arrow-breadth-half;
+      color: transparent transparent $color transparent;
     }
-    @else {// $direction == down
-      border-left-width: round($width / 2);
-      border-right-width: round($width / 2);
-      border-top-width: $height;
-      border-bottom-width: 0;
-
-      border-top-color: $color;
+  }
+  @else if $direction == down {
+    border: {
+      width: $arrow-length $arrow-breadth-half 0 $arrow-breadth-half;
+      color: $color transparent transparent transparent;
     }
-
+  }
 }
 
 /* Mixin - EQ

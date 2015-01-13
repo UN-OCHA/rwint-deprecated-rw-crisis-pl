@@ -24,6 +24,8 @@ $grid--3-2-3 : 3 2 3;
 $grid--2-3-3 : 2 3 3;
 $grid--3-3-2 : 3 3 2;
 $grid--2-1: 2 1; // product images on left, details on right
+$grid--golden-left   : 1.618 1;
+$grid--golden-right  : 1 1.618;
 
 // gutters (no gutter by default)
 @include add-gutter(0.1);

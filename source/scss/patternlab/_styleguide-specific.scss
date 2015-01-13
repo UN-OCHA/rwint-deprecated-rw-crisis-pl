@@ -237,3 +237,14 @@ pre {
 .sg-pattern-body {
   -webkit-transform: translateZ(0); // fixed position elements will be contrained to this, so patterns don't go to the top of the all patterns list ~ http://stackoverflow.com/a/15885486
 }
+
+
+// UN icons
+.sg-un-icons {
+  outline: 1px solid red;
+  [class*="un-icon"] {
+    &:before {
+      font-size: 2em;
+    }
+  }
+}
