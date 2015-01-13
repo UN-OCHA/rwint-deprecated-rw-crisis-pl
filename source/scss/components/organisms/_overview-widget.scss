@@ -24,26 +24,36 @@ $bp--overview-2col: 600px;
 }
 
 .overview-widget--title {
+  $color--diagonal--lighter: mix($color--gray--light, $color--blue--dark, 97%);
+  @include background-image(linear-gradient(90deg, $color--gray--light, transparent), repeating-linear-gradient(-45deg, transparent, transparent 16px, $color--diagonal--lighter 16px, $color--diagonal--lighter 32px));
   @include fontsize-rem(ms(0));
   position: relative;
   margin: 0;
-  padding: 0.75em 0.5em 0.75em 3em;
+  padding: 0.75em 0.5em 0.75em 3.5em;
+  border-bottom: 1px solid $color--gray--lightish;
+  background-color: $color--gray--light;
+  background-position: 50% 50%, 50% 50%;
+  color: $color--blue--dark;
   font-weight: bold;
   line-height: 1.2;
   text-transform: uppercase;
-  @include try-colors();
-
-
+  .word1 {
+    display: block;
+  }
+  .word2 {
+    display: block;
+  }
   .un-icon-crisis_conflict {
     @include transform(translateY(-50%));
     position: absolute;
     top: 50%;
-    left: 0.5rem;
-//    color: $color--yellow;
+    left: 0;
+    padding: 0 0.125em;
+    background-color: $color--yellow;
+    color: $color--white;
     font-size: 2.25em;
-    @include try-colors();
+    line-height: 1.74;
   }
-
 
   // HEADER OPTION A
   .overview-option-a & {
@@ -54,33 +64,6 @@ $bp--overview-2col: 600px;
       @include background-image(linear-gradient(90deg, $color--blue--dark, transparent), repeating-linear-gradient(-45deg, transparent, transparent 16px, $color--blue--dark--lighter 16px, $color--blue--dark--lighter 32px));
     }
   }
-
-  // HEADER OPTION B
-  .overview-option-b & {
-    //    margin-bottom: $base-line-px;
-    //    color: $color--blue--dark;
-    color: #375573;
-    border-bottom: 1px solid #CCCCCC;
-    padding-left: 3.5em;
-    background-color: $color--gray--light;
-    $color--diagonal--lighter: mix($color--gray--light, $color--blue--dark, 97%);
-    @include background-image(linear-gradient(90deg, $color--gray--light, transparent), repeating-linear-gradient(-45deg, transparent, transparent 16px, $color--diagonal--lighter 16px, $color--diagonal--lighter 32px));
-    .word1 {
-      display: block;
-    }
-    .word2 {
-      display: block;
-    }
-    .un-icon-crisis_conflict {
-      line-height: 1.74;
-      left: 0;
-      padding: 0 0.125em;
-      background-color: #f5c655;
-      color: white;
-    }
-  }
-
-
 }
 
 .overview-widget--map {
@@ -92,7 +75,6 @@ $bp--overview-2col: 600px;
 }
 
 .overview-widget--description {
-//  @extend %baseline;
   h2 {
     @include fontsize-rem(ms(2));
     margin: 0 0 12px;
@@ -163,7 +145,6 @@ $bp--overview-2col: 600px;
     padding: 3px 0.5em;
     background-color: $color--gray--light;
     font-family: $font--futura;
-    text-transform: uppercase;
     flex-basis: 33%;
   }
   .tab-set--tab:checked {
@@ -175,6 +156,7 @@ $bp--overview-2col: 600px;
         @include arrow($color--purple, down);
         top: 100%;
         left: 0.5em;
+        z-index: 10;
       }
     }
   }
