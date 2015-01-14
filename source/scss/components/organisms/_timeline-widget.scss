@@ -1,64 +1,29 @@
-
-// Responsive styles.
-@media screen and (max-width: 1360px) {
-
-  .timeline-widget-frames-wrapper {
-    margin: 0 em(60px);
-  }
-
-  .timeline-widget--controls {
-
-    .next {
-      right: 0 !important;
-    }
-
-    .prev {
-      left: 0 !important;
-    }
-  }
-}
-
-@media screen and (max-width: 700px) {
-
-  .timeline-widget--dropdown {
-    position: static !important;
-    right: auto;
-    top: auto;
-
-    .timeline-widget--dropdown-heading {
-      width: 100% !important;
-    }
-
-    .timeline-widget--dropdown--wrapper {
-      height: 100% !important;
-      position: absolute;
-      width: 100% !important;
-      z-index: 100;
-    }
-  }
-
-  .timeline-widget-item--description {
-    padding-top: em(10px) !important;
-  }
-
-  .timeline-widget-pager {
-    max-height: em(20px);
-  }
-
-  .timeline-widget-pager--item-content {
-    display: none;
-  }
-}
+// Breakpoints
+$bp--timeline-2col: 700px;
+$bp--navigation-buttons: 1360px;
 
 .timeline-widget--dropdown {
-  position: absolute;
-  right: 0.5em;
-  top: 1.5em;
-  z-index: 10;
+  position: relative;
+  right: auto;
+  top: auto;
+
+  @include breakpoint($bp--timeline-2col) {
+    position: absolute;
+    right: 0.5em;
+    top: 1.5em;
+    z-index: 10;
+  }
 
   .timeline-widget--dropdown--wrapper {
     display: none;
-    width: em(360px);
+    position: absolute;
+    right:0;
+    width: 100%;
+    z-index: 100;
+
+    @include breakpoint($bp--timeline-2col) {
+      width: em(360px);
+    }
 
     &.open {
       display: block;
@@ -72,7 +37,11 @@
     padding: em(10px) em(32px);
     text-align: center;
     text-transform: uppercase;
-    width: em(240px);
+    width: 100%;
+
+    @include breakpoint($bp--timeline-2col) {
+      width: auto;
+    }
 
     span {
       color: $color--blue--dark;
@@ -117,6 +86,12 @@
   }
 }
 
+.timeline-widget-frames-wrapper {
+  margin: 0 em(60px);
+  @include breakpoint($bp--navigation-buttons) {
+    margin: 0;
+  }
+}
 
 .timeline-widget-frames {
   width: 100%;
@@ -159,15 +134,34 @@
     }
 
     .next {
-      background: url('../../images/next-chevron.svg') no-repeat center;
-      background-size: 12px 18px;
-      right: em(-102px);
+      right: 0;
+
+      .arrow {
+        position: absolute;
+        top:em(16px);
+        right:em(16px);
+        @include arrow($color--purple--dark, right);
+      }
     }
 
     .prev {
-      background: url('../../images/prev-chevron.svg') no-repeat center;
-      background-size: 12px 18px;
-      left: em(-102px);
+      .arrow {
+        position: absolute;
+        top:em(16px);
+        left:em(16px);
+        @include arrow($color--purple--dark, left);
+      }
+      left: 0;
+    }
+
+    @include breakpoint($bp--navigation-buttons) {
+      .next {
+        right: em(-102px);
+      }
+
+      .prev {
+        left: em(-102px);
+      }
     }
   }
 
@@ -194,7 +188,7 @@
 
     &:after {
       @include arrow($color--red, em(15px), em(31px), right);
-      content: ' ';
+      content: 'sdfsdfsdf';
       position: absolute;
       right: em(-15px);
       top: em(16px);
@@ -266,16 +260,24 @@
 
     .timeline-widget-item--description {
       color: $color--gray;
-      padding-top: em(64px);
+      padding-top: em(10px);
+
+      @include breakpoint($bp--timeline-2col) {
+        padding-top: em(64px);
+      }
     }
   }
 
   .timeline-widget-pager {
     background: url('../../images/pager-bk-img.png') repeat-x $color--blue--light;
-    height: em(120px);
+    height: em(20px);
     margin-top: em(40px);
     position: relative;
     width: 100%;
+
+    @include breakpoint($bp--timeline-2col) {
+      height: em(120px);
+    }
 
     ul {
       margin: 0;
@@ -297,6 +299,11 @@
             margin-top: em(15px);
             padding: em(10px);
             text-align: center;
+            display: none;
+
+            @include breakpoint($bp--timeline-2col) {
+              display: block;
+            }
           }
         }
       }
