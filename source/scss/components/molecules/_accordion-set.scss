@@ -1,5 +1,7 @@
 .accordion-set--content {
-  display: none;
+  @include single-transition(max-height, $default-transition-duration, $default-transition-function);
+  max-height: 0;
+  overflow: hidden;
 }
 .accordion-set--check {
   display: none;
@@ -7,7 +9,7 @@
     + .accordion-set--label {
       + .accordion-set--content {
         /* @todo: this isn't working in Safari */
-        display: block;
+        max-height: 100em;
       }
     }
   }

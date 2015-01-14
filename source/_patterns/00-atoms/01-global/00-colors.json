@@ -1,6 +1,14 @@
 {
   "pl_colors": [
     {
+      "name": "$color--purple",
+      "value": "#a993e1"
+    },
+    {
+      "name": "$color--purple--dark",
+      "value": "#665695"
+    },
+    {
       "name": "$color--blue",
       "value": "#6c9acd"
     },
