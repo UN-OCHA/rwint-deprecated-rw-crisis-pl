@@ -175,7 +175,7 @@ $bp--navigation-buttons: 1360px;
       right: 0;
 
       .arrow {
-        @include arrow($color--purple--dark, right, em(30px));
+        @include arrow($color--gray--lightish, right, ms(1));
         position: absolute;
         top: 0;
         right: 0;
@@ -192,7 +192,7 @@ $bp--navigation-buttons: 1360px;
       left: 0;
 
       .arrow {
-        @include arrow($color--purple--dark, left, em(30px));
+        @include arrow($color--gray--lightish, left, ms(1));
         position: absolute;
         top: 0;
         left: 0;
@@ -226,7 +226,7 @@ $bp--navigation-buttons: 1360px;
   }
 
   .timeline-widget-item--header {
-    padding-top: em(24px);
+    padding-top: 0.5em;
   }
 
   .timeline-widget-item--title {
