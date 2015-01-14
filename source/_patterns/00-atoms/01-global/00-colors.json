@@ -17,6 +17,10 @@
       "value": "#375573"
     },
     {
+      "name": "$color--blue--darker",
+      "value": "#2E4455"
+    },
+    {
       "name": "$color--blue--light",
       "value": "#97dcf7"
     },
