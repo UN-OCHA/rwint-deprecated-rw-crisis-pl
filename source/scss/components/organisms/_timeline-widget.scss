@@ -4,20 +4,20 @@ $bp--navigation-buttons: 1360px;
 
 .timeline-widget--dropdown {
   position: relative;
-  right: auto;
   top: auto;
+  right: auto;
 
   @include breakpoint($bp--timeline-2col) {
     position: absolute;
-    right: 0.5em;
     top: 1.5em;
+    right: 0.5em;
     z-index: 10;
   }
 
   .timeline-widget--dropdown--wrapper {
     display: none;
     position: absolute;
-    right:0;
+    right: 0;
     width: 100%;
     z-index: 100;
 
@@ -31,57 +31,62 @@ $bp--navigation-buttons: 1360px;
   }
 
   .timeline-widget--dropdown-heading {
-    background: $color--blue;
-    color: $color--white;
-    float: right;
+    width: 100%;
     padding: em(10px) em(32px);
+    float: right;
+    background: $color--purple--dark;
+    color: $color--white;
     text-align: center;
     text-transform: uppercase;
-    width: 100%;
 
     @include breakpoint($bp--timeline-2col) {
       width: auto;
     }
-
-    span {
-      color: $color--blue--dark;
-    }
   }
 
   .timeline-widget--dropdown-controls {
-    background: $color--blue;
+    position: relative;
     height: em(55px);
     margin-top: em(14px);
     padding: em(10px) em(32px);
-    position: relative;
+    background: $color--purple;
 
+    .close {
+      @include inline-block;
+      width: em(15px);
+      height: em(15px);
+      margin-top: em(10px);
+      float: right;
+      background: url('../../images/close.svg');
+      background-size: em(15px);
+    }
     .form-select {
       @include inline-block;
     }
   }
   .timeline-widget--dropdown--container {
-    background: url('../../images/dropdown-bk-img.png');
     height: em(325px);
     padding: 0 em(15px) 0 em(30px);
+    background: url('../../images/dropdown-bk-img.png');
 
     ul {
-      border-left: em(4px) solid $color--blue;
       padding: em(14px) 0;
+      border-left: em(4px) solid $color--purple;
     }
 
     li {
-      @include arrow-box(em(10px), $color--white, em(1px), $color--gray--light, left);
+      @include arrow-box(em(10px), $color--white, em(1px), $color--gray--lightish, left);
+      position: relative;
       margin-bottom: em(14px);
       margin-left: em(22px);
       padding: em(20px);
-      position: relative;
       text-align: right;
     }
 
     .timeline-widget--dot {
-      left: em(-33px);
       position: absolute;
       top: em(34px);
+      left: em(-33px);
     }
   }
 }
@@ -98,25 +103,25 @@ $bp--navigation-buttons: 1360px;
 
   ul {
     height: 100%;
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none;
   }
 
   .timeline-widget-item {
-    float: left;
     height: 100%;
     margin: 0;
     padding: 0;
+    float: left;
   }
 }
 
 .timeline-widget {
-  margin: 0 auto;
-  max-width: em(1175px);
-  padding: 0.5em;
   position: relative;
-
+  max-width: em(1175px);
+  margin: 0 auto;
+  padding: 0.5em;
+  font-family: $font--futura;
 
   .timeline-widget--controls {
     position: relative;
@@ -124,34 +129,35 @@ $bp--navigation-buttons: 1360px;
     .next,
     .prev {
       @include border-radius(em(50px));
-      background: $color--white;
-      border: em(1px) solid $color--gray--light;
-      height: em(50px);
       position: absolute;
       top: em(260px);
       width: em(50px);
+      height: em(50px);
+      border: em(1px) solid $color--gray--light;
+      background: $color--white;
       z-index: 10;
     }
 
     .next {
       right: 0;
+    }
 
-      .arrow {
-        position: absolute;
-        top:em(16px);
-        right:em(16px);
-        @include arrow($color--purple--dark, right);
-      }
+    .next .arrow {
+      @include arrow($color--purple--dark, right);
+      position: absolute;
+      top: em(16px);
+      right: em(16px);
     }
 
     .prev {
-      .arrow {
-        position: absolute;
-        top:em(16px);
-        left:em(16px);
-        @include arrow($color--purple--dark, left);
-      }
       left: 0;
+    }
+
+    .prev .arrow {
+      @include arrow($color--purple--dark, left);
+      position: absolute;
+      top: em(16px);
+      left: em(16px);
     }
 
     @include breakpoint($bp--navigation-buttons) {
@@ -178,20 +184,19 @@ $bp--navigation-buttons: 1360px;
 
   .timeline-widget-item--category {
     @include inline-block;
+    position: relative;
+    margin-right: 20px;
+    padding: em(6px) em(10px);
     background: $color--red;
     color: $color--white;
     font-size: ms(0);
-    margin-right: 20px;
-    padding: em(6px) em(10px);
-    position: relative;
     text-transform: uppercase;
 
-    &:after {
-      @include arrow($color--red, em(15px), em(31px), right);
-      content: 'sdfsdfsdf';
+    .arrow {
+      @include arrow($color--red, right, em(12px), em(37px));
       position: absolute;
-      right: em(-15px);
-      top: em(16px);
+      top: 0;
+      right: em(-12px);
     }
   }
 
@@ -224,12 +229,12 @@ $bp--navigation-buttons: 1360px;
     }
 
     .btn {
+      width: 100%;
       background: $color--purple--dark;
       font-family: $font--futura;
       font-size: ms(0);
       font-weight: normal;
       text-decoration: none;
-      width: 100%;
     }
 
     .timeline-widget-item--image {
@@ -294,8 +299,8 @@ $bp--navigation-buttons: 1360px;
           max-width: em(200px);
 
           .timeline-widget-pager--item-content {
-            @include arrow-box(em(10px), $color--white, em(1px), $color--gray--light, up);
-            border: em(1px) solid $color--gray--light;
+            @include arrow-box(em(10px), $color--white, em(1px), $color--gray--lightish, up);
+            border: em(1px) solid $color--gray--lightish;
             margin-top: em(15px);
             padding: em(10px);
             text-align: center;
@@ -311,7 +316,7 @@ $bp--navigation-buttons: 1360px;
   }
 
   .timeline-widget-pager--current {
-    background: $color--blue--light;
+    background: $color--gray--light;
     border-top: em(1px) solid $color--white;
     font-size: ms(0);
     margin: auto;
@@ -324,42 +329,9 @@ $bp--navigation-buttons: 1360px;
 
 .timeline-widget--dot {
   @include border-radius(16px);
-  background: $color--blue;
-  border: em(4px) solid $color--blue--light;
+  background: $color--purple--dark;
+  border: em(4px) solid $color--gray--light;
   height: em(16px);
   margin: 0 auto;
   width: em(16px);
-}
-
-.selectricWrapper {
-  position: relative;
-  cursor: pointer;
-}
-
-.selectric {
-  @include border-radius(em(2px));
-  position: relative;
-  background: $color--blue--dark;
-  color: $color--white;
-
-  .label {
-    display: block;
-    margin-right: em(14px);
-    padding: em(6px) em(12px);
-    color: $color--white;
-    font-size: ms(0);
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  .button {
-    display: block;
-    position: absolute;
-    top: 20%;
-    right: em(10px);
-    width: em(10px);
-    height: em(8px);
-    color: $color--white;
-    text-align: center;
-  }
 }

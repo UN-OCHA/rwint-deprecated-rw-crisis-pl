@@ -93,7 +93,7 @@ $(document).ready(function() {
   });
 
   // Open popup.
-  $('.timeline-widget--dropdown-heading').click(function(){
+  $('.timeline-widget--dropdown-heading, .close').click(function(){
     $('.timeline-widget--dropdown--wrapper').toggleClass('open');
     $slyDropdown.reload();
   });

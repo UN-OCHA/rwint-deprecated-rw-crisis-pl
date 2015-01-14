@@ -3,11 +3,44 @@
 //   ========================================================================== */
 
 // Selectric styles.
+.selectricWrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.selectric {
+  @include border-radius(em(2px));
+  position: relative;
+  background: $color--purple--dark;
+  color: $color--white;
+
+  .label {
+    display: block;
+    margin-right: em(14px);
+    padding: em(6px) em(12px);
+    color: $color--white;
+    font-size: ms(0);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .button {
+    display: block;
+    position: absolute;
+    top: 20%;
+    right: em(10px);
+    width: em(10px);
+    height: em(8px);
+    color: $color--white;
+    text-align: center;
+  }
+}
+
 .selectricOpen {
   z-index: 9999;
 
   .selectric {
-    background: $color--blue--dark;
+    background: $color--purple--dark;
   }
 
   .selectricItems {
@@ -54,7 +87,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: $color--blue--dark;
+  background: $color--purple--dark;;
   z-index: -1;
 
   ul,
@@ -71,13 +104,13 @@
     color: $color--white;
 
     &.selected {
-      background: $color--blue;
-      color: $color--blue--dark;
+      background: $color--purple;
+      color: $color--purple--dark;;
     }
 
     &:hover {
       background: $color--white;
-      color: $color--blue--dark;
+      color: $color--purple--dark;;
     }
   }
 
