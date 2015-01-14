@@ -15,18 +15,35 @@ $bp--navigation-buttons: 1360px;
   }
 
   .timeline-widget--dropdown--wrapper {
-    display: none;
-    position: absolute;
+    @include transition-property(max-height, opacity);
+    @include transition-duration($default-transition-duration);
+    @include transition-timing-function($default-transition-function);
+    position: fixed;
+    top: 0;
     right: 0;
     width: 100%;
+    height: 100vh;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     z-index: 100;
+    &:before {
+      @include arrow($color--blue--darker, up);
+      right: 2em;
+      bottom: 100%;
+    }
 
     @include breakpoint($bp--timeline-2col) {
+      position: relative;
+      top: em(14px);
       width: em(360px);
+      height: auto;
     }
 
     &.open {
-      display: block;
+      max-height: 100em;
+      opacity: 1;
+      overflow: visible;
     }
   }
 
@@ -47,7 +64,7 @@ $bp--navigation-buttons: 1360px;
   .timeline-widget--dropdown-controls {
     position: relative;
     height: em(55px);
-    margin-top: em(14px);
+    //    margin-top: em(14px);
     padding: em(10px) em(32px);
     background: $color--purple;
 
@@ -65,9 +82,12 @@ $bp--navigation-buttons: 1360px;
     }
   }
   .timeline-widget--dropdown--container {
-    height: em(325px);
+    height: 100%;
     padding: 0 em(15px) 0 em(30px);
     background: url('../../images/dropdown-bk-img.png');
+    @include breakpoint($bp--timeline-2col) {
+      height: em(325px);
+    }
 
     ul {
       padding: em(14px) 0;
@@ -120,7 +140,7 @@ $bp--navigation-buttons: 1360px;
   position: relative;
   max-width: em(1175px);
   margin: 0 auto;
-  padding: 0.5em;
+  padding: 0 0.5em;
   font-family: $font--futura;
 
   .timeline-widget--controls {
@@ -242,10 +262,10 @@ $bp--navigation-buttons: 1360px;
     }
 
     .timeline-widget-item--image--icons {
-      font-size: ms(0);
-      left: 0;
       position: absolute;
       top: 0;
+      left: 0;
+      font-size: ms(0);
 
       a {
         border: none;
@@ -266,7 +286,7 @@ $bp--navigation-buttons: 1360px;
     .timeline-widget-item--description {
       color: $color--gray;
       padding-top: em(10px);
-
+      font-family: $font--skolar;
       @include breakpoint($bp--timeline-2col) {
         padding-top: em(64px);
       }
