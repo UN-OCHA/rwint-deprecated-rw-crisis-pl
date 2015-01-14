@@ -24,8 +24,9 @@ $bp--overview-2col: 600px;
 }
 
 .overview-widget--title {
+  $transparent--white: hsla(0, 0%, 100%, 0);
   $color--diagonal--lighter: mix($color--gray--light, $color--blue--dark, 97%);
-  @include background-image(linear-gradient(90deg, $color--gray--light, transparent), repeating-linear-gradient(-45deg, transparent, transparent 16px, $color--diagonal--lighter 16px, $color--diagonal--lighter 32px));
+  @include background-image(linear-gradient(90deg, $color--gray--light, $transparent--white), repeating-linear-gradient(-45deg, $transparent--white, $transparent--white 16px, $color--diagonal--lighter 16px, $color--diagonal--lighter 32px));
   @include fontsize-rem(ms(0));
   position: relative;
   margin: 0;
@@ -103,19 +104,11 @@ $bp--overview-2col: 600px;
 }
 
 // Accordion
-.accordion-set--check {
-  &:checked {
-    + .accordion-set--label {
-      &:before {
-        @include transform(rotate(90deg));
-      }
-    }
-  }
-}
-
 .accordion-set--label {
   position: relative;
   &:before {
+    @include single-transition(transform, $default-transition-duration, $default-transition-function);
+    @include transform(rotate(0deg));
     @include arrow($color--purple);
     top: 1em;
     left: 0.5em;
@@ -130,6 +123,17 @@ $bp--overview-2col: 600px;
     }
   }
 }
+
+.accordion-set--check {
+  &:checked {
+    + .accordion-set--label {
+      &:before {
+        @include transform(rotate(90deg));
+      }
+    }
+  }
+}
+
 
 // Tabs
 .overview-widget--tabs {
