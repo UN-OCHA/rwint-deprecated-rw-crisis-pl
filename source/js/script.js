@@ -94,6 +94,11 @@ $(document).ready(function() {
     $slyDropdown.reload();
   });
 
+  // Close popup.
+  $('.timeline-widget-dropdown--item').click(function(){
+    $('.timeline-widget--dropdown--wrapper').removeClass('open');
+  });
+
   // Update other sliders based on main.
   $sly.on('moveEnd', function(){
     $index = $sly.rel.activeItem;
