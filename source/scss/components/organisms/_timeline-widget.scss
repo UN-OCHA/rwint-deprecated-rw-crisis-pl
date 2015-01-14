@@ -71,7 +71,7 @@ $bp--navigation-buttons: 1360px;
 
     ul {
       padding: em(14px) 0;
-      border-left: em(4px) solid $color--purple;
+      border-left: em(4px) solid $color--blue--dark;
     }
 
     li {
@@ -79,11 +79,12 @@ $bp--navigation-buttons: 1360px;
       position: relative;
       margin-bottom: em(14px);
       margin-left: em(22px);
-      padding: em(20px);
+      padding: 0.5em;
       text-align: right;
     }
 
     .timeline-widget--dot {
+      background: $color--blue;
       position: absolute;
       top: em(34px);
       left: em(-33px);
