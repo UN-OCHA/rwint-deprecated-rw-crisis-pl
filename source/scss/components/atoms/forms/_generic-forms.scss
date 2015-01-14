@@ -104,13 +104,13 @@
     color: $color--white;
 
     &.selected {
-      background: $color--purple;
-      color: $color--blue--dark;;
+      background: $color--white;
+      color: $color--blue--dark;
     }
 
     &:hover {
       background: $color--white;
-      color: $color--blue--dark;;
+      color: $color--blue--dark;
     }
   }
 

@@ -35,6 +35,7 @@ $bp--navigation-buttons: 1360px;
     padding: em(10px) em(32px);
     float: right;
     background: $color--purple--dark;
+    cursor: pointer;
     color: $color--white;
     text-align: center;
     text-transform: uppercase;
@@ -49,7 +50,7 @@ $bp--navigation-buttons: 1360px;
     height: em(55px);
     margin-top: em(14px);
     padding: em(10px) em(32px);
-    background: $color--purple;
+    background: $color--blue--darker;
 
     .close {
       @include inline-block;
@@ -59,6 +60,7 @@ $bp--navigation-buttons: 1360px;
       float: right;
       background: url('../../images/close.svg');
       background-size: em(15px);
+      cursor: pointer;
     }
     .form-select {
       @include inline-block;
@@ -84,10 +86,10 @@ $bp--navigation-buttons: 1360px;
     }
 
     .timeline-widget--dot {
-      background: $color--blue;
       position: absolute;
-      top: em(34px);
+      top: 36%;
       left: em(-33px);
+      background: $color--blue;
     }
   }
 }
@@ -243,10 +245,10 @@ $bp--navigation-buttons: 1360px;
     }
 
     .timeline-widget-item--image--icons {
-      font-size: ms(0);
-      left: 0;
       position: absolute;
       top: 0;
+      left: 0;
+      font-size: ms(0);
 
       a {
         border: none;
@@ -258,15 +260,15 @@ $bp--navigation-buttons: 1360px;
         }
 
         &.timeline-widget-item--image--country {
-          background: $color--blue--dark;
           padding: 0 em(3px);
+          background: $color--blue--dark;
         }
       }
     }
 
     .timeline-widget-item--description {
-      color: $color--gray;
       padding-top: em(10px);
+      color: $color--gray;
 
       @include breakpoint($bp--timeline-2col) {
         padding-top: em(64px);
@@ -276,10 +278,10 @@ $bp--navigation-buttons: 1360px;
 
   .timeline-widget-pager {
     background: url('../../images/pager-bk-img.png') repeat-x $color--blue--light;
-    height: em(20px);
-    margin-top: em(40px);
     position: relative;
     width: 100%;
+    height: em(20px);
+    margin-top: em(40px);
 
     @include breakpoint($bp--timeline-2col) {
       height: em(120px);
@@ -297,7 +299,7 @@ $bp--navigation-buttons: 1360px;
 
         .timeline-widget-pager--item {
           margin: 0 auto;
-          max-width: em(200px);
+          max-width: em(230px);
 
           .timeline-widget-pager--item-content {
             @include arrow-box(em(10px), $color--white, em(1px), $color--gray--lightish, up);
