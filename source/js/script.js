@@ -1,15 +1,14 @@
 $(document).ready(function() {
 
+  // Apply styles to dropdowns.
   $('select').selectric();
 
+  // Initialize Sly Sliders.
   var $frame = $('.timeline-widget-frames');
   var $item = $('.timeline-widget-item');
-  var $pager = $('.timeline-widget-pager');
-  var $pagerItem = $('.timeline-widget-pager--item');
-  var $wrap  = $frame.parent();
   var $margin = '40px';
 
-  // Set initial.
+  // Set initial widths.
   var $initialWidth = $frame.width();
   var $width = $initialWidth;
   $item.width($initialWidth);
@@ -38,7 +37,6 @@ $(document).ready(function() {
     scrollBy: 1,
     speed: 200,
     elasticBounds: 1,
-    //easing: 'easeOutExpo',
     dragHandle: 1,
     dynamicHandle: 1,
     clickBar: 1,
@@ -61,7 +59,6 @@ $(document).ready(function() {
     scrollBy: 1,
     speed: 200,
     elasticBounds: 1,
-    //easing: 'easeOutExpo',
     dragHandle: 1,
     dynamicHandle: 1,
     clickBar: 1
@@ -89,13 +86,17 @@ $(document).ready(function() {
     var $index = $(this).attr('data-slide');
     var $pos = $sly.getPos($index);
     $sly.slideTo($pos.start);
-    var $dropDownPos = $slyDropdown.getPos($index);
   });
 
   // Open popup.
   $('.timeline-widget--dropdown-heading, .close').click(function(){
     $('.timeline-widget--dropdown--wrapper').toggleClass('open');
     $slyDropdown.reload();
+  });
+
+  // Close popup.
+  $('.timeline-widget-dropdown--item').click(function(){
+    $('.timeline-widget--dropdown--wrapper').removeClass('open');
   });
 
   // Update other sliders based on main.

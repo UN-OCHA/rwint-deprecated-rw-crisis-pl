@@ -95,10 +95,10 @@ $bp--overview-2col: 600px;
     padding: 0 0.5em;
     @include eq('cols2') {
       @include columns(2);
-      padding-bottom: $base-line-em;
+      margin-bottom: $base-line-em;
     }
     @include breakpoint($bp--overview-2col) {
-      display: block;
+      max-height: 100em;
     }
   }
 }
@@ -145,22 +145,30 @@ $bp--overview-2col: 600px;
     background-color: $color--gray--light;
   }
   label {
+    @include transition-property(background-color, color);
+    @include transition-duration($default-transition-duration);
+    @include transition-timing-function($default-transition-function);
     @include fontsize-rem(ms(1));
     padding: 3px 0.5em;
     background-color: $color--gray--light;
     font-family: $font--futura;
     flex-basis: 33%;
+    position: relative;
+    &:before {
+      @include single-transition(opacity, $default-transition-duration, $default-transition-function);
+      @include arrow($color--purple, down);
+      top: 100%;
+      left: 0.5em;
+      z-index: 10;
+      opacity: 0;
+    }
   }
   .tab-set--tab:checked {
     + label {
-      position: relative;
       background-color: $color--purple;
       color: $color--white;
       &:before {
-        @include arrow($color--purple, down);
-        top: 100%;
-        left: 0.5em;
-        z-index: 10;
+        opacity: 1;
       }
     }
   }
