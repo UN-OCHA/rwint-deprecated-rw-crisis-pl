@@ -28,7 +28,7 @@ $color--gray--lightish: #cccccc;
 $color--gray: #4d515b;
 $color--gray--dark: #060606;
 $color--black: hsl(0, 0%, 0%);
-
+$color--transparent--white: hsla(0, 0%, 100%, 0);
 
 $color-map: (
   color--purple: $color--purple,

@@ -24,9 +24,8 @@ $bp--overview-2col: 600px;
 }
 
 .overview-widget--title {
-  $transparent--white: hsla(0, 0%, 100%, 0);
   $color--diagonal--lighter: mix($color--gray--light, $color--blue--dark, 97%);
-  @include background-image(linear-gradient(90deg, $color--gray--light, $transparent--white), repeating-linear-gradient(-45deg, $transparent--white, $transparent--white 16px, $color--diagonal--lighter 16px, $color--diagonal--lighter 32px));
+  @include background-image(linear-gradient(90deg, $color--gray--light, $color--transparent--white), repeating-linear-gradient(-45deg, $color--transparent--white, $color--transparent--white 16px, $color--diagonal--lighter 16px, $color--diagonal--lighter 32px));
   @include fontsize-rem(ms(0));
   position: relative;
   margin: 0;
@@ -54,16 +53,6 @@ $bp--overview-2col: 600px;
     color: $color--white;
     font-size: 2.25em;
     line-height: 1.74;
-  }
-
-  // HEADER OPTION A
-  .overview-option-a & {
-    background-color: $color--blue--dark;
-    color: $color--white;
-    @include breakpoint($bp--overview-2col) {
-      $color--blue--dark--lighter: mix($color--blue--dark, $color--blue, 90%);
-      @include background-image(linear-gradient(90deg, $color--blue--dark, transparent), repeating-linear-gradient(-45deg, transparent, transparent 16px, $color--blue--dark--lighter 16px, $color--blue--dark--lighter 32px));
-    }
   }
 }
 

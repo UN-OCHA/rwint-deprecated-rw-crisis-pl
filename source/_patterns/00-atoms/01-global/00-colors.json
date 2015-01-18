@@ -71,6 +71,10 @@
     {
       "name": "$color--black",
       "value": "hsl(0, 0%, 0%)"
+    },
+    {
+      "name": "$color--transparent--white",
+      "value": "hsla(0, 0%, 100%, 0)"
     }
   ]
 }
