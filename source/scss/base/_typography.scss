@@ -62,7 +62,7 @@
 %reverse-text {
   color: $color--white;
   a {
-    @include set-link-colors($color--white, $color--white, $color--white, $color--white, $color--white, false);
+    @include set-link-colors($color--white, $color--white, $color--white, $color--white, $color--white);
     @include single-transition($property: border-bottom-color);
     border-bottom-color: $color--gray--light;
     &:hover,

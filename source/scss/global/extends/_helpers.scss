@@ -75,11 +75,3 @@
   display: block;
   z-index: $z-low;
 }
-
-
-
-/* link with no style
-   ========================================================================== */
-.link-plain {
-  @extend %link-unset-underline-extend;
-}

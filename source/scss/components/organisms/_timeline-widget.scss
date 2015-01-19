@@ -1,7 +1,3 @@
-// Breakpoints
-$bp--timeline-2col: 700px;
-$bp--navigation-buttons: 1360px;
-
 .timeline-widget--dropdown {
   position: relative;
   top: auto;
@@ -121,7 +117,7 @@ $bp--navigation-buttons: 1360px;
     margin: 0 em(60px);
   }
 
-  @include breakpoint($bp--navigation-buttons) {
+  @include breakpoint($bp--timeline--navigation-buttons) {
     margin: 0;
   }
 }
@@ -205,7 +201,7 @@ $bp--navigation-buttons: 1360px;
       }
     }
 
-    @include breakpoint($bp--navigation-buttons) {
+    @include breakpoint($bp--timeline--navigation-buttons) {
       .next {
         right: em(-102px);
       }

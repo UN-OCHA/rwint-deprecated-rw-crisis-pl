@@ -152,13 +152,9 @@ body {// just giving everything an extra level of specificity so it can override
       position: absolute;
       border-left: solid 3px hsl(0, 0%, 35%);
       height: 100%;
-      >.icon--arrow--right-medium {
-        font-size: 18px;
-        margin-top: 100px;
-      }
       >.label {
         @include transform(rotate(90deg));
-        @include transform-origin(bottom left);
+        @include transform-origin(bottom, left);
         display: block;
 //        position: absolute;
 //        bottom: 20px;
@@ -167,10 +163,7 @@ body {// just giving everything an extra level of specificity so it can override
         color: white;
       }
       &:hover {
-        border-left-color: hsla(0,0%,35%,0.3);
-        >.label {
-          opacity: 0;
-        }
+        opacity: 0.5;
       }
     }
   }

@@ -10,22 +10,22 @@
  * to actual usable font family strings.
  */
 
-$font--volkhov:   font-name('volkhov-regular'), 'Times New Roman', Times, serif;
+//$font--volkhov:   font-name('volkhov-regular'), 'Times New Roman', Times, serif;
 $font--futura:    'futura-pt', Helvetica, Arial, sans-serif;
 $font--helvetica: Helvetica, Arial, sans-serif;
-$font--adelle-sans: "adelle-sans",sans-serif;
-$font--servus-slab: "servus-slab",sans-serif;
-$font--ff-tisa-web-pro: "ff-tisa-web-pro",serif;
+//$font--adelle-sans: "adelle-sans",sans-serif;
+//$font--servus-slab: "servus-slab",sans-serif;
+//$font--ff-tisa-web-pro: "ff-tisa-web-pro",serif;
 $font--skolar: "skolar",serif;
 
 $font-map: (
-  font--volkhov: $font--volkhov,
+//  font--volkhov: $font--volkhov,
   font--futura: $font--futura,
   font--helvetica: $font--helvetica,
-  font--adelle-sans: $font--adelle-sans,
-  font--servus-slab: $font--servus-slab,
-  font--ff-tisa-web-pro: $font--ff-tisa-web-pro,
-  font--skolar: $font--skolar
+//  font--adelle-sans: $font--adelle-sans,
+//  font--servus-slab: $font--servus-slab,
+//  font--ff-tisa-web-pro: $font--ff-tisa-web-pro,
+  font--skolar: $font--skolar  3
 );
 
 $font-body: $font--skolar;

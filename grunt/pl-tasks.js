@@ -63,7 +63,7 @@ module.exports = function (grunt, options) {
     //},
     pattern_lab_component_builder__breakpoints: {
       options: {
-        'regex': '^\\$width.*',
+        'regex': '^\\$bp--.*',
         'allow_var_values': false
       },
       src: "source/scss/global/variables/_breakpoints.scss",

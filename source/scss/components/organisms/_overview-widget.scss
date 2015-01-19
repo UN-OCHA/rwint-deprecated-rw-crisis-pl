@@ -1,6 +1,3 @@
-// Breakpoints
-$bp--overview-2col: 600px;
-
 .overview-widget {
   @include breakpoint($bp--overview-2col) {
     @include layout($grid--golden-left) {

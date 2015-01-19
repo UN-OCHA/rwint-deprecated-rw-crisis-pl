@@ -16,7 +16,6 @@ textarea {
   font-size: $root-typesize;
   line-height: $base-line-height;
   color: $color--text;
-  @include try-fonts();
 }
 
 body {

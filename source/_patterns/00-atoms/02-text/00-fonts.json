@@ -1,8 +1,27 @@
 {
   "meta": {
-    "font-volkhov": {
+    "font-skolar": {
       "scss-style": [
-        "font-family: $font--volkhov"
+        "font-family: $font--skolar"
+      ]
+    },
+    "font-skolar-italic": {
+      "scss-style": [
+        "font-family: $font--skolar",
+        "font-style: italic"
+      ]
+    },
+    "font-skolar-bold": {
+      "scss-style": [
+        "font-family: $font--skolar",
+        "font-weight: bold"
+      ]
+    },
+    "font-skolar-bold-italic": {
+      "scss-style": [
+        "font-family: $font--skolar",
+        "font-weight: bold",
+        "font-style: italic"
       ]
     },
     "font-futura": {

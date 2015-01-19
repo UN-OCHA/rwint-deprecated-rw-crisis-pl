@@ -7,7 +7,7 @@
    ========================================================================== */
 
 %btn {
-  @extend %link-unset-underline-extend;
+  @include unset-background-links();
   @include link-colors($normal: white, $hover: white, $active: white, $visited: white, $focus: white);
   @include antialiased;
   font-size: 15px;
@@ -59,7 +59,7 @@
    ========================================================================== */
 
 %btn--light {
-  @extend %link-unset-underline-extend;
+  @include unset-background-links();
   @include link-colors($normal: black, $hover: black, $active: black, $visited: black, $focus: black);
   background-color: $color--white;
   border-color: $color--black;

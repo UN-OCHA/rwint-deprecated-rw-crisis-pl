@@ -1,12 +1,38 @@
 <ul class="pl-font">
-  <li class="pl-font-volkhov">
-    [volkhov]:  {{ headline.short }}
+  <li class="pl-font-skolar">
+    [skolar]: {{ headline.short }}
     {{# meta }}
-       {{# font-volkhov}}
+      {{# font-skolar}}
         {{>atoms-scss-style}}
-      {{/ font-volkhov}}
+      {{/ font-skolar}}
     {{/meta}}
     <hr />
+  </li>
+  <li class="pl-font-skolar-italic">
+    [skolar italic]: {{ headline.short }}
+    {{# meta }}
+      {{# font-skolar-italic}}
+        {{>atoms-scss-style}}
+      {{/ font-skolar-italic}}
+    {{/meta}}
+    <hr />
+  </li>
+  <li class="pl-font-skolar-bold">
+    [skolar bold]: {{ headline.short }}
+    {{# meta }}
+      {{# font-skolar-bold}}
+        {{>atoms-scss-style}}
+      {{/ font-skolar-bold}}
+    {{/meta}}
+    <hr />
+  </li>
+  <li class="pl-font-skolar-bold-italic">
+    [skolar bold italic]: {{ headline.short }}
+    {{# meta }}
+      {{# font-skolar-bold-italic}}
+        {{>atoms-scss-style}}
+      {{/ font-skolar-bold-italic}}
+    {{/meta}}
   </li>
   <li class="pl-font-futura">
     [futura pt]: {{ headline.short }}
