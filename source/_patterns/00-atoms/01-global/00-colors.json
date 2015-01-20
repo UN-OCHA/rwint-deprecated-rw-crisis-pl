@@ -9,6 +9,10 @@
       "value": "#665695"
     },
     {
+      "name": "$color--purple--light",
+      "value": "#e6e6f5"
+    },
+    {
       "name": "$color--blue",
       "value": "#6c9acd"
     },

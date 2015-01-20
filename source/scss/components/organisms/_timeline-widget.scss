@@ -5,7 +5,7 @@
 
   @include breakpoint($bp--timeline-2col) {
     position: absolute;
-    top: 1.5em;
+    top: 0.5em;
     right: 0.5em;
     z-index: 10;
   }
@@ -93,19 +93,34 @@
     }
 
     li {
-      @include arrow-box(em(10px), $color--white, em(1px), $color--gray--lightish, left);
+      @include arrow-box(em(10px), $color--white, em(1px), $color--gray--light, left);
       position: relative;
       margin-bottom: em(14px);
-      margin-left: em(22px);
+      margin-left: em(32px);
       padding: 0.5em;
       text-align: right;
+      color: $color--gray--lightish;
+
+      &.active {
+        @include arrow-box(em(10px), $color--white, em(1px), $color--gray--lightish, left);
+        color: $color--gray;
+      }
     }
 
     .timeline-widget--dot {
       position: absolute;
-      top: 36%;
-      left: em(-33px);
+      top: 20%;
+      left: em(-55px);
       background: $color--blue;
+      border: em(4px) solid $color--gray--light;
+
+      .timeline-widget--dot--date {
+        width: em(30px);
+        margin: auto;
+        text-align: center;
+        padding-left: em(2px);
+        padding-top: em(4px);
+      }
     }
   }
 }
@@ -319,6 +334,7 @@
         border: none;
         color: $color--white;
         text-transform: uppercase;
+        text-shadow: none;
 
         &.timeline-widget-item--image--view-more {
           background: $color--red;
@@ -354,42 +370,44 @@
   .timeline-widget-pager {
     position: relative;
     width: 100%;
-    height: em(20px);
     margin-top: em(40px);
-    background: url('../../images/pager-bk-img.png') repeat-x $color--blue--light;
-
-    @include breakpoint($bp--timeline-2col) {
-      height: em(120px);
-    }
+    padding-bottom: 10px;
+    background: url('../../images/pager-bk-img.png') repeat-x 0 em(14px);
 
     ul {
       width: 100%;
       margin: 0;
       padding: 0;
+    }
 
-      li {
-        display: inline;
-        height: 100%;
-        float: left;
+    li {
+      display: inline;
+      height: 100%;
+      float: left;
+    }
 
-        .timeline-widget-pager--item {
-          max-width: em(230px);
-          margin: 0 auto;
+    .timeline-widget-pager--item {
+      max-width: em(260px);
+      margin: 0 auto;
 
-          .timeline-widget-pager--item-content {
-            @include arrow-box(em(10px), $color--white, em(1px), $color--gray--lightish, up);
-            display: none;
-            margin-top: em(15px);
-            padding: em(10px);
-            border: em(1px) solid $color--gray--lightish;
-            text-align: center;
+      .timeline-widget-pager--item-content {
+        @include arrow-box(em(10px), $color--white, em(1px), $color--gray--light, up);
+        color: $color--gray--lightish;
+        display: none;
+        margin: em(15px) em(5px) 0 em(5px);
+        padding: em(10px);
+        border: em(1px) solid $color--gray--light;
+        text-align: center;
 
-            @include breakpoint($bp--timeline-2col) {
-              display: block;
-            }
-          }
+        @include breakpoint($bp--timeline-2col) {
+          display: block;
         }
       }
+    }
+
+    .active .timeline-widget-pager--item .timeline-widget-pager--item-content {
+      @include arrow-box(em(10px), $color--white, em(2px), $color--purple--dark, up);
+      color: $color--gray;
     }
   }
 
@@ -405,11 +423,25 @@
   }
 }
 
-.timeline-widget--dot {
-  @include border-radius(16px);
-  width: em(16px);
-  height: em(16px);
-  margin: 0 auto;
-  border: em(4px) solid $color--gray--light;
+.active .timeline-widget--dot {
   background: $color--purple--dark;
+}
+
+.timeline-widget--dot {
+  @include border-radius(40px);
+  width: em(40px);
+  height: em(40px);
+  margin: 0 auto;
+  border: em(6px) solid $color--purple--light;
+  background: $color--purple;
+  font-weight: bold;
+  color: $color--white;
+
+  .timeline-widget--dot--date {
+    width: 30px;
+    margin: auto;
+    text-align: center;
+    padding-right: 2px;
+    padding-top: 2px;
+  }
 }
