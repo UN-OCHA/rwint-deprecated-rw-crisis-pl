@@ -79,7 +79,8 @@ $(document).ready(function() {
     clickBar: 1
   }).init();
 
-  $('.timeline-widget-pager--item, .timeline-widget-dropdown--item').click(function(){
+  // Control main slider with the pager and the dropdown.
+  $('.timeline-widget-pager--item, .timeline-widget--dropdown--container li').click(function(){
     var $index = $(this).attr('data-slide');
     var $pos = $sly.getPos($index);
     $sly.slideTo($pos.start);
@@ -101,10 +102,21 @@ $(document).ready(function() {
     $index = $sly.rel.activeItem;
 
     var $pagerPos = $slyPager.getPos($index);
+    $slyPager.activate($index);
     $slyPager.slideTo($pagerPos.center);
 
-    var $dropDownPos = $slyDropdown.getPos($index);
-    $slyDropdown.slideTo($dropDownPos.start);
+    // Since the months add extra items to the dropdown slider we need to get
+    // the correct indices and slide to them.
+    $('.timeline-widget--dropdown--container li').each(function( $liIndex ) {
+      var $slyIndex = $(this).attr('data-slide');
+      if ($slyIndex) {
+        if ($slyIndex == $index) {
+          var $dropDownPos = $slyDropdown.getPos($liIndex);
+          $slyDropdown.activate($liIndex);
+          $slyDropdown.slideTo($dropDownPos.center);
+        }
+      }
+    });
   });
 });
 

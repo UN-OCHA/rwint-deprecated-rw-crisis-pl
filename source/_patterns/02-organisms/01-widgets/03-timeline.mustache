@@ -33,13 +33,18 @@
         <div class="timeline-widget--dropdown--container">
           <ul class="slidee">
             {{#timeline-items}}
-              <li>
+              {{#new-month}}
+              <li class="timeline-widget--dropdown--month" data-isMonth="true">
+                {{ date-month }} - {{ date-year }}
+              </li>
+              {{/new-month}}
+              <li data-slide="{{ index }}">
                 <div class="timeline-widget--dot">
                   <div class="timeline-widget--dot--date">
                     {{ date-day }}
                   </div>
                 </div>
-                <div class="timeline-widget-dropdown--item" data-slide="{{ index }}">
+                <div class="timeline-widget-dropdown--item">
                     {{ short-desc }}
                 </div>
               </li>

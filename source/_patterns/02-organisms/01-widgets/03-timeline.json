@@ -6,76 +6,90 @@
       "date-full": "1 December 2014",
       "date-month": "December",
       "date-day": "1",
+      "date-year": "2014",
       "country": "Iraq",
       "img-source": "../../images/timeline-img.png",
       "long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
-      "short-desc": "Spate of attacks terrorize civilains in Iraq — HRW"
+      "short-desc": "Spate of attacks terrorize civilains in Iraq — HRW",
+      "new-month": true
     },
     {
       "index": 1,
       "title": "Lorem ipsum dolor sit amet, condimentum tempor elit tincidun",
       "date-full": "13 January 2015",
-      "date-month": "December",
+      "date-month": "January",
       "date-day": "13",
+      "date-year": "2015",
       "country": "Iran",
       "img-source": "../../images/timeline-img.png",
       "long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
-      "short-desc": "Lorem ipsum dolor sit amet, condimentum tempor elit tincidun"
+      "short-desc": "Lorem ipsum dolor sit amet, condimentum tempor elit tincidun",
+      "new-month": true
     },
     {
       "index": 2,
       "title": "Magna laoreet justo eget laoreet, quis magna sagittis amet risus",
-      "date-full": "21 February 2015",
-      "date-month": "December",
+      "date-full": "21 March 2015",
+      "date-month": "March",
       "date-day": "21",
+      "date-year": "2015",
       "country": "Iraq",
       "img-source": "../../images/timeline-img.png",
       "long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
-      "short-desc": "Magna laoreet justo eget laoreet, quis magna sagittis amet risus"
+      "short-desc": "Magna laoreet justo eget laoreet, quis magna sagittis amet risus",
+      "new-month": true
     },
     {
       "index": 3,
       "title": "Vel habitasse, justo lectus luctus eget nec sollicitudin, massa",
       "date-full": "30 March 2015",
-      "date-month": "December",
+      "date-month": "March",
       "date-day": "30",
+      "date-year": "2015",
       "country": "Iran",
       "img-source": "../../images/timeline-img.png",
       "long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
-      "short-desc": "Vel habitasse, justo lectus luctus eget nec sollicitudin, massa"
+      "short-desc": "Vel habitasse, justo lectus luctus eget nec sollicitudin, massa",
+      "new-month": false
     },
     {
       "index": 4,
       "title": "Urna id pretium neque eget faucibus in, mattis nam phasellus",
-      "date-full": "30 April 2015",
-      "date-month": "December",
-      "date-day": "30",
+      "date-full": "31 March 2015",
+      "date-month": "March",
+      "date-day": "31",
+      "date-year": "2015",
       "country": "Iraq",
       "img-source": "../../images/timeline-img.png",
       "long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
-      "short-desc": "Urna id pretium neque eget faucibus in, mattis nam phasellus"
+      "short-desc": "Urna id pretium neque eget faucibus in, mattis nam phasellus",
+      "new-month": false
     },
     {
       "index": 5,
       "title": "Quisque mauris dui curabitur sed morbi, a hymenaeos nec",
       "date-full": "17 May 2015",
-      "date-month": "December",
+      "date-month": "May",
       "date-day": "17",
+      "date-year": "2015",
       "country": "Iran",
       "img-source": "../../images/timeline-img.png",
       "long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
-      "short-desc": "Quisque mauris dui curabitur sed morbi, a hymenaeos nec"
+      "short-desc": "Quisque mauris dui curabitur sed morbi, a hymenaeos nec",
+      "new-month": true
     },
     {
       "index": 6,
       "title": "Ipsum magnis tortor nullam tincidunt luctus, ipsum nullam",
       "date-full": "12 June 2015",
-      "date-month": "December",
+      "date-month": "June",
       "date-day": "12",
+      "date-year": "2015",
       "country": "Iraq",
       "img-source": "../../images/timeline-img.png",
       "long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
-      "short-desc": "Ipsum magnis tortor nullam tincidunt luctus, ipsum nullam"
+      "short-desc": "Ipsum magnis tortor nullam tincidunt luctus, ipsum nullam",
+      "new-month": true
     }
   ]
 }
