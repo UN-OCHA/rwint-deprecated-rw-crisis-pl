@@ -6,11 +6,6 @@ module.exports = function(grunt, options) {
     {
       grunt: true,
       stream: true,
-      args: ['watch:scss']
-    },
-    {
-      grunt: true,
-      stream: true,
       args: ['watch:js']
     },
     {
@@ -22,6 +17,11 @@ module.exports = function(grunt, options) {
       grunt: true,
       stream: true,
       args: ['watch:icons']
+    },
+    {
+      grunt: true,
+      stream: true,
+      args: ['watch:scss']
     }
   ];
 

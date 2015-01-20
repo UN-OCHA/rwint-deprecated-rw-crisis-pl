@@ -1,0 +1,91 @@
+.financial-widget {
+  padding: 0 0.5rem;
+}
+
+.financial-widget--data-source {
+  @include unset-background-links();
+  @include link-colors($color--white, $color--gray--light, $color--gray--light, $color--white, $color--white);
+  font-family: $font--futura;
+  background-color: $color--blue--dark;
+  padding: 3px 0.5rem;
+  display: block;
+  &:nth-last-of-type(1n+2) {
+    border-bottom: 1px solid $color--blue--darker;
+  }
+  &.active {
+    background-color: $color--blue;
+  }
+}
+
+.financial-widget--time {
+  h1 {
+    line-height: 1.1;
+  }
+}
+
+.financial-widget--percent-funded {
+//  $color--diagonal--lighter: mix($color--gray--light, $color--blue--dark, 97%);
+//  @include background-image(linear-gradient(90deg, $color--green, $color--transparent--white), repeating-linear-gradient(-45deg, $color--transparent--white, $color--transparent--white 16px, $color--diagonal--lighter 16px, $color--diagonal--lighter 32px));
+
+//  $color--diagonal--lighter: mix($color--gray--light, $color--blue--light, 25%);
+//  @include background-image(repeating-linear-gradient(-45deg, $color--transparent--white, $color--transparent--white 16px, $color--diagonal--lighter 16px, $color--diagonal--lighter 32px));
+//
+//  $color--diagonal--lighter: mix($color--gray--light, $color--green--dark, 25%);
+//  @include background-image(repeating-linear-gradient(-45deg, $color--transparent--white, $color--transparent--white 16px, $color--diagonal--lighter 16px, $color--diagonal--lighter 32px));
+  width: 100%;
+  height: 3rem;
+//  border: 1px solid cadetblue;
+  background-color: $color--blue--dark;
+//  background-color: $color--green--dark;
+//  background-position: 50% 50%, 50% 50%;
+  @include try-borders();
+  @include try-colors();
+}
+
+.financial-widget--percent-funded--amount {
+  height: 100%;
+  padding: 3rem 0.5rem 0;
+  position: relative;
+  white-space: nowrap;
+  font-family: $font--futura;
+//  &:before {
+//    position: absolute;
+//    top: 2px;
+//    color: $color--white;
+//    font-size: 2em;
+//  }
+  &.covered {
+    float: left;
+    width: 55%;
+    background: $color--green;
+    $color--diagonal--lighter: mix($color--gray--light, $color--green, 25%);
+    @include background-image(linear-gradient(90deg, $color--green, $color--transparent--white), repeating-linear-gradient(-45deg, $color--transparent--white, $color--transparent--white 16px, $color--diagonal--lighter 16px, $color--diagonal--lighter 32px));
+    background-position: 50% 50%, 50% 50%;
+    border-right: 4px solid $color--purple;
+//    &:before {
+//      content: "$2.12B";
+//      left: 0.5rem;
+//    }
+  }
+  &.requested {
+    text-align: right;
+//    &:before {
+//      content: "$3.74B";
+//      right: 0.5rem;
+//    }
+  }
+  .percent {
+    color: $color--white;
+    font-size: ms(2);
+    text-align: right;
+    position: absolute;
+    top: 5px;
+    right: 0.5rem;
+    line-height: 1;
+    span {
+      display: block;
+      font-size: ms(0);
+    }
+  }
+}
+
