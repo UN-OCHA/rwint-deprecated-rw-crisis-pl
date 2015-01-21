@@ -2,24 +2,61 @@
   padding: 0 0.5rem;
 }
 
+.financial-widget--data-source-chooser {
+  margin-bottom: $base-line-px;
+}
 .financial-widget--data-source {
   @include unset-background-links();
-  @include link-colors($color--white, $color--gray--light, $color--gray--light, $color--white, $color--white);
+//  @include link-colors($color--white, $color--gray--light, $color--gray--light, $color--white, $color--white);
   font-family: $font--futura;
   background-color: $color--blue--dark;
   padding: 3px 0.5rem;
   display: block;
+  //
+  @include fontsize-rem(ms(1));
+  padding: 3px 0.5em;
+  background-color: $color--gray--light;
+  color: $color--gray;
+  @include link-colors($color--gray, $color--gray--dark, $color--gray--dark, $color--gray, $color--gray);
+  font-family: $font--futura;
+  border: 1px solid $color--gray--lightish;
+  //
   &:nth-last-of-type(1n+2) {
     border-bottom: 1px solid $color--blue--darker;
   }
-  &.active {
+  &.active, &:hover {
     background-color: $color--blue;
+    //
+    background-color: $color--purple;
+    color: $color--white;
+    @include link-colors($color--white, $color--gray--light, $color--gray--light, $color--white, $color--white);
+    //
   }
 }
 
 .financial-widget--time {
+  display: table;
+  margin-bottom: $base-line-px;
+  border-bottom: 1px solid $color--gray--lightish;
   h1 {
+    font-size: ms(3);
     line-height: 1.1;
+    float: left;
+    max-width: 100% / $phi;
+  }
+  .selectric-financial-widget--time-select {
+    /* min-width: 50%; */
+    /* display: inline-block; */
+    /* position: relative; */
+    /* left: 50%; */
+    /* -webkit-transform: translateX(-50%); */
+    float: right;
+    max-width: 100% - (100% / $phi);
+    margin-top: 1em;
+    /* outline: 1px solid gray; */
+    .label {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -38,6 +75,7 @@
   background-color: $color--blue--dark;
 //  background-color: $color--green--dark;
 //  background-position: 50% 50%, 50% 50%;
+  margin-bottom: $base-line-px * 2;
   @include try-borders();
   @include try-colors();
 }
@@ -89,3 +127,25 @@
   }
 }
 
+.financial-widget--cluster-funding {
+  background: url('../../images/dropdown-bk-img.png');
+  border: {
+    width: 4px 0;
+    style: double;
+    color: $color--gray--light;
+  }
+  margin: 0 -0.5rem;
+  padding: 0.5em 0;
+  box-shadow: 0 0 0px 0.25em white inset;
+  h2 {
+    font-size: ms(4);
+    line-height: 1.1;
+    margin: 0 0.5rem;
+  }
+}
+
+
+// selectric
+.selectric {
+  border-radius: none;
+}
