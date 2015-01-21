@@ -65,6 +65,10 @@
       "value": "#cccccc"
     },
     {
+      "name": "$color--gray--light--mid",
+      "value": "#8c8e93"
+    },
+    {
       "name": "$color--gray",
       "value": "#4d515b"
     },

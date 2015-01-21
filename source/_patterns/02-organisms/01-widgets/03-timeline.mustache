@@ -38,7 +38,7 @@
                 {{ date-month }} - {{ date-year }}
               </li>
               {{/new-month}}
-              <li data-slide="{{ index }}">
+              <li class="timeline-widget-dropdown--list-item" data-slide="{{ index }}">
                 <div class="timeline-widget--dot">
                   <div class="timeline-widget--dot--date">
                     {{ date-day }}
@@ -49,6 +49,7 @@
                 </div>
               </li>
             {{/timeline-items}}
+            <li class="timeline-widget--dropdown--end-of-line">No More Entries</li>
           </ul>
         </div>
       </div>
