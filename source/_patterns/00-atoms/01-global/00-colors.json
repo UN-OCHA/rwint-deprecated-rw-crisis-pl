@@ -9,6 +9,10 @@
       "value": "#665695"
     },
     {
+      "name": "$color--purple--light",
+      "value": "#e6e6f5"
+    },
+    {
       "name": "$color--blue",
       "value": "#6c9acd"
     },
@@ -59,6 +63,10 @@
     {
       "name": "$color--gray--lightish",
       "value": "#cccccc"
+    },
+    {
+      "name": "$color--gray--light--mid",
+      "value": "#8c8e93"
     },
     {
       "name": "$color--gray",
