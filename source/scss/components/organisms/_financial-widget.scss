@@ -150,15 +150,48 @@
 
 //
 #finance-bubbles {
+//  background-color: $color--purple--light;
+  background-image: image-url('diagonal-pinstripes.png');
+  padding: 1em 0 1em 0.5em;
   text {
     font-family: $font--futura;
 //    text-transform: uppercase;
     font-size: ms(0);
   }
-  #clusters {
-    text {}
+  .scale-line {
+    stroke: $color--gray--lightish
+  }
+  .scale-line--left {
+    fill: $color--purple;
+  }
+  .cluster-bubble {
+    text {
+      fill: $color--white;
+    }
     circle {
       fill: $color--purple;
+    }
+    &.small {
+      text {
+        fill: $color--purple--dark;
+      }
+    }
+  }
+  #detail-overlay {
+//    display: none;
+    .detail--block {
+      fill: rgba($color--white, 0.8);
+    }
+    .detail--info {
+      fill: $color--purple;
+      stroke: $color--purple--dark;
+    }
+    .detail--text {
+      font-size: ms(1);
+      fill: $color--white;
+    }
+    .detail--title {
+      font-size: ms(2);
     }
   }
 }
