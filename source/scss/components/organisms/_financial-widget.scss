@@ -1,3 +1,5 @@
+$bp--financial--wide-chart: 680px;
+
 .financial-widget {
   padding: 0 0.5rem;
 }
@@ -129,39 +131,39 @@
 
 // BUBBLES!!!
 .financial-widget--cluster-funding {
-//  background-image: image-url('diagonal-pinstripes.png');
-//  border: {
-//    width: 4px 0;
-//    style: double;
-//    color: $color--gray--light;
-//  }
-//  margin: 0 -0.5rem;
-//  padding: 0.5em 0;
-//  box-shadow: 0 0 0px 0.25em white inset;
   h2 {
     font-size: ms(3);
     line-height: 1.1;
-//    margin: 0 0.5rem;
   }
   svg {
     width: 100%;
   }
 }
 
-//
 #finance-bubbles {
-//  background-color: $color--purple--light;
+  &.horizontal {
+    display: none;
+  }
+  @include breakpoint($bp--financial--wide-chart) {
+    &.vertical {
+      display: none;
+    }
+    &.horizontal {
+      display: block;
+    }
+  }
+}
+#finance-bubbles {
   background-image: image-url('diagonal-pinstripes.png');
   padding: 1em 0 1em 0.5em;
   text {
     font-family: $font--futura;
-//    text-transform: uppercase;
     font-size: ms(0);
   }
   .scale-line {
     stroke: $color--gray--lightish
   }
-  .scale-line--left {
+  .scale-line--percent {
     fill: $color--purple;
   }
   .cluster-bubble {
@@ -178,7 +180,7 @@
     }
   }
   #detail-overlay {
-//    display: none;
+    display: none;
     .detail--block {
       fill: rgba($color--white, 0.8);
     }
