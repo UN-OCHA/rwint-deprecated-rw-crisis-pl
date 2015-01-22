@@ -13,11 +13,11 @@ module.exports = function(grunt, options) {
       stream: false,
       args: ['watch:livereload']
     },
-    {
-      grunt: true,
-      stream: true,
-      args: ['watch:icons']
-    },
+    //{
+    //  grunt: true,
+    //  stream: true,
+    //  args: ['watch:icons']
+    //},
     {
       grunt: true,
       stream: true,
@@ -30,7 +30,7 @@ module.exports = function(grunt, options) {
       grunt: true,
       stream: true,
       args: ['watch:pl']
-    },{
+    }, {
       grunt: true,
       stream: false,
       args: ['connect:pl']
