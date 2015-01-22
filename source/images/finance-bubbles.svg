@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="403px" height="715px" viewBox="0 0 403 715" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>cluster-bubbles</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="cluster-bubbles" sketch:type="MSLayerGroup" transform="translate(-1.000000, 0.000000)">
+            <g id="clusters" transform="translate(63.000000, 36.000000)">
+                <g id="food-agriculture-+-Food-&amp;-Agriculture" transform="translate(164.000000, 283.000000)">
+                    <circle id="food-agriculture" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="88" cy="88" r="88"></circle>
+                    <text id="Food-&amp;-Agriculture" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                        <tspan x="21.2460938" y="97">Food &amp; Agriculture</tspan>
+                    </text>
+                </g>
+                <g id="etc-+-ETC" transform="translate(119.000000, 371.000000)">
+                    <circle id="etc" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="15.5" cy="15.5" r="15.5"></circle>
+                    <text id="ETC" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                        <tspan x="0" y="20">ETC</tspan>
+                    </text>
+                </g>
+                <g id="nutrition-+-Nutrition" transform="translate(15.000000, 182.000000)">
+                    <circle id="nutrition" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="41.5" cy="41.5" r="41.5"></circle>
+                    <text id="Nutrition" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                        <tspan x="11.7109375" y="50">Nutrition</tspan>
+                    </text>
+                </g>
+                <g id="nfi-shelter-+-NFI-&amp;-Shelter" transform="translate(98.000000, 435.000000)">
+                    <circle id="nfi-shelter" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
+                    <text id="NFI-&amp;-Shelter" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                        <tspan x="4.484375" y="57">NFI &amp; Shelter</tspan>
+                    </text>
+                </g>
+                <g id="cluster5" transform="translate(177.000000, 0.000000)">
+                    <circle fill="#D8D8D8" sketch:type="MSShapeGroup" cx="66" cy="66" r="66"></circle>
+                    <text id="Cluster5" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                        <tspan x="36.7109375" y="74">Cluster5</tspan>
+                    </text>
+                </g>
+                <g id="cluster6" transform="translate(86.000000, 92.000000)">
+                    <circle fill="#D8D8D8" sketch:type="MSShapeGroup" cx="48.5" cy="48.5" r="48.5"></circle>
+                    <text id="Cluster6" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                        <tspan x="18.7109375" y="57">Cluster6</tspan>
+                    </text>
+                </g>
+                <g id="cluster7" transform="translate(17.000000, 577.000000)">
+                    <circle fill="#D8D8D8" sketch:type="MSShapeGroup" cx="31" cy="20" r="20"></circle>
+                    <text id="Cluster7" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                        <tspan x="0.7109375" y="27">Cluster7</tspan>
+                    </text>
+                </g>
+                <g id="cluster8" transform="translate(0.000000, 331.000000)">
+                    <circle fill="#D8D8D8" sketch:type="MSShapeGroup" cx="51.5" cy="51.5" r="51.5"></circle>
+                    <text id="Cluster8" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                        <tspan x="21.7109375" y="60">Cluster8</tspan>
+                    </text>
+                </g>
+                <g id="cluster9" transform="translate(237.000000, 511.000000)">
+                    <circle fill="#D8D8D8" sketch:type="MSShapeGroup" cx="30" cy="24" r="24"></circle>
+                    <text id="Cluster9" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                        <tspan x="0.7109375" y="30">Cluster9</tspan>
+                    </text>
+                </g>
+                <g id="cluster10" transform="translate(129.000000, 569.000000)">
+                    <circle fill="#D8D8D8" sketch:type="MSShapeGroup" cx="34.5" cy="28.5" r="28.5"></circle>
+                    <text id="Cluster10" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                        <tspan x="0.76171875" y="35">Cluster10</tspan>
+                    </text>
+                </g>
+                <g id="cluster11" transform="translate(54.000000, 267.000000)">
+                    <circle fill="#D8D8D8" sketch:type="MSShapeGroup" cx="34.5" cy="18.5" r="18.5"></circle>
+                    <text id="Cluster11" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                        <tspan x="0.26171875" y="27">Cluster11</tspan>
+                    </text>
+                </g>
+                <g id="cluster12" transform="translate(110.000000, 206.000000)">
+                    <circle fill="#D8D8D8" sketch:type="MSShapeGroup" cx="49" cy="49" r="49"></circle>
+                    <text id="Cluster12" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                        <tspan x="14.7617188" y="57">Cluster12</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="detail-overlay" transform="translate(41.000000, 0.000000)">
+                <rect id="Rectangle-1" fill-opacity="0.8" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="363" height="714"></rect>
+                <circle id="Oval-13" stroke="#979797" stroke-width="5" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="184" cy="254" r="160"></circle>
+                <text id="Nutrition" sketch:type="MSTextLayer" font-family="Helvetica" font-size="18" font-weight="bold" sketch:alignment="middle" fill="#000000">
+                    <tspan x="146.510254" y="228">Nutrition</tspan>
+                    <tspan x="221.489746" y="228" font-weight="normal"></tspan>
+                    <tspan x="129.468262" y="250" font-weight="normal">62% Covered</tspan>
+                    <tspan x="92.4443359" y="272" font-weight="normal">30.0 Million Requested</tspan>
+                    <tspan x="105.452148" y="294" font-weight="normal">18.5 Million Funded</tspan>
+                </text>
+            </g>
+            <g id="scale">
+                <path d="M40.5,0.5 L40.5,713.938171" id="percent-line" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <text id="100%" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#000000">
+                    <tspan x="0" y="11">100%</tspan>
+                </text>
+                <text id="0%" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#000000">
+                    <tspan x="13" y="711">0%</tspan>
+                </text>
+                <text id="50%" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#000000">
+                    <tspan x="6" y="359">50%</tspan>
+                </text>
+                <text id="25%" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#000000">
+                    <tspan x="6" y="533">25%</tspan>
+                </text>
+                <text id="75%" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#000000">
+                    <tspan x="6" y="185">75%</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
