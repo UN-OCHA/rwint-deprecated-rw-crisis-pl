@@ -83,7 +83,7 @@
 .timeline-widget--dropdown--container {
   height: 100%;
   padding: 0 em(15px) 0 em(30px);
-  background: url('../../images/diagonal-pinstripes.png');
+  background-image: image-url('diagonal-pinstripes.png');
   @include breakpoint($bp--timeline-2col) {
     height: em(325px);
     border-bottom: 2px solid $color--blue--dark;
@@ -388,7 +388,7 @@
   width: 100%;
   margin-top: em(40px);
   padding-bottom: 10px;
-  background: url('../../images/pager-bk-img.png') repeat-x 0 em(14px);
+  background: image-url('pager-bk-img.png') repeat-x 0 em(14px);
 
   ul {
     width: 100%;
