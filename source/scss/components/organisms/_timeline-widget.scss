@@ -83,7 +83,7 @@
 .timeline-widget--dropdown--container {
   height: 100%;
   padding: 0 em(15px) 0 em(30px);
-  background: url('../../images/dropdown-bk-img.png');
+  background: url('../../images/diagonal-pinstripes.png');
   @include breakpoint($bp--timeline-2col) {
     height: em(325px);
     border-bottom: 2px solid $color--blue--dark;
