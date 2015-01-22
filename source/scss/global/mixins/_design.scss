@@ -12,6 +12,12 @@
   }
 }
 
+@mixin try-borders() {
+  @each $color-var, $color-val in $color-map {
+    /* border: 1px solid #{$color-val}; */
+  }
+}
+
 @mixin try-fonts() {
   @each $font-var, $font-val in $font-map {
     /* font-family: #{$font-val}; */

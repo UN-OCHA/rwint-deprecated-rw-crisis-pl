@@ -19,6 +19,8 @@ module.exports = function (grunt, options) {
     watch: {
       files: [
         'source/**/*',
+        '!**/source/scss/**/*', // ignore sass compiles
+        '!**/source/css/*.css.map', // ignore source map
         '!**/source/images/icons/src/**', // watch:icons has this
         '!**/source/images/icons/templates/*', // watch:icons has this
         '!**/source/images/icons/unused-library/*', // watch:icons has this
