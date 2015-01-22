@@ -1,4 +1,6 @@
 $bp--financial--wide-chart: 680px;
+$bp--financial--horizontal-tabs: 620px;
+$bp--financial--inline-date: 620px;
 
 .financial-widget {
   padding: 0 0.5rem;
@@ -6,6 +8,9 @@ $bp--financial--wide-chart: 680px;
 
 .financial-widget--data-source-chooser {
   margin-bottom: $base-line-px;
+  @include breakpoint($bp--financial--horizontal-tabs) {
+    display: flex;
+  }
 }
 .financial-widget--data-source {
   @include unset-background-links();
@@ -13,10 +18,27 @@ $bp--financial--wide-chart: 680px;
   font-family: $font--futura;
   display: block;
   @include fontsize-rem(ms(1));
-  padding: 3px 0.5em;
+  padding: 3px 0.5em 3px 1.5em;
   background-color: $color--gray--light;
   position: relative;
-  padding-left: 1.5em;
+  @include breakpoint($bp--financial--horizontal-tabs) {
+    padding-right: 1.5em;
+    flex-grow: 1;
+    border-bottom: 1px solid $color--blue--pale;
+    &:before {
+//      @include single-transition(transform, $default-transition-duration, $default-transition-function);
+      @include transition-property(border-color, transform);
+      @include transition-duration($default-transition-duration);
+      @include transition-timing-function($default-transition-function);
+      @include transform(rotate(0deg));
+
+    }
+    &.active, &:hover {
+      &:before {
+        @include transform(rotate(90deg));
+      }
+    }
+  }
   &:before {
     @include single-transition(border-color, $default-transition-duration, $default-transition-function);
     @include arrow($color--purple--light--mid, right, $arrow-length: 0.66em, $arrow-breadth: 0.5em);
@@ -40,12 +62,20 @@ $bp--financial--wide-chart: 680px;
   margin-bottom: $base-line-px;
   border-bottom: 1px solid $color--gray--lightish;
   width: 100%;
+  @include breakpoint($bp--financial--inline-date) {
+    display: flex;
+  }
   h1 {
     font-size: ms(3);
     line-height: 1.1;
   }
   .selectric-financial-widget--time-select {
     margin-top: 1em;
+    @include breakpoint($bp--financial--inline-date) {
+      margin-top: 0.5rem;
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+    }
   }
 }
 
@@ -156,6 +186,7 @@ $bp--financial--wide-chart: 680px;
 #finance-bubbles {
   background-image: image-url('diagonal-pinstripes.png');
   padding: 1em 0 1em 0.5em;
+  margin-bottom: $base-line-px;
   text {
     font-family: $font--futura;
     font-size: ms(0);
