@@ -130,6 +130,38 @@
 
 .placeholder {
 	width: 100%;
+	background: white;
+	
+	.graph--heading {
+		font-size: 12px;
+		font-family: $font--futura;
+		color: $color--gray--dark;
+		text-transform: uppercase;
+		padding: 20px 30px 0;
+	}
+	
+	svg {
+		background-color: white;
+		width: 100%;
+		margin-bottom: em(20px);
+		
+		text {
+			font-family: $font--futura;
+			font-size: 12px;
+		}
+		
+		.graph-reports {
+			stroke: $color--blue--dark;
+		}
+		
+		.graph-maps {
+			stroke: $color--yellow--dark;
+		}
+		
+		.graph-jobs {
+			stroke: $color--purple--dark;
+		}
+	}
 }			
 
 .river-tabs {
