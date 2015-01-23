@@ -1,5 +1,16 @@
 .widget-river {
   background: image-url('diagonal-pinstripes.png') repeat $color--white;
+  // layout
+  @include breakpoint($bp--river--two-cols) {
+    @include layout(7 3) {
+      .widget-river--results--graph {
+        @include grid-span(1, 1);
+      }
+      .widget-river--filters {
+        @include grid-span(1, 2);
+      }
+    }
+  }
 }
 
 .widget-river--header {
@@ -51,7 +62,6 @@
   }
 }
 
-$bp--unstack-tabs: 640px;
 .widget-river--results-tabs {
   > li {
     width: 100%;
@@ -66,7 +76,7 @@ $bp--unstack-tabs: 640px;
     &:nth-child(3) {
       background-color: $color--yellow--mid;
     }
-    @include breakpoint($bp--unstack-tabs) {
+    @include breakpoint($bp--river-unstack-tabs) {
       width: 33.3%;
       float: left;
       text-align: center;
@@ -80,7 +90,7 @@ $bp--unstack-tabs: 640px;
       line-height: 1.3em;
       vertical-align: middle;
 
-      @include breakpoint($bp--unstack-tabs) {
+      @include breakpoint($bp--river-unstack-tabs) {
         @include fontsize-rem(ms(9));
         display: block;
         width: auto;
@@ -106,7 +116,7 @@ $bp--unstack-tabs: 640px;
     top: 12px;
     right: 0.5rem;
   }
-  @include breakpoint($bp--unstack-tabs) {
+  @include breakpoint($bp--river-unstack-tabs) {
     display: block;
     width: auto;
     &:after {
@@ -114,6 +124,8 @@ $bp--unstack-tabs: 640px;
     }
   }
 }
+
+
 
 .widget-river--filters {
 //  @include transition-property(max-height, opacity);
@@ -134,11 +146,9 @@ $bp--unstack-tabs: 640px;
     opacity: 1;
     overflow: visible;
   }
-  @media screen and (min-width: 768px) {
+  @include breakpoint($bp--river--two-cols) {
     position: static;
     height: auto;
-    width: 22%;
-    float: right;
     margin-bottom: $base-line-em;
     max-height: 100em;
     opacity: 1;
@@ -164,7 +174,7 @@ $bp--unstack-tabs: 640px;
     float: right;
     background: image-url('close.svg') no-repeat;
     cursor: pointer;
-    @media screen and (min-width: 768px) {
+    @include breakpoint($bp--river--two-cols) {
       display: none;
     }
   }
@@ -184,9 +194,14 @@ $bp--unstack-tabs: 640px;
       background-color: $color--white;
       color: $color--blue--dark;
       font-family: $font--futura;
-
+      position: relative;
       &:hover {
         background-color: $color--gray--light;
+      }
+      &:after {
+        @include arrow($color--purple, right);
+        top: 16px;
+        right: 0.5rem;
       }
     }
   }
@@ -195,20 +210,13 @@ $bp--unstack-tabs: 640px;
 
 ////////////////////////////////////////////
 .widget-river--results {
-  @media screen and (min-width: 640px) {
-    margin: 20px;
+  @include breakpoint($bp--river-unstack-tabs) {
+    margin: 1rem;
   }
   .widget-river--results--graph {
-    background-color: #b7bec9;
-    border: 8px solid RGBA(182, 190, 200, 1);
-    margin-bottom: em(20px);
-
-    @media screen and (min-width: 768px) {
-      float: left;
-      width: 75%;
-      margin-right: em(20px);
-
-    }
+    background-color: $color--gray--lightish;
+    border: 0.5rem solid $color--gray--lightish;
+    margin-bottom: $base-line-em;
   }
 
 

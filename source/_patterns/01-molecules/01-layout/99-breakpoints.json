@@ -11,6 +11,26 @@
     {
       "name": "$bp--timeline--navigation-buttons",
       "value": "1360px"
+    },
+    {
+      "name": "$bp--financial--wide-chart",
+      "value": "680px"
+    },
+    {
+      "name": "$bp--financial--horizontal-tabs",
+      "value": "620px"
+    },
+    {
+      "name": "$bp--financial--inline-date",
+      "value": "620px"
+    },
+    {
+      "name": "$bp--river-unstack-tabs",
+      "value": "640px"
+    },
+    {
+      "name": "$bp--river--two-cols",
+      "value": "860px"
     }
   ]
 }
