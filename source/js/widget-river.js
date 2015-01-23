@@ -1,10 +1,9 @@
   // Open popup.
-  $('.river-widget--dropdown-heading, .close').click(function(){
-    $('.river-widget--dropdown--wrapper').toggleClass('open');
-    $slyDropdown.reload();
+  $('.widget-river--results--item, .close').click(function(){
+    $('.widget-river--filters').toggleClass('open');
   });
 
   // Close popup.
-  $('.river-widget-dropdown--item').click(function(){
-    $('.river-widget--dropdown--wrapper').removeClass('open');
+  $('.close').click(function(){
+    $('.widget-river--filters').removeClass('open');
   });
