@@ -51,27 +51,26 @@
   }
 }
 
+$bp--unstack-tabs: 640px;
 .widget-river--results-tabs {
   > li {
     width: 100%;
     padding: em(10px);
-    background-color: $color--purple--dark;
     color: $color--white;
-
-    @media screen and (min-width: 640px) {
+    &:nth-child(1) {
+      background-color: $color--purple--dark;
+    }
+    &:nth-child(2) {
+      background-color: $color--blue--dark;
+    }
+    &:nth-child(3) {
+      background-color: $color--yellow--mid;
+    }
+    @include breakpoint($bp--unstack-tabs) {
       width: 33.3%;
       float: left;
       text-align: center;
     }
-
-    &:nth-child(2) {
-      background-color: $color--blue--dark;
-    }
-
-    &:nth-child(3) {
-      background-color: $color--yellow--dark;
-    }
-
     .widget-river--results--number {
       @include fontsize-rem(ms(4));
       width: 33%;
@@ -81,7 +80,7 @@
       line-height: 1.3em;
       vertical-align: middle;
 
-      @media screen and (min-width: 640px) {
+      @include breakpoint($bp--unstack-tabs) {
         @include fontsize-rem(ms(9));
         display: block;
         width: auto;
@@ -90,19 +89,6 @@
 
       }
     }
-
-    //    > div {
-    //
-    //
-    //      @media screen and (min-width: 640px) {
-    //        font-size: .8em;
-    ////        text-transform: uppercase;
-    //      }
-    //
-    ////      @media screen and (min-width: 768px) {
-    ////        font-size: fontsize-rem(ms(0));
-    ////      }
-    //    }
   }
 }
 
@@ -120,7 +106,7 @@
     top: 12px;
     right: 0.5rem;
   }
-  @media screen and (min-width: 640px) {
+  @include breakpoint($bp--unstack-tabs) {
     display: block;
     width: auto;
     &:after {
@@ -233,11 +219,12 @@
   background: $color--white;
 
   .graph--heading {
-    font-size: 12px;
+    @include fontsize-rem(ms(0));
     font-family: $font--futura;
     color: $color--gray--dark;
     text-transform: uppercase;
-    padding: 20px 30px 0;
+    padding: 20px 0 0 30px;
+    margin-bottom: 0;
   }
 
   svg {
@@ -255,7 +242,7 @@
     }
 
     .graph-maps {
-      stroke: $color--yellow--dark;
+      stroke: $color--yellow--mid;
     }
 
     .graph-jobs {
@@ -263,69 +250,3 @@
     }
   }
 }
-
-// @todo refactor this to only drop down the main list
-.river-widget--dropdown {
-  position: relative;
-  top: auto;
-  right: auto;
-  display: inline;
-
-  @media screen and (min-width: 640px) {
-    display: block;
-  }
-
-  .river-widget--dropdown--wrapper {
-    @include transition-property(max-height, opacity);
-    @include transition-duration($default-transition-duration);
-    @include transition-timing-function($default-transition-function);
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    z-index: 100;
-    background-color: $color--white;
-    &:before {
-      @include arrow($color--blue--darker, up);
-      right: 2em;
-      bottom: 100%;
-    }
-
-    &.open {
-      max-height: 100em;
-      opacity: 1;
-      overflow: visible;
-    }
-  }
-
-  //  .river-widget--dropdown-heading {
-  //
-  //  }
-
-  .close {
-    @include inline-block;
-    width: 20px;
-    height: 20px;
-    margin-top: .75em;
-    float: right;
-    background: url('../../images/close.svg') no-repeat;
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-  }
-  .river-widget--dropdown--container {
-    height: 100%;
-
-    .widget-river--filters {
-      float: none;
-      width: 100%;
-    }
-
-  }
-}
-
-

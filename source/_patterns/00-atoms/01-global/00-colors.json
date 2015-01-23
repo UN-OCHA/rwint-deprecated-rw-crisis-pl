@@ -45,6 +45,10 @@
       "value": "#f5c655"
     },
     {
+      "name": "$color--yellow--mid",
+      "value": "#ddb049"
+    },
+    {
       "name": "$color--yellow--dark",
       "value": "#957128"
     },
