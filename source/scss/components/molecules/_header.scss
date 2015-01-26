@@ -1,0 +1,110 @@
+.crisis-page--header {
+  //  @include try-colors();
+  //  @include try-borders();
+  position: relative;
+  margin-bottom: $base-line-em;
+  background-color: $color--gray--light;
+  color: $color--gray;
+  border-bottom: 1px solid $color--gray--light--mid;
+  min-height: 68px;
+  padding: 0 0.5rem;
+  font-family: $font--futura;
+}
+
+.rw--name-logo {
+  @include fontsize-rem(ms(0));
+  display: inline-block;
+  line-height: unitless-convert(68px);
+  @include try-colors();
+}
+.crisis-page--title {
+  @include fontsize-rem(ms(0));
+  display: inline-block;
+  line-height: unitless-convert(68px);
+  @include try-colors();
+}
+.crisis-page--navigation--trigger-label {
+  display: block;
+  float: right;
+  color: $color--purple;
+  text-transform: uppercase;
+  position: relative;
+  top: -10px;
+  line-height: unitless-convert(68px);
+  .text {
+    display: block;
+    line-height: 1;
+    position: relative;
+    top: -9px;
+  }
+  svg {
+    position: relative;
+    left: 2px;
+    .brady-button {
+      fill: $color--purple;
+    }
+  }
+}
+
+.crisis-page--navigation--trigger {
+  display: none;
+  &:checked {
+    + .crisis-page--navigation {
+      li {
+        max-height: 100vh;
+        opacity: 1;
+        &.crisis-page--widget-nav--item {
+          ~ {
+            .crisis-page--external-nav--item {
+              padding-top: $base-line-em ;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.crisis-page--navigation {
+
+//  position: absolute;
+//  height: 100vh;
+//  max-height: 0;
+//  opacity: 0;
+//  overflow: hidden;
+  width: 100vw;
+//  z-index: 100;
+//  background: $color--white;
+//  top: 1px;
+//  margin: 0 -0.5rem;
+  line-height: unitless-convert(44px);
+  @include try-colors();
+  li {
+    @include transition-property(max-height, opacity);
+    @include transition-duration($default-transition-duration);
+    @include transition-timing-function($default-transition-function);
+    max-height: 0;
+    opacity: 0;
+    margin: 0 -0.5rem;
+    padding: 0 0.5rem;
+    @for $i from 1 through 8 {
+      &:nth-of-type(#{$i}) {
+//        @include transition-delay(($i - 1) * 0.33s);
+        @include transition-duration(($default-transition-duration * 0.5) * $i);
+        $color--bg--nav: mix($color--gray--light--mid, $color--white, $i * 5%);
+        background-color: $color--bg--nav;
+      }
+    }
+  }
+  a {
+    @include unset-background-links();
+  }
+}
+
+.crisis-page--widget-nav--item {
+  @include try-colors();
+  @include try-borders();
+  @include try-ms();
+  @include try-fonts();
+}
+
+

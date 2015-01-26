@@ -1,135 +1,95 @@
 {
-	"title" : "Home Page",
-	"bodyClass": "home",
-	"emergency" : false,
-	"hero" : [
+	"timeline-items":[
 		{
-			"img": {
-				"landscape-16x9": {
-					"src": "../../images/sample/landscape-16x9-mountains.jpg",
-					"alt": "Mountains"	
-				}
-			},
-			"headline" : {
-				"medium" : "Top 10 mountain ranges for hiking"
-			}
-		}
-	],
-	"touts" : [
-		{
-			"img": {
-				"landscape-4x3": {
-					"src": "../../images/sample/tout-4x3-climber.jpg",
-					"alt": "Climber"	
-				}
-			},
-			"headline" : {
-				"short" : "Extreme climbing tips"
-			}
+			"index": 0,
+			"title": "Spate of attacks terrorize civilains in Iraq — HRW",
+			"date-full": "1 December 2014",
+			"date-month": "December",
+			"date-day": "1",
+			"date-year": "2014",
+			"country": "Iraq",
+			"img-source": "../../images/timeline-img.png",
+			"long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
+			"short-desc": "Spate of attacks terrorize civilains in Iraq — HRW",
+			"new-month": true
 		},
 		{
-			"img": {
-				"landscape-4x3": {
-					"src": "../../images/sample/tout-4x3-stream.jpg",
-					"alt": "Stream hiking"	
-				}
-			},
-			"headline" : {
-				"short" : "Stream hiking"
-			}
+			"index": 1,
+			"title": "Lorem ipsum dolor sit amet, condimentum tempor elit tincidun",
+			"date-full": "13 January 2015",
+			"date-month": "January",
+			"date-day": "13",
+			"date-year": "2015",
+			"country": "Iran",
+			"img-source": "../../images/timeline-img.png",
+			"long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
+			"short-desc": "Lorem ipsum dolor sit amet, condimentum tempor elit tincidun",
+			"new-month": true
 		},
 		{
-			"img": {
-				"landscape-4x3": {
-					"src": "../../images/sample/tout-4x3-climbers.jpg",
-					"alt": "Explore hiking trails"	
-				}
-			},
-			"headline" : {
-				"short" : "Explore hiking trails"
-			}
-		}
-	],
-	"latest-posts" : [
-		{
-			"img": {
-				"square": {
-					"src": "../../images/sample/thumb-square-river.jpg",
-					"alt": "Post Thumbnail"	
-				}
-			},
-			"headline" : {
-				"short" : "Navigate the Allegheny River"
-			},
-			"exerpt" : {
-				"medium" : "The Allegheny River is a principal tributary of the Ohio River; it is located in the Eastern United States. The Allegheny River joins with the Monongahela River to form the Ohio River at the Point of Point State Park in Downtown Pittsburgh, Pennsylvania."
-			}
+			"index": 2,
+			"title": "Magna laoreet justo eget laoreet, quis magna sagittis amet risus",
+			"date-full": "21 March 2015",
+			"date-month": "March",
+			"date-day": "21",
+			"date-year": "2015",
+			"country": "Iraq",
+			"img-source": "../../images/timeline-img.png",
+			"long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
+			"short-desc": "Magna laoreet justo eget laoreet, quis magna sagittis amet risus",
+			"new-month": true
 		},
 		{
-			"img": {
-				"square": {
-					"src": "../../images/sample/thumb-square-ivy.jpg",
-					"alt": "Ivy"	
-				}
-			},
-			"headline" : {
-				"short" : "How to detect and avoid poison ivy"
-			},
-			"exerpt" : {
-				"medium" : "Toxicodendron radicans, commonly known as poison ivy is a poisonous North American plant that is well known for its production of urushiol"
-			}
+			"index": 3,
+			"title": "Vel habitasse, justo lectus luctus eget nec sollicitudin, massa",
+			"date-full": "30 March 2015",
+			"date-month": "March",
+			"date-day": "30",
+			"date-year": "2015",
+			"country": "Iran",
+			"img-source": "../../images/timeline-img.png",
+			"long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
+			"short-desc": "Vel habitasse, justo lectus luctus eget nec sollicitudin, massa",
+			"new-month": false
 		},
 		{
-			"img": {
-				"square": {
-					"src": "../../images/sample/thumb-square-yosemite.jpg",
-					"alt": "Yosemite"	
-				}
-			},
-			"headline" : {
-				"short" : "Top 10 hiking mountains"
-			},
-			"exerpt" : {
-				"medium" : "Yosemite National Park is a United States National Park spanning eastern portions of Tuolumne, Mariposa and Madera counties in the central eastern portion of the U.S. state of California."
-			}
+			"index": 4,
+			"title": "Urna id pretium neque eget faucibus in, mattis nam phasellus",
+			"date-full": "31 March 2015",
+			"date-month": "March",
+			"date-day": "31",
+			"date-year": "2015",
+			"country": "Iraq",
+			"img-source": "../../images/timeline-img.png",
+			"long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
+			"short-desc": "Urna id pretium neque eget faucibus in, mattis nam phasellus",
+			"new-month": false
 		},
 		{
-			"img": {
-				"square": {
-					"src": "../../images/sample/thumb-square-fire.jpg",
-					"alt": "Fire"	
-				}
-			},
-			"headline" : {
-				"short" : "How to build a campfire"
-			},
-			"exerpt" : {
-				"medium" : "A campfire is a fire lit at a campsite, to serve the following functions: light, warmth, a beacon, an insect and/or apex predator deterrent, to cook, and for a psychological sense of security. "
-			}
+			"index": 5,
+			"title": "Quisque mauris dui curabitur sed morbi, a hymenaeos nec",
+			"date-full": "17 May 2015",
+			"date-month": "May",
+			"date-day": "17",
+			"date-year": "2015",
+			"country": "Iran",
+			"img-source": "../../images/timeline-img.png",
+			"long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
+			"short-desc": "Quisque mauris dui curabitur sed morbi, a hymenaeos nec",
+			"new-month": true
 		},
 		{
-			"img": {
-				"square": {
-					"src": "../../images/sample/thumb-square-gear.jpg",
-					"alt": "Camping Gear"	
-				}
-			},
-			"headline" : {
-				"short" : "Pick the right camping gear"
-			},
-			"exerpt" : {
-				"medium" : "The equipment used in camping varies with the particular type of camping. For instance, in survival camping the equipment consists of small items which have the purpose of helping the camper in providing food, heat and safety."
-			}
-		}
-	],
-	"inset-blocks" : [
-		{
-			"headline" : "This is the headline for the inset block"
-		}
-	],
-	"latest-block" : [
-		{
-			"headline" : "This is the headline for the latest block"
+			"index": 6,
+			"title": "Ipsum magnis tortor nullam tincidunt luctus, ipsum nullam",
+			"date-full": "12 June 2015",
+			"date-month": "June",
+			"date-day": "12",
+			"date-year": "2015",
+			"country": "Iraq",
+			"img-source": "../../images/timeline-img.png",
+			"long-desc": "<p>The <a>United Nations top official</a> for Iraq today urged continuance of, and support to, the new unity Government’s efforts to push forward reconciliation and security efforts that he said were beginning to succeed in countering the brutal onslaught of terrorist forces.</p>",
+			"short-desc": "Ipsum magnis tortor nullam tincidunt luctus, ipsum nullam",
+			"new-month": true
 		}
 	]
 }
