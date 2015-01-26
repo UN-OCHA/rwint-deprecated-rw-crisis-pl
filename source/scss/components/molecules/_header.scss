@@ -15,12 +15,14 @@
   @include fontsize-rem(ms(0));
   display: inline-block;
   line-height: unitless-convert(68px);
+  margin: 0;
   @include try-colors();
 }
 .crisis-page--title {
   @include fontsize-rem(ms(0));
   display: inline-block;
   line-height: unitless-convert(68px);
+  margin: 0;
   @include try-colors();
 }
 .crisis-page--navigation--trigger-label {
@@ -29,13 +31,13 @@
   color: $color--purple;
   text-transform: uppercase;
   position: relative;
-  top: -10px;
+  margin-top: -10px;
   line-height: unitless-convert(68px);
   .text {
     display: block;
     line-height: 1;
     position: relative;
-    top: -9px;
+    margin-top: -9px;
   }
   svg {
     position: relative;
@@ -53,14 +55,18 @@ $bp--wide-nav: 600px;
   &:checked {
     + .crisis-page--navigation {
       li {
-//        max-height: 100vh;
-        opacity: 1;
-        height: 42px;
+        a {
+          //        max-height: 100vh;
+//          opacity: 1;
+          height: 42px;
+        }
         &.crisis-page--widget-nav--item {
           ~ {
             .crisis-page--external-nav--item {
-              padding-top: $base-line-em ;
-              height: 42px + $base-line-px;
+              a {
+                padding-top: $base-line-em ;
+                height: 42px + $base-line-px;
+              }
             }
           }
         }
@@ -93,28 +99,38 @@ $bp--wide-nav: 600px;
       @include grid-span(1, 2);
     }
   }
-  li {
+  a {
+    @include unset-background-links();
     @include transition-property(height, opacity, padding-top);
     @include transition-duration($default-transition-duration);
     @include transition-timing-function($default-transition-function);
     height: 0;
-    opacity: 0;
+//    opacity: 0;
     margin: 0 -0.5rem;
     padding: 0 0.5rem;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-transform: uppercase;
+    text-align: center;
     @include breakpoint($bp--wide-nav) {
       margin: 0;
     }
+  }
+  li {
     @for $i from 1 through 8 {
       &:nth-of-type(#{$i}) {
-//        @include transition-delay(($i - 1) * 0.33s);
-//        @include transition-duration(($default-transition-duration * 0.5) * $i);
-        $color--bg--nav: mix($color--gray--light--mid, $color--white, $i * 5%);
-        background-color: $color--bg--nav;
+        a {
+          @include transition-delay(($i - 1) * 0.1s);
+          //        @include transition-duration(($default-transition-duration * 0.5) * $i);
+          $color--bg--nav: mix($color--gray--light--mid, $color--white, $i * 5%);
+          background-color: $color--bg--nav;
+          &:hover {
+            background-color: $color--white;
+          }
+        }
       }
     }
-  }
-  a {
-    @include unset-background-links();
   }
 }
 
