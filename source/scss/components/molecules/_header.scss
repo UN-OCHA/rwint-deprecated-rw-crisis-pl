@@ -46,17 +46,21 @@
   }
 }
 
+
+$bp--wide-nav: 600px;
 .crisis-page--navigation--trigger {
   display: none;
   &:checked {
     + .crisis-page--navigation {
       li {
-        max-height: 100vh;
+//        max-height: 100vh;
         opacity: 1;
+        height: 42px;
         &.crisis-page--widget-nav--item {
           ~ {
             .crisis-page--external-nav--item {
               padding-top: $base-line-em ;
+              height: 42px + $base-line-px;
             }
           }
         }
@@ -65,7 +69,6 @@
   }
 }
 .crisis-page--navigation {
-
 //  position: absolute;
 //  height: 100vh;
 //  max-height: 0;
@@ -78,18 +81,33 @@
 //  margin: 0 -0.5rem;
   line-height: unitless-convert(44px);
   @include try-colors();
+  @include breakpoint($bp--wide-nav) {
+    position: absolute;
+    z-index: 100;
+//    width: 36.79176%;
+    right: 0;
+    top: 100%;
+    border-bottom: 1px solid $color--gray--light--mid;
+    border-left: 1px solid $color--gray--light--mid;
+    @include layout($grid--golden-left) {
+      @include grid-span(1, 2);
+    }
+  }
   li {
-    @include transition-property(max-height, opacity);
+    @include transition-property(height, opacity, padding-top);
     @include transition-duration($default-transition-duration);
     @include transition-timing-function($default-transition-function);
-    max-height: 0;
+    height: 0;
     opacity: 0;
     margin: 0 -0.5rem;
     padding: 0 0.5rem;
+    @include breakpoint($bp--wide-nav) {
+      margin: 0;
+    }
     @for $i from 1 through 8 {
       &:nth-of-type(#{$i}) {
 //        @include transition-delay(($i - 1) * 0.33s);
-        @include transition-duration(($default-transition-duration * 0.5) * $i);
+//        @include transition-duration(($default-transition-duration * 0.5) * $i);
         $color--bg--nav: mix($color--gray--light--mid, $color--white, $i * 5%);
         background-color: $color--bg--nav;
       }
