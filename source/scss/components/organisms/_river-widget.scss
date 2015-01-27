@@ -89,7 +89,6 @@
       font-weight: bold;
       line-height: 1.3em;
       vertical-align: middle;
-
       @include breakpoint($bp--river-unstack-tabs) {
         @include fontsize-rem(ms(9));
         display: block;
@@ -134,10 +133,10 @@
   width: 100%;
   height: 100vh;
   max-height: 0;
+  background-color: $color--white;
   opacity: 0;
   overflow: hidden;
   z-index: 100;
-  background-color: $color--white;
   &.open {
     max-height: 100em;
     opacity: 1;
@@ -146,8 +145,8 @@
   @include breakpoint($bp--river--two-cols) {
     position: static;
     height: auto;
-    margin-bottom: $base-line-em;
     max-height: 100em;
+    margin-bottom: $base-line-em;
     opacity: 1;
   }
   .close {
@@ -172,13 +171,13 @@
     a {
       @include unset-background-links();
       display: block;
+      position: relative;
       padding: em(10px) em(20px);
       border-bottom: 1px solid $color--gray--light;
       background: none;
       background-color: $color--white;
       color: $color--blue--dark;
       font-family: $font--futura;
-      position: relative;
       &:hover {
         background-color: $color--gray--light;
       }
@@ -193,6 +192,7 @@
 
 .widget-river--filters--title {
   @include fontsize-rem(ms(0));
+  position: relative;
   margin: 0;
   padding: 0.5em 2em;
   background-color: $color--blue--dark;
@@ -200,7 +200,6 @@
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
-  position: relative;
   .results--item--reports & {
     background-color: $color--purple--dark;
   }
@@ -218,9 +217,9 @@
     margin: 1rem;
   }
   .widget-river--results--graph {
-    background-color: $color--gray--lightish;
-    border: 0.5rem solid $color--gray--lightish;
     margin-bottom: $base-line-em;
+    border: 0.5rem solid $color--gray--lightish;
+    background-color: $color--gray--lightish;
   }
 
 
@@ -229,34 +228,28 @@
 .placeholder {
   width: 100%;
   background: $color--white;
-
   .graph--heading {
     @include fontsize-rem(ms(0));
-    font-family: $font--futura;
-    color: $color--gray--dark;
-    text-transform: uppercase;
-    padding: 20px 0 0 30px;
     margin-bottom: 0;
+    padding: 20px 0 0 30px;
+    color: $color--gray--dark;
+    font-family: $font--futura;
+    text-transform: uppercase;
   }
-
   svg {
-    background-color: $color--white;
     width: 100%;
     margin-bottom: em(20px);
-
+    background-color: $color--white;
     text {
-      font-family: $font--futura;
       @include fontsize-rem(ms(-1));
+      font-family: $font--futura;
     }
-
     .graph-reports {
       stroke: $color--blue--dark;
     }
-
     .graph-maps {
       stroke: $color--yellow--mid;
     }
-
     .graph-jobs {
       stroke: $color--purple--dark;
     }
