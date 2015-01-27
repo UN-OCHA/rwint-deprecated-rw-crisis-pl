@@ -106,7 +106,7 @@
   display: inline-block;
   position: relative;
   width: 67%;
-  padding: 0.5rem;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   background-color: rgba($color--white, .2);
   cursor: pointer;
   font-family: $font--futura;
@@ -119,9 +119,6 @@
   @include breakpoint($bp--river-unstack-tabs) {
     display: block;
     width: auto;
-    &:after {
-      display: none;
-    }
   }
 }
 
@@ -153,21 +150,11 @@
     max-height: 100em;
     opacity: 1;
   }
-
-  h5 {
-    margin: 0;
-    padding: 10px 0;
-    background-color: $color--blue--dark;
-    color: $color--white;
-    font-size: em(15px);
-    font-weight: 900;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
   .close {
+    @include transform(translateY(-50%));
     display: inline-block;
     position: absolute;
+    top: 50%;
     right: 1rem;
     width: 20px;
     height: 20px;
@@ -178,13 +165,10 @@
       display: none;
     }
   }
-
   ul {
     border-top: 1px solid $color--gray--light;
   }
-
   li {
-
     a {
       @include unset-background-links();
       display: block;
@@ -207,6 +191,26 @@
   }
 }
 
+.widget-river--filters--title {
+  @include fontsize-rem(ms(0));
+  margin: 0;
+  padding: 0.5em 2em;
+  background-color: $color--blue--dark;
+  color: $color--white;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  .results--item--reports & {
+    background-color: $color--purple--dark;
+  }
+  .results--item--maps & {
+    background-color: $color--blue--dark;
+  }
+  .results--item--jobs & {
+    background-color: $color--yellow--mid;
+  }
+}
 
 ////////////////////////////////////////////
 .widget-river--results {
@@ -242,7 +246,7 @@
 
     text {
       font-family: $font--futura;
-      font-size: 12px;
+      @include fontsize-rem(ms(-1));
     }
 
     .graph-reports {
