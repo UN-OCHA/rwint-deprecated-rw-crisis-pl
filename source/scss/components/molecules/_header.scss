@@ -136,7 +136,7 @@
     @for $i from 1 through 8 {
       &:nth-of-type(#{$i}) {
         a {
-          @include transition-delay(($i - 1) * 0.1s);
+          @include transition-delay(($i - 1) * 0.025s);
           $color--bg--nav: mix($color--gray--light--mid, $color--white, $i * 5%);
           background-color: $color--bg--nav;
           &:hover {
