@@ -1,13 +1,28 @@
-.crisis-page--header {
+.crisis-page--header-nav {
   position: relative;
   min-height: 68px;
-  padding: 0 0.5rem;
   border-bottom: 1px solid $color--gray--light--mid;
+  margin-bottom: $base-line-em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+  + div {
+    margin-top: 68px + 40px + $base-line-px;
+    @include breakpoint($bp--global--inline-title) {
+      margin-top: 68px + $base-line-px;
+    }
+  }
+}
+
+.crisis-page--header {
+  padding: 0 0.5rem;
   background-color: $color--gray--light;
   color: $color--gray;
   font-family: $font--futura;
-  @include breakpoint($bp--global--inline-title) {
-    margin-bottom: $base-line-em;
+  @include breakpoint($bp--global--wide-nav) {
+    display: table;
+    width: 100%;
   }
 }
 
@@ -23,7 +38,8 @@
 }
 .crisis-page--title {
   @include fontsize-rem(ms(0));
-  margin: 0 0 $base-line-em;
+//  margin: 0 0 $base-line-em;
+  margin: 0;
   padding: 0 0.5rem;
   background-color: $color--gray--light--mid;
   color: $color--white;
