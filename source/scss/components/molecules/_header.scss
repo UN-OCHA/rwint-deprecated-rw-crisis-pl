@@ -1,25 +1,44 @@
 .crisis-page--header {
   position: relative;
   min-height: 68px;
-  margin-bottom: $base-line-em;
   padding: 0 0.5rem;
   border-bottom: 1px solid $color--gray--light--mid;
   background-color: $color--gray--light;
   color: $color--gray;
   font-family: $font--futura;
+  @include breakpoint($bp--global--inline-title) {
+    margin-bottom: $base-line-em;
+  }
 }
 
 .rw--name-logo {
   @include fontsize-rem(ms(0));
+  @include replace-text('rw-logo.svg');
   display: inline-block;
+  width: 125px;
+  margin: 0 0.5rem 0 0;
+  float: left;
+  background-size: contain;
   line-height: unitless-convert(68px);
-  margin: 0;
 }
 .crisis-page--title {
   @include fontsize-rem(ms(0));
-  display: inline-block;
-  margin: 0;
-  line-height: unitless-convert(68px);
+  margin: 0 0 $base-line-em;
+  padding: 0 0.5rem;
+  background-color: $color--gray--light--mid;
+  color: $color--white;
+  font-weight: bold;
+  line-height: 2;
+  text-transform: uppercase;
+  @include fontsize-rem(ms(1));
+  @include breakpoint($bp--global--inline-title) {
+    position: absolute;
+    top: 12px;
+    left: 140px;
+    background: transparent;
+    color: $color--gray;
+    z-index: 1;
+  }
 }
 .crisis-page--navigation--trigger-label {
   display: block;

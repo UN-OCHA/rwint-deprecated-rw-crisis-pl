@@ -35,6 +35,10 @@
     {
       "name": "$bp--global--wide-nav",
       "value": "600px"
+    },
+    {
+      "name": "$bp--global--inline-title",
+      "value": "480px"
     }
   ]
 }
