@@ -44,8 +44,6 @@
   }
 }
 
-
-$bp--wide-nav: 600px;
 .crisis-page--navigation--trigger {
   display: none;
   &:checked {
@@ -71,7 +69,7 @@ $bp--wide-nav: 600px;
 .crisis-page--navigation {
   width: 100vw;
   line-height: unitless-convert(44px);
-  @include breakpoint($bp--wide-nav) {
+  @include breakpoint($bp--global--wide-nav) {
     position: absolute;
     top: 100%;
     right: 0;
@@ -95,7 +93,7 @@ $bp--wide-nav: 600px;
     text-align: center;
     text-transform: uppercase;
     overflow: hidden;
-    @include breakpoint($bp--wide-nav) {
+    @include breakpoint($bp--global--wide-nav) {
       margin: 0;
     }
   }

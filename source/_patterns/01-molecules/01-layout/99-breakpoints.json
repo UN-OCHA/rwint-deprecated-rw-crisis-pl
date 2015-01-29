@@ -31,6 +31,10 @@
     {
       "name": "$bp--river--two-cols",
       "value": "912px"
+    },
+    {
+      "name": "$bp--global--wide-nav",
+      "value": "600px"
     }
   ]
 }
