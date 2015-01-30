@@ -236,6 +236,17 @@
     font-family: $font--futura;
     text-transform: uppercase;
   }
+  .axis {
+    path, line {
+      stroke: $color--gray--lightish;
+    }
+  }
+  .tick{
+    text{
+      fill: $color--gray--light--mid;
+    }
+  }
+
   svg {
     width: 100%;
     margin-bottom: em(20px);
