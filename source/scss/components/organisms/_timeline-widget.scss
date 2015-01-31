@@ -197,6 +197,10 @@
       width: em(50px);
       height: em(50px);
     }
+
+    &.disabled {
+      display: none;
+    }
   }
 
   .next {
