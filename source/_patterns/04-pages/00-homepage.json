@@ -1,4 +1,32 @@
 {
+	"widget-overview": {
+		"widget-title": {
+			"word1": "Crisis",
+			"word2": "Overview",
+			"icon": "un-icon-crisis_conflict"
+		}
+	},
+	"widget-timeline": {
+		"widget-title": {
+			"word1": "Crisis",
+			"word2": "Timeline",
+			"icon": "un-icon-product_type_calendar"
+		}
+	},
+	"widget-financial": {
+		"widget-title": {
+			"word1": "Financial",
+			"word2": "Support",
+			"icon": "un-icon-activity_financing"
+		}
+	},
+	"widget-river": {
+		"widget-title": {
+			"word1": "More",
+			"word2": "Information",
+			"icon": "un-icon-product_type_report"
+		}
+	},
 	"timeline-items":[
 		{
 			"index": 0,

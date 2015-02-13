@@ -1,5 +1,22 @@
-{{> molecules-primary-nav }}
-{{> organisms-overview }}
-{{> organisms-timeline }}
-{{> organisms-financial }}
-{{> organisms-river }}
+{{>molecules-primary-nav}}
+
+{{#widget-overview}}
+<section id="crisis-overview"
+         class="crisis-page--widget-container container content-section text-center">{{> organisms-overview }}</section>
+<div class="clear-both"></div>
+{{/widget-overview}}
+{{#widget-timeline}}
+<section id="timeline"
+         class="crisis-page--widget-container container content-section text-center">{{> organisms-timeline }}</section>
+<div class="clear-both"></div>
+{{/widget-timeline}}
+{{#widget-financial}}
+<section id="financial"
+         class="crisis-page--widget-container container content-section text-center">{{> organisms-financial }}</section>
+<div class="clear-both"></div>
+{{/widget-financial}}
+{{#widget-river}}
+<section id="river"
+         class="crisis-page--widget-container container content-section text-center">{{> organisms-river }}</section>
+<div class="clear-both"></div>
+{{/widget-river}}
