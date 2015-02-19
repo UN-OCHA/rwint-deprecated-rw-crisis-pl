@@ -35,6 +35,8 @@
     top: em(14px);
     width: em(360px);
     height: auto;
+    opacity: 1;
+    overflow: visible;
   }
 
   &.open {
@@ -56,6 +58,7 @@
 
   @include breakpoint($bp--timeline-2col) {
     width: auto;
+    display:none;
   }
 }
 
@@ -204,9 +207,7 @@
       right: 0;
 
       @include breakpoint($bp--timeline-2col) {
-        @include arrow($color--purple--dark, right);
-        top: em(16px);
-        right: em(16px);
+        display: none;
       }
     }
   }
@@ -221,9 +222,7 @@
       left: 0;
 
       @include breakpoint($bp--timeline-2col) {
-        @include arrow($color--purple--dark, left);
-        top: em(16px);
-        left: em(16px);
+        display: none;
       }
     }
   }
