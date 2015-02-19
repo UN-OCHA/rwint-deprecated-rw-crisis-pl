@@ -17,14 +17,14 @@
 		"widget-title": {
 			"word1": "Financial",
 			"word2": "Support",
-			"icon": "un-icon-activity_financing"
+			"icon": "un-icon-activity_fund"
 		}
 	},
 	"widget-river": {
 		"widget-title": {
 			"word1": "More",
-			"word2": "Information",
-			"icon": "un-icon-product_type_report"
+			"word2": "From ReliefWeb",
+			"icon": "un-icon-activity_reporting"
 		}
 	},
 	"timeline-items":[
