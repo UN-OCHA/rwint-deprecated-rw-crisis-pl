@@ -222,9 +222,7 @@
       left: 0;
 
       @include breakpoint($bp--timeline-2col) {
-        @include arrow($color--purple--dark, left);
-        top: em(16px);
-        left: em(16px);
+        display: none;
       }
     }
   }
