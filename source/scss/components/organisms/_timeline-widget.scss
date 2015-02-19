@@ -207,9 +207,7 @@
       right: 0;
 
       @include breakpoint($bp--timeline-2col) {
-        @include arrow($color--purple--dark, right);
-        top: em(16px);
-        right: em(16px);
+        display: none;
       }
     }
   }
