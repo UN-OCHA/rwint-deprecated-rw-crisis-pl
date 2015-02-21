@@ -43,24 +43,6 @@ $(document).ready(function() {
     next: $('.next')
   }).init();
 
-  // Pager.
-  var $slyPager = new Sly('.timeline-widget-pager', {
-    horizontal: 1,
-    itemNav: 'forceCentered',
-    smart: 1,
-    activateMiddle: 1,
-    mouseDragging: 1,
-    touchDragging: 1,
-    releaseSwing: 1,
-    startAt: 0,
-    scrollBy: 1,
-    speed: 200,
-    elasticBounds: 1,
-    dragHandle: 1,
-    dynamicHandle: 1,
-    clickBar: 1
-  }).init();
-
   // Dropdowns.
   var $slyDropdown = new Sly('.timeline-widget--dropdown--container', {
     itemNav: 'basic',
@@ -99,24 +81,11 @@ $(document).ready(function() {
 
   // Update other sliders based on main.
   $sly.on('moveEnd', function(){
-    $index = $sly.rel.activeItem;
-
-    var $pagerPos = $slyPager.getPos($index);
-    $slyPager.activate($index);
-    $slyPager.slideTo($pagerPos.center);
-
-    // Since the months add extra items to the dropdown slider we need to get
-    // the correct indices and slide to them.
-    $('.timeline-widget--dropdown--container li').each(function( $liIndex ) {
-      var $slyIndex = $(this).attr('data-slide');
-      if ($slyIndex) {
-        if ($slyIndex == $index) {
-          var $dropDownPos = $slyDropdown.getPos($liIndex);
-          $slyDropdown.activate($liIndex);
-          $slyDropdown.slideTo($dropDownPos.center);
-        }
-      }
-    });
+    var $index = $sly.rel.activeItem,
+        $pagerPos = $slyDropdown.getPos($index);
+    $slyDropdown.activate($index);
+    $slyDropdown.slideTo($pagerPos.center);
   });
+
 });
 

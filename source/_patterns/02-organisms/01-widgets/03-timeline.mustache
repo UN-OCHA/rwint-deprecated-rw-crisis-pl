@@ -28,23 +28,15 @@
               <option value="dec">April</option>
             </select>
           </div>
+          <button class="form-today">Today</button>
           <span class="close"></span>
         </div>
         <div class="timeline-widget--dropdown--container">
           <ul class="slidee">
             {{#timeline-items}}
-              {{#new-month}}
-              <li class="timeline-widget--dropdown--month" data-isMonth="true">
-                {{ date-month }} - {{ date-year }}
-              </li>
-              {{/new-month}}
               <li class="timeline-widget-dropdown--list-item" data-slide="{{ index }}">
-                <div class="timeline-widget--dot">
-                  <div class="timeline-widget--dot--date">
-                    {{ date-day }}
-                  </div>
-                </div>
                 <div class="timeline-widget-dropdown--item">
+                  <div class="timeline-widget-dropdown--item-date">{{ date-day }} {{ date-month }} {{ date-year }}</div>
                     {{ short-desc }}
                 </div>
               </li>
@@ -87,29 +79,6 @@
         <div class="clear"></div>
       </div><!-- .timeline-widget-frames -->
     </div><!-- .timeline-widget-frames-wrapper -->
-
-    <div class="timeline-widget-pager">
-      <ul class="">
-       {{#timeline-items}}
-          <li>
-            <div class="timeline-widget-pager--item" data-slide="{{ index }}">
-              <div class="timeline-widget--dot">
-                <div class="timeline-widget--dot--date">
-                  {{ date-day }}
-                </div>
-              </div>
-              <div class="timeline-widget-pager--item-content">
-                {{ short-desc }}
-              </div>
-            </div>
-          </li>
-        {{/timeline-items}}
-      </ul>
-      <div class="clear"></div>
-    </div><!-- .timeline-widget-pager -->
-    <div class="timeline-widget-pager--current">
-      2014 December
-    </div>
 
   </div>
 

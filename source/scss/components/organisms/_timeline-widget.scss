@@ -81,20 +81,35 @@
   .form-select {
     @include inline-block;
   }
+  .form-today {
+    font-family: $font--futura;
+    border: none;
+    color: $color--white;
+    background-color: $color--blue;
+    position: relative;
+    line-height: 1.5;
+    top: -11px;
+    height: 36px;
+    margin-left: 0.5em;
+    &:hover {
+      background-color: $color--purple;
+    }
+  }
 }
 
 .timeline-widget--dropdown--container {
   height: 100%;
   padding: 0 em(15px) 0 em(30px);
   background-image: image-url('diagonal-pinstripes.png');
+  overflow: hidden;
   @include breakpoint($bp--timeline-2col) {
-    height: em(325px);
+    height: 27em;
     border-bottom: 2px solid $color--blue--dark;
   }
 
   ul {
-    padding: em(14px) 0;
-    border-left: em(4px) solid $color--blue--dark;
+//    padding: em(14px) 0;
+//    border-left: em(4px) solid $color--blue--dark;
   }
 
   .timeline-widget--dot {
@@ -124,7 +139,7 @@
   @include arrow-box(em(10px), $color--white, em(1px), $color--gray--light--mid, left);
   position: relative;
   margin-bottom: em(14px);
-  margin-left: em(32px);
+//  margin-left: em(32px);
   padding: 0.5em;
   text-align: right;
   color: $color--gray;
