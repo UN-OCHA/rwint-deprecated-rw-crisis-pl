@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   // Initialize Sly Sliders.
-  var $frame = $('.timeline-widget-frames');
+  var $frame = $('.timeline-widget--frames');
   var $item = $('.timeline-widget-item');
   var $margin = '40px';
 
@@ -18,7 +18,6 @@ $(document).ready(function() {
     $item.width($width);
     $sly.reload();
     $('.timeline-widget-pager li').width(Math.floor($width/3));
-    $slyPager.reload();
   });
 
   // Main slider.
