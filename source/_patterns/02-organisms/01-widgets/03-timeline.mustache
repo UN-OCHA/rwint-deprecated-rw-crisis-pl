@@ -56,15 +56,17 @@
             </div>
             <h1 class="timeline-widget-item--title">{{ title }}</h1>
           </div>
-          <div class="timeline-widget-item--content clearfix">
-            <div class="timeline-widget-item--image grid--item">
-              <div class="timeline-widget-item--image--icons">
-                <a class="timeline-widget-item--image--view-more"><img src="../../images/eye-img--yellow.png"></a>
-                <a class="timeline-widget-item--image--country">{{ country }}</a>
+          <div class="timeline-widget-item--content">
+            {{#img-source}}
+              <div class="timeline-widget-item--image">
+                <div class="timeline-widget-item--image--icons">
+                  <a class="timeline-widget-item--image--view-more"><img src="../../images/eye-img--yellow.png"></a>
+                  <a class="timeline-widget-item--image--country">{{ country }}</a>
+                </div>
+                <img src="{{img-source}}">
               </div>
-              <img src="../../images/timeline-img.png">
-            </div>
-            <div class="timeline-widget-item--description grid--item">
+            {{/img-source}}
+            <div class="timeline-widget-item--description">
               {{{long-desc}}}
               <div class="timeline-widget-item-link">
                 <a class="btn" href="{{ url }}"><span class="un-icon-product_type_report"></span> Read full report</a>

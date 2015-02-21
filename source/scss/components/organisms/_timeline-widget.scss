@@ -121,10 +121,13 @@ $bp--timeline-2col-wide: 860px;
 
 .timeline-widget--dropdown--container {
   height: 100%;
-  height: 100vh;
+  height: calc(100vh - 55px);
   padding: 0 em(15px) 0 em(30px);
   background-image: image-url('diagonal-pinstripes.png');
   overflow: hidden;
+  @include breakpoint($bp--timeline-2col) {
+    height: calc(100vh - 55px - 62px);
+  }
 }
 
 .timeline-widget-dropdown--list-item {
@@ -256,11 +259,11 @@ margin: 0.5em;
 }
 
 .timeline-widget-item--title {
+  @include padding-sides();
   font-family: $font--futura;
   font-size: ms(1);
   font-weight: bold;
   line-height: normal;
-
   @include breakpoint($bp--timeline-2col) {
     font-size: ms(4);
   }

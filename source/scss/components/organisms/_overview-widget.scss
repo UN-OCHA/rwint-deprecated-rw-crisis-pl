@@ -79,7 +79,7 @@
   }
   .accordion-set--content {
     @include column-gap(2em);
-    padding: 0 0.5em;
+    @include padding-sides();
     @include eq('cols2') {
       @include columns(2);
       margin-bottom: $base-line-em;
