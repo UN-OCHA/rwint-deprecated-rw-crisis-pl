@@ -9,6 +9,10 @@
       "value": "700px"
     },
     {
+      "name": "$bp--timeline-2col-wide",
+      "value": "860px"
+    },
+    {
       "name": "$bp--timeline--navigation-buttons",
       "value": "1360px"
     },
