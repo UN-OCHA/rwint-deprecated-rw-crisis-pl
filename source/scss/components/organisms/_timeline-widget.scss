@@ -1,4 +1,8 @@
 // LAYOUT
+.timeline-widget--frames {
+  width: 100%;
+}
+
 @include breakpoint($bp--timeline-2col) {
   @include layout($grid--2) {
     .timeline-widget--dropdown {
