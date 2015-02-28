@@ -64,11 +64,7 @@
 }
 
 .timeline-widget-dropdown--item-date {
-  @include padding-sides();
-  float: right;
-  border: 1px solid $color--blue--pale;
-  background-color: $color--blue--paler;
-  font-size: ms(-1);
+  @include list--item-date();
 }
 
 .timeline-widget-dropdown--item-desc {
@@ -335,16 +331,7 @@ margin: 0.5em;
   }
 
   .btn {
-    @include transform(translateX(-50%));
-    position: relative;
-    left: 50%;
-    width: 100%;
-    max-width: phi-a(100%);
-    background: $color--purple--dark;
-    font-family: $font--futura;
-    font-size: ms(0);
-    font-weight: normal;
-    text-decoration: none;
+    @include phi-btn();
   }
 
   .timeline-widget-item--image {
