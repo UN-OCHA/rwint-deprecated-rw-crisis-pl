@@ -132,10 +132,10 @@
   &.covered {
     $color--diagonal--lighter: mix($color--gray--light, $color--yellow, 25%);
     @include background-image(linear-gradient(-90deg, $color--yellow, $color--transparent--white), repeating-linear-gradient(-45deg, $color--transparent--white, $color--transparent--white 16px, $color--diagonal--lighter 16px, $color--diagonal--lighter 32px));
-    width: 55%;
+    width: 0;
     float: left;
     border-right: 4px solid $color--purple;
-    background: $color--yellow;
+    background-color: $color--yellow;
     background-position: 50% 50%, 50% 50%;
     color: $color--yellow--dark;
   }
@@ -192,6 +192,20 @@
   margin-bottom: $base-line-px;
   padding: 1em 0 1em 0.5em;
   background-color: $color--white;
+  .axis {
+    .domain {
+      fill: none;
+      stroke: $color--gray--lightish;
+    }
+    line {
+      stroke: $color--gray--lightish;
+    }
+  }
+  .grid {
+    line {
+      stroke: $color--gray--lightish;
+    }
+  }
   text {
     font-family: $font--futura;
     font-size: ms(0);
@@ -219,6 +233,9 @@
     display: none;
     .detail--block {
       fill: rgba($color--white, 0.8);
+    }
+    .detail--icon {
+      fill: $color--white;
     }
     .detail--info {
       fill: $color--purple;
