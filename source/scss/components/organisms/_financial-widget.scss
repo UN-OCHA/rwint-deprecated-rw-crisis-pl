@@ -192,6 +192,20 @@
   margin-bottom: $base-line-px;
   padding: 1em 0 1em 0.5em;
   background-color: $color--white;
+  .axis {
+    .domain {
+      fill: none;
+      stroke: $color--gray--lightish;
+    }
+    line {
+      stroke: $color--gray--lightish;
+    }
+  }
+  .grid {
+    line {
+      stroke: $color--gray--lightish;
+    }
+  }
   text {
     font-family: $font--futura;
     font-size: ms(0);
