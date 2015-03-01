@@ -123,6 +123,20 @@
     }
   }
 }
+
+.crisis-page--external-nav--item {
+  a {
+    position: relative;
+    &:after {
+      @include arrow($color--blue, right);
+      display: inline-block;
+      position: relative;
+      top: 21px;
+      right: -0.5em;
+    }
+  }
+}
+
 .crisis-page--navigation {
   width: 100vw;
   line-height: unitless-convert(44px);
