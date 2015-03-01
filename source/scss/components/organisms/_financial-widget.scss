@@ -234,6 +234,9 @@
     .detail--block {
       fill: rgba($color--white, 0.8);
     }
+    .detail--icon {
+      fill: $color--white;
+    }
     .detail--info {
       fill: $color--purple;
       stroke: $color--purple--dark;
