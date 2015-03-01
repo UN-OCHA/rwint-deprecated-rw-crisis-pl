@@ -87,12 +87,24 @@
       fill: $color--purple;
     }
   }
+  #menu-button-close {
+    display: none;
+    height: 68px;
+  }
 }
 
 .crisis-page--navigation--trigger {
   display: none;
   &:checked {
-    + .crisis-page--navigation {
+    ~ .crisis-page--navigation--trigger-label {
+      #menu-button {
+        display: none;
+      }
+      #menu-button-close {
+        display: block;
+      }
+    }
+    ~ .crisis-page--navigation {
       li {
         a {
           height: 42px;
