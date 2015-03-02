@@ -1,5 +1,24 @@
 .overview-widget {
   @include breakpoint($bp--overview-2col) {
+    @include layout($grid--2) {
+      .overview-widget--description {
+        @include grid-span(1, 1);
+        clear: left;
+      }
+      .overview-widget--map {
+        @include grid-span(1, 2);
+      }
+      .overview-widget--tabs {
+        @include grid-span(1, 2);
+        clear: right;
+      }
+      .overview-widget--sources {
+        @include grid-span(1, 2);
+        clear: right;
+      }
+    }
+  }
+  @include breakpoint($bp--overview-2col-wide) {
     @include layout($grid--golden-left) {
       .overview-widget--description {
         @include grid-span(1, 1);

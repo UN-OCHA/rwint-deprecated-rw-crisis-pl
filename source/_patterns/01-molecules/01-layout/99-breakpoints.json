@@ -1,8 +1,20 @@
 {
   "pl_breakpoints": [
     {
+      "name": "$bp--global--inline-title",
+      "value": "480px"
+    },
+    {
+      "name": "$bp--global--wide-nav",
+      "value": "600px"
+    },
+    {
       "name": "$bp--overview-2col",
       "value": "600px"
+    },
+    {
+      "name": "$bp--overview-2col-wide",
+      "value": "880px"
     },
     {
       "name": "$bp--timeline-2col",
@@ -37,12 +49,12 @@
       "value": "912px"
     },
     {
-      "name": "$bp--global--wide-nav",
-      "value": "600px"
+      "name": "$bp--river-2col",
+      "value": "640px"
     },
     {
-      "name": "$bp--global--inline-title",
-      "value": "480px"
+      "name": "$bp--river-2col-wide",
+      "value": "800px"
     }
   ]
 }
