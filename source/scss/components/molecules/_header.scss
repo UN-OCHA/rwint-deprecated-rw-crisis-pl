@@ -28,7 +28,7 @@
 
 .crisis-page--header {
   padding: 0 0.5rem;
-  background-color: $color--gray--light;
+  background: $color--gray--light image-url('diagonal-pinstripes.png') repeat;
   color: $color--gray;
   font-family: $font--futura;
   @include breakpoint($bp--global--wide-nav) {
@@ -48,7 +48,7 @@
   line-height: unitless-convert(68px);
 }
 .crisis-page--title {
-  @include fontsize-rem(ms(0));
+  @include fontsize-rem(ms(1));
   margin: 0;
   padding: 0 0.5rem;
   background-color: $color--gray--light--mid;
@@ -56,7 +56,6 @@
   font-weight: bold;
   line-height: 2;
   text-transform: uppercase;
-  @include fontsize-rem(ms(1));
   @include breakpoint($bp--global--inline-title) {
     position: absolute;
     top: 12px;

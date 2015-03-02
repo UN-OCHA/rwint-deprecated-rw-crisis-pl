@@ -1,16 +1,13 @@
-$bp-river-2col: 640px;
-$bp-river-2col-wide: 800px;
-
 .widget-river {
   background: image-url('diagonal-pinstripes.png') repeat $color--white;
   .widget-river--filters {
     @include single-transition(width, $default-transition-duration, $default-transition-function);
-    @include breakpoint($bp-river-2col) {
+    @include breakpoint($bp--river-2col) {
       @include layout($grid--2, 0) {
         width: grid-span(1, 1);
       }
     }
-    @include breakpoint($bp-river-2col-wide) {
+    @include breakpoint($bp--river-2col-wide) {
       @include layout($grid--golden-right, 0) {
         width: grid-span(1, 1);
       }
@@ -83,7 +80,7 @@ $bp-river-2col-wide: 800px;
   .accordion-set--label {
     @include single-transition(width, $default-transition-duration, $default-transition-function);
     width: 100%;
-    @include breakpoint($bp-river-2col) {
+    @include breakpoint($bp--river-2col) {
       &:before {
         @include transition-property(transform, border-color);
         @include transition-duration($default-transition-duration);
@@ -93,14 +90,14 @@ $bp-river-2col-wide: 800px;
         @include arrow($color--purple);
         right: 0.5em;
         left: auto;
-        @include breakpoint($bp-river-2col-wide) {
+        @include breakpoint($bp--river-2col-wide) {
           @include transform-origin(75%, 50%);
         }
       }
     }
   }
   .accordion-set--content {
-    @include breakpoint($bp-river-2col) {
+    @include breakpoint($bp--river-2col) {
       @include single-transition(width, $default-transition-duration, $default-transition-function);
     }
   }
@@ -110,7 +107,7 @@ $bp-river-2col-wide: 800px;
     &:checked {
       + .accordion-set--label {
         background-color: $color--gray--light;
-        @include breakpoint($bp-river-2col) {
+        @include breakpoint($bp--river-2col) {
           width: calc(100% + 16px);
           &:before {
             @include transform(rotateY(180deg));
@@ -127,12 +124,12 @@ $bp-river-2col-wide: 800px;
           }
         }
         + .accordion-set--content {
-          @include breakpoint($bp-river-2col) {
+          @include breakpoint($bp--river-2col) {
             @include layout($grid--2, 0) {
               width: calc(#{grid-span(1, 2)} - 2em);
             }
           }
-          @include breakpoint($bp-river-2col-wide) {
+          @include breakpoint($bp--river-2col-wide) {
             @include layout($grid--golden-right, 0) {
               width: calc(#{grid-span(1, 2)} - 2em);
             }
@@ -145,7 +142,7 @@ $bp-river-2col-wide: 800px;
   .widget-river--filters-content {
     padding: 0.5em 0.5em $base-line-em 0.5em;
     background-color: adjust_color($color--gray--light, $lightness: 2%);
-    @include breakpoint($bp-river-2col) {
+    @include breakpoint($bp--river-2col) {
       background-color: $color--white;
     }
   }
@@ -161,7 +158,7 @@ $bp-river-2col-wide: 800px;
     color: $color--purple--dark;
     font-weight: 900;
     text-transform: uppercase;
-    @include breakpoint($bp-river-2col) {
+    @include breakpoint($bp--river-2col) {
       display: block;
     }
   }
