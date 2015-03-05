@@ -2,7 +2,7 @@
   "widget-title": {
     "word1": "Crisis",
     "word2": "Timeline",
-    "icon": "un-icon-product_type_calendar"
+    "icon": "un-icon-product_type_timeline widget-title--icon-custom"
   },
   "timeline-items":[
     {
