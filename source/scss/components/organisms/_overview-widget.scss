@@ -73,6 +73,20 @@
   line-height: 1.74;
 }
 
+.widget-title--icon-custom {
+  width: 1.25em;
+  height: 1.73em;
+
+  &:before {
+    position: absolute;
+    top: 16px;
+    left: 7px;
+    width: 30px;
+    height: 30px;
+    content: '';
+  }
+}
+
 .overview-widget--map {
   border: {
     width: 0 0 1px 0;
