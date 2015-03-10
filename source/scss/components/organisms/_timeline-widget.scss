@@ -339,7 +339,15 @@ margin: 0.5em;
   }
 
   .timeline-widget-item--image {
+    background: $color--gray--light;
+    max-height: 25rem;
+    overflow: hidden;
     position: relative;
+    text-align: center;
+
+    & > img {
+      margin: 0 auto;
+    }
   }
 
   .timeline-widget-item--image--icons {
