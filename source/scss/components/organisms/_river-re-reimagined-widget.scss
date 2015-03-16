@@ -98,7 +98,7 @@
   }
   .accordion-set--content {
     @include breakpoint($bp--river-2col) {
-      @include single-transition(width, $default-transition-duration, $default-transition-function);
+      @include single-transition(height, $default-transition-duration, $default-transition-function);
     }
   }
 
