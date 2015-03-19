@@ -1,3 +1,15 @@
+// Prevent FOUT(Flash of unstyled text)
+.wf-loading {
+  h1, .text {
+    visibility: hidden;
+  }
+}
+.wf-active{
+  h1, .text {
+    visibility: visible;
+  }
+}
+
 .crisis-page--header-nav {
   position: relative;
   min-height: 68px;
@@ -11,17 +23,6 @@
     margin-top: 68px + 40px;
     @include breakpoint($bp--global--inline-title) {
       margin-top: 68px;
-    }
-  }
-  // Prevent FOUT(Flash of unstyled text)
-  .wf-loading {
-    h1, .text {
-      visibility: hidden;
-    }
-  }
-  .wf-active{
-    h1, .text {
-      visibility: visible;
     }
   }
 }
@@ -129,9 +130,10 @@
     &:after {
       @include arrow($color--blue, right);
       display: inline-block;
-      position: relative;
-      top: 21px;
-      right: -0.5em;
+      position: absolute;
+      top: 36px;
+      left: 50%;
+      margin-left: 70px;
     }
   }
 }
