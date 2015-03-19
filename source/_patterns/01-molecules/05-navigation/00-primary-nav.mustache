@@ -1,6 +1,7 @@
-<div class="crisis-page--header-nav">
+<div class="crisis-page--header-nav {{#suppress_nav}}no-navigation{{/suppress_nav}}">
   <header class="crisis-page--header">
     <h2 class="rw--name-logo">ReliefWeb</h2>
+    {{^suppress_nav}}
     <input type="checkbox" id="page-menu" name="page-menu" class="crisis-page--navigation--trigger"/>
     <label class="crisis-page--navigation--trigger-label" for="page-menu">
 			{{> atoms-menu-button-svg }}
@@ -16,6 +17,7 @@
         <li class="crisis-page--external-nav--item"><a href="http://reliefweb.int">ReliefWeb.int</a></li>
       </ul>
     </nav>
+    {{/suppress_nav}}
   </header>
   <h1 class="crisis-page--title">Syria / Iraq Crisis Page</h1>
 </div>
