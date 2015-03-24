@@ -51,6 +51,9 @@
   float: left;
   background-size: contain;
   line-height: unitless-convert(68px);
+  .no-svg & {
+    background-image: url(image_url('rw-logo.png'));
+  }
 }
 .crisis-page--title {
   @include fontsize-rem(ms(1));
