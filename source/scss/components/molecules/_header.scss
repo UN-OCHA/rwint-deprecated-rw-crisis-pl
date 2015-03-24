@@ -52,7 +52,7 @@
   background-size: contain;
   line-height: unitless-convert(68px);
   .no-svg & {
-    background-image: url(image_url('rw-logo.png'));
+    @include background-image(image_url('rw-logo.png'));
   }
 }
 .crisis-page--title {
