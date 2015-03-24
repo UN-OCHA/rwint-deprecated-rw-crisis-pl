@@ -143,8 +143,12 @@
 // Tabs
 .overview-widget--tabs {
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   margin-top: $base-line-em;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   @include breakpoint($bp--overview-2col) {
     margin-top: 0;
   }
@@ -157,6 +161,8 @@
     background-color: $color--gray--light;
     font-family: $font--futura;
     flex-basis: 33%;
+    -webkit-flex-basis: 33%;
+    -ms-flex-basis: 33%;
     position: relative;
     &:before {
       @include single-transition(opacity, $default-transition-duration, $default-transition-function);
