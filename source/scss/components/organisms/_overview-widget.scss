@@ -167,7 +167,7 @@
     &:before {
       @include single-transition(opacity, $default-transition-duration, $default-transition-function);
       @include arrow($color--purple, down);
-      top: 100%;
+      bottom: -12px;
       left: 0.5em;
       z-index: 10;
       opacity: 0;
@@ -183,6 +183,7 @@
     }
   }
   .tab-set--content {
+    margin-top: -1px;
     position: relative;
     width: 100%;
     background-color: $color--purple--dark;
