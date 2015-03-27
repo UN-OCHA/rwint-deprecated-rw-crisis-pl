@@ -167,7 +167,7 @@
     &:before {
       @include single-transition(opacity, $default-transition-duration, $default-transition-function);
       @include arrow($color--purple, down);
-      bottom: -12px;
+      bottom: -11px;
       left: 0.5em;
       z-index: 10;
       opacity: 0;
