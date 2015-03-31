@@ -157,13 +157,15 @@
     @include transition-duration($default-transition-duration);
     @include transition-timing-function($default-transition-function);
     @include fontsize-rem(ms(1));
-    padding: 3px 0.5em;
+    padding: 2px 0.5em;
     background-color: $color--gray--light;
     font-family: $font--futura;
     flex-basis: 33%;
     -webkit-flex-basis: 33%;
     -ms-flex-basis: 33%;
     position: relative;
+    float: left;
+    width:33%;
     &:before {
       @include single-transition(opacity, $default-transition-duration, $default-transition-function);
       @include arrow($color--purple, down);
