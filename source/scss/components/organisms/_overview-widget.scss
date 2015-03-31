@@ -129,6 +129,7 @@
     @include eq('cols2') {
       @include columns(2);
       margin-bottom: $base-line-em;
+      display: inline-block;
     }
     @include breakpoint($bp--overview-2col) {
       max-height: 100em;
