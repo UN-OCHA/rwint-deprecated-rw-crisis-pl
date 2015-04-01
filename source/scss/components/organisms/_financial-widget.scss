@@ -163,6 +163,10 @@
     font-size: ms(2);
     line-height: 1;
     text-align: right;
+    &.aligned-right {
+      color: $color--white;
+      right: -3.5em;
+    }
     span {
       display: block;
       font-size: ms(0);
