@@ -43,11 +43,6 @@
       @include transform(rotate(0deg));
 
     }
-    &.active, &:hover {
-      &:before {
-        @include transform(rotate(90deg));
-      }
-    }
   }
   &:before {
     @include single-transition(border-color, $default-transition-duration, $default-transition-function);
@@ -63,6 +58,7 @@
     background-color: $color--white;
     &:before {
       @include arrow($color--purple, right, $arrow-length: 0.66em, $arrow-breadth: 0.5em);
+      @include transform(rotate(90deg));
     }
   }
 }
