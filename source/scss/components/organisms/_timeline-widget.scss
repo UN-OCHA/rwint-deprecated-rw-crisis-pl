@@ -120,10 +120,11 @@
   }
   .form-select {
     @include inline-block;
+    p {
+      margin-bottom: 0;
+    }
   }
   .form-today {
-    position: relative;
-    top: -11px;
     height: 36px;
     margin-left: 0.5em;
     border: none;
