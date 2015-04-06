@@ -102,8 +102,12 @@
 .timeline-widget--dropdown-controls {
   position: relative;
   height: em(55px);
-  padding: em(10px) em(32px);
+  padding: em(10px) em(16px);
   background: $color--blue--darker;
+
+  @include breakpoint(330px) {
+    padding: em(10px) em(32px);
+  }
 
   .close {
     @include inline-block;
