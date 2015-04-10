@@ -258,7 +258,12 @@
       fill: $color--white;
     }
     .detail--title {
-      font-size: ms(2);
+      font-size: ms(1.75);
+    }
+    @include breakpoint($bp--financial--wide-chart) {
+      .detail--title {
+        font-size: ms(2);
+      }
     }
   }
 }
