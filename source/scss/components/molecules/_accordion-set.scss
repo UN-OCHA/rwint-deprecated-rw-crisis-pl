@@ -2,20 +2,12 @@
   @include single-transition(max-height, $default-transition-duration, $default-transition-function);
   max-height: 0;
   overflow: hidden;
-  @include transform3d( translateX(0));
   &.is-active {
     max-height: 100em;
   }
 }
 .accordion-set--check {
   display: none;
-  &:checked {
-    + .accordion-set--label {
-      + .accordion-set--content {
-        max-height: 100em;
-      }
-    }
-  }
 }
 .accordion-set--label {
   display: block;

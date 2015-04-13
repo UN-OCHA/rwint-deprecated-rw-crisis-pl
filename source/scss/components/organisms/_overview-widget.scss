@@ -129,6 +129,7 @@
     @include eq('cols2') {
       @include columns(2);
       margin-bottom: $base-line-em;
+      display: inline-block;
     }
     @include breakpoint($bp--overview-2col) {
       max-height: 100em;
@@ -157,17 +158,19 @@
     @include transition-duration($default-transition-duration);
     @include transition-timing-function($default-transition-function);
     @include fontsize-rem(ms(1));
-    padding: 3px 0.5em;
+    padding: 2px 0.5em;
     background-color: $color--gray--light;
     font-family: $font--futura;
     flex-basis: 33%;
     -webkit-flex-basis: 33%;
     -ms-flex-basis: 33%;
     position: relative;
+    float: left;
+    width:33%;
     &:before {
       @include single-transition(opacity, $default-transition-duration, $default-transition-function);
       @include arrow($color--purple, down);
-      top: 100%;
+      bottom: -11px;
       left: 0.5em;
       z-index: 10;
       opacity: 0;
@@ -183,6 +186,7 @@
     }
   }
   .tab-set--content {
+    margin-top: -1px;
     position: relative;
     width: 100%;
     background-color: $color--purple--dark;
